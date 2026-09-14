@@ -1,0 +1,155 @@
+{
+  "id": "yiyi-04",
+  "series": "yiyi",
+  "title": "哗啦哗啦，一一洗澡啦",
+  "subtitle": "一一成长系列 · 第 4 本（~1.5个月）",
+  "author": "一一与爸爸妈妈",
+  "ageRange": "~1.5个月",
+  "readingLevel": "亲子伴读",
+  "blurb": "一一成长系列第 4 本（~1.5个月）：《哗啦哗啦，一一洗澡啦》—— 洗澡·水花四溅的乐趣。",
+  "cover": "art/cover.jpg",
+  "scenes": "scenes.js",
+  "pagesCount": 11,
+  "spine": "#c04e3e",
+  "colors": {
+    "cloth": "#c04e3e",
+    "endpaper": {
+      "base": "#fff5eb",
+      "ink": "#c04e3e",
+      "pattern": "stars"
+    }
+  },
+  "pins": [
+    {
+      "id": "pin_yiyi-04",
+      "name": "第4本 哗啦哗啦，一一洗澡啦 纪念徽章",
+      "icon": "🌟"
+    }
+  ],
+  "pages": [
+    {
+      "id": "p1",
+      "heading": "第 1 页",
+      "text": "{{咕嘟}}，咕嘟。",
+      "image": "art/page-1.jpg",
+      "scene": "scene-1",
+      "words": [
+        "咕嘟",
+        "咕嘟"
+      ]
+    },
+    {
+      "id": "p2",
+      "heading": "第 2 页",
+      "text": "{{暖暖的}}？暖暖的！",
+      "image": "art/page-2.jpg",
+      "scene": "scene-2",
+      "words": [
+        "暖暖的",
+        "暖暖的"
+      ]
+    },
+    {
+      "id": "p3",
+      "heading": "第 3 页",
+      "text": "{光溜溜}！",
+      "image": "art/page-3.jpg",
+      "scene": "scene-3",
+      "words": [
+        "光溜溜"
+      ]
+    },
+    {
+      "id": "p4",
+      "heading": "第 4 页",
+      "text": "哗——",
+      "image": "art/page-4.jpg",
+      "scene": "scene-4",
+      "words": [
+        "一一",
+        "成长",
+        "快乐"
+      ]
+    },
+    {
+      "id": "p5",
+      "heading": "第 5 页",
+      "text": "{{咯咯}}，咯咯。",
+      "image": "art/page-5.jpg",
+      "scene": "scene-5",
+      "words": [
+        "咯咯",
+        "咯咯"
+      ]
+    },
+    {
+      "id": "p6",
+      "heading": "第 6 页",
+      "text": "噗。",
+      "image": "art/page-6.jpg",
+      "scene": "scene-6",
+      "words": [
+        "一一",
+        "成长",
+        "快乐"
+      ]
+    },
+    {
+      "id": "p7",
+      "heading": "第 7 页",
+      "text": "{哗啦哗啦}！",
+      "image": "art/page-7.jpg",
+      "scene": "scene-7",
+      "words": [
+        "哗啦哗啦"
+      ]
+    },
+    {
+      "id": "p8",
+      "heading": "第 8 页",
+      "text": "{香香的}。",
+      "image": "art/page-8.jpg",
+      "scene": "scene-8",
+      "words": [
+        "香香的"
+      ]
+    },
+    {
+      "id": "p9",
+      "heading": "第 9 页",
+      "text": "{暖暖的}。",
+      "image": "art/page-9.jpg",
+      "scene": "scene-9",
+      "words": [
+        "暖暖的"
+      ]
+    },
+    {
+      "id": "p10",
+      "heading": "第 10 页",
+      "text": "呼——。",
+      "image": "art/page-10.jpg",
+      "scene": "scene-10",
+      "words": [
+        "一一",
+        "成长",
+        "快乐"
+      ]
+    },
+    {
+      "id": "p11",
+      "heading": "第 11 页",
+      "text": "{给爸爸妈}{妈的话} {洗澡}，对大人来说是日常，对小宝宝来说是一场水上的冒险。 哗啦哗啦的水声、温热的澡盆、漂浮的小鸭子——这是属于一一的水上乐园。而站在旁边的你，既是救生员，也是玩伴，更是那个让她觉得\"水不可怕\"的安全岛。 有些孩子天生爱水，有些则需要时间。不管一一属于哪一种，请给她足够的耐心。今天的害怕可能是明天的热爱，今天的抗拒可能只是水温差了一度。 等她自己会站着淋浴的那一天，你会怀念现在这个泡在小澡盆里、胖乎乎、光溜溜的小家伙的。",
+      "image": "art/page-11.jpg",
+      "scene": "scene-11",
+      "words": [
+        "给爸爸妈",
+        "妈的话",
+        "洗澡",
+        "对大人来",
+        "说是日常",
+        "对小宝宝"
+      ]
+    }
+  ]
+}

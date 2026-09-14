@@ -1,0 +1,8 @@
+/* Parent account: the floating button is retired (the profiles folio opens the account),
+   and the dialog itself wears the settings folio (.panel-shell.folio-dialog in style.css). */
+.account-open { display: none; }
+#account-dialog [hidden] { display: none !important; }
+#account-dialog button:disabled { opacity: .6; cursor: wait; }
+.account-membership:empty, #account-status:empty, #account-identity:empty { display: none; }
+.account-plans-link { display: block; text-align: center; font-size: 14px; font-weight: 800; color: #8d4f1f; margin: 16px 0 4px; }
+

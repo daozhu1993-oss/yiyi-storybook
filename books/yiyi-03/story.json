@@ -1,0 +1,159 @@
+{
+  "id": "yiyi-03",
+  "series": "yiyi",
+  "title": "咕嘟咕嘟，一一喝奶啦",
+  "subtitle": "一一成长系列 · 第 3 本（~1个月）",
+  "author": "一一与爸爸妈妈",
+  "ageRange": "~1个月",
+  "readingLevel": "亲子伴读",
+  "blurb": "一一成长系列第 3 本（~1个月）：《咕嘟咕嘟，一一喝奶啦》—— 喝奶·小嘴巴的日常。",
+  "cover": "art/cover.jpg",
+  "scenes": "scenes.js",
+  "pagesCount": 11,
+  "spine": "#dd705f",
+  "colors": {
+    "cloth": "#dd705f",
+    "endpaper": {
+      "base": "#fff5eb",
+      "ink": "#dd705f",
+      "pattern": "stars"
+    }
+  },
+  "pins": [
+    {
+      "id": "pin_yiyi-03",
+      "name": "第3本 咕嘟咕嘟，一一喝奶啦 纪念徽章",
+      "icon": "🌟"
+    }
+  ],
+  "pages": [
+    {
+      "id": "p1",
+      "heading": "第 1 页",
+      "text": "{一一}，{睡着了}。",
+      "image": "art/page-1.jpg",
+      "scene": "scene-1",
+      "words": [
+        "一一",
+        "睡着了"
+      ]
+    },
+    {
+      "id": "p2",
+      "heading": "第 2 页",
+      "text": "哇——！",
+      "image": "art/page-2.jpg",
+      "scene": "scene-2",
+      "words": [
+        "一一",
+        "成长",
+        "快乐"
+      ]
+    },
+    {
+      "id": "p3",
+      "heading": "第 3 页",
+      "text": "{爸爸}，{冲奶}。{妈妈}，抱抱。",
+      "image": "art/page-3.jpg",
+      "scene": "scene-3",
+      "words": [
+        "爸爸",
+        "冲奶",
+        "妈妈",
+        "抱抱"
+      ]
+    },
+    {
+      "id": "p4",
+      "heading": "第 4 页",
+      "text": "{哎呀}。",
+      "image": "art/page-4.jpg",
+      "scene": "scene-4",
+      "words": [
+        "哎呀"
+      ]
+    },
+    {
+      "id": "p5",
+      "heading": "第 5 页",
+      "text": "{{不哭}}，不哭。",
+      "image": "art/page-5.jpg",
+      "scene": "scene-5",
+      "words": [
+        "不哭",
+        "不哭"
+      ]
+    },
+    {
+      "id": "p6",
+      "heading": "第 6 页",
+      "text": "{来啦}！",
+      "image": "art/page-6.jpg",
+      "scene": "scene-6",
+      "words": [
+        "来啦"
+      ]
+    },
+    {
+      "id": "p7",
+      "heading": "第 7 页",
+      "text": "{刚好}。",
+      "image": "art/page-7.jpg",
+      "scene": "scene-7",
+      "words": [
+        "刚好"
+      ]
+    },
+    {
+      "id": "p8",
+      "heading": "第 8 页",
+      "text": "{{{咕嘟}}}，咕嘟。咕嘟，咕嘟。",
+      "image": "art/page-8.jpg",
+      "scene": "scene-8",
+      "words": [
+        "咕嘟",
+        "咕嘟",
+        "咕嘟",
+        "咕嘟"
+      ]
+    },
+    {
+      "id": "p9",
+      "heading": "第 9 页",
+      "text": "嗝——！",
+      "image": "art/page-9.jpg",
+      "scene": "scene-9",
+      "words": [
+        "一一",
+        "成长",
+        "快乐"
+      ]
+    },
+    {
+      "id": "p10",
+      "heading": "第 10 页",
+      "text": "{晚安}，{一一}。",
+      "image": "art/page-10.jpg",
+      "scene": "scene-10",
+      "words": [
+        "晚安",
+        "一一"
+      ]
+    },
+    {
+      "id": "p11",
+      "heading": "第 11 页",
+      "text": "{给爸爸妈}{妈的话} \"{咕嘟咕嘟}\"的声音，是一一来到这个世界后最早学会的一首歌。 喝奶这件事，看似简单，却是你和宝宝之间最早的默契——她饿了会哭，你听到了会抱，抱起来喂，喂饱了笑。这个循环重复几百几千次以后，就成了你们之间不用语言也能懂的暗号。 夜里的每一次\"咕嘟\"，都是小小的身体在努力长大。而你放下手机、揉着惺忪睡眼坐起来的样子，就是最好的摇篮曲。 总有一天，她会自己拿着杯子喝水、自己用勺子吃饭。但那些深夜里\"咕嘟咕嘟\"的时光，会成为你记忆里最温柔的回响。",
+      "image": "art/page-11.jpg",
+      "scene": "scene-11",
+      "words": [
+        "给爸爸妈",
+        "妈的话",
+        "咕嘟咕嘟",
+        "的声音",
+        "是一一来",
+        "到这个世"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+/* The reading reminder and the Pro prompt wear the settings folio (.panel-shell.folio-dialog
+   in style.css); only the bits the folio does not cover live here. */
+.family-dialog [hidden] { display: none !important; }
+.family-dialog button:disabled { opacity: .6; cursor: wait; }
+.family-dialog :focus-visible, .family-tools :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }

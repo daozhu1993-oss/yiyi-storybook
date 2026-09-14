@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://api.storycomet.app" crossorigin />
+    <base href="./" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#141a33" />
+    
+    <title>一一与芽芽兽 · 3D立体绘本馆 | Daozhu Storybook</title>
+    <link rel="icon" href="https://api.storycomet.app/storage/v1/object/public/story-assets/public/favicon.0e772dcee2865bcf.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="public/fonts/fonts.css" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/account.css" />
+    <link rel="stylesheet" href="src/brand.css" />
+    <link rel="stylesheet" href="src/family.css" />
+    <script type="module" src="src/account.js"></script>
+    <script type="module" src="src/analytics.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/",
+          "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm"
+        }
+      }
+    </script>
+  <meta name="description" content="Explore interactive picture books with read-aloud narration, word highlighting and playful 3D scenes in five languages. Read the first three stories free." />
+<link rel="canonical" href="https://storycomet.app/" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta property="og:site_name" content="StoryComet" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content="Interactive Picture Books &amp; Read-Aloud Stories | StoryComet" />
+<meta property="og:description" content="Explore interactive picture books with read-aloud narration, word highlighting and playful 3D scenes in five languages. Read the first three stories free." />
+<meta property="og:url" content="https://storycomet.app/" />
+<meta property="og:image" content="https://api.storycomet.app/storage/v1/object/public/story-assets/public/social/storycomet-shelf.c31b9bb7eaf30768.jpg" />
+<meta property="og:image:secure_url" content="https://api.storycomet.app/storage/v1/object/public/story-assets/public/social/storycomet-shelf.c31b9bb7eaf30768.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="The StoryComet bookshelf with illustrated picture books and playful pop-up characters" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Interactive Picture Books &amp; Read-Aloud Stories | StoryComet" />
+<meta name="twitter:description" content="Explore interactive picture books with read-aloud narration, word highlighting and playful 3D scenes in five languages. Read the first three stories free." />
+<meta name="twitter:image" content="https://api.storycomet.app/storage/v1/object/public/story-assets/public/social/storycomet-shelf.c31b9bb7eaf30768.jpg" />
+<meta name="twitter:image:alt" content="The StoryComet bookshelf with illustrated picture books and playful pop-up characters" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://storycomet.app/#organization","name":"StoryComet","legalName":"DESIGNCODE IO PTE. LTD.","url":"https://storycomet.app/","logo":"https://api.storycomet.app/storage/v1/object/public/story-assets/public/brand/storycomet-symbol.546985a7de0c49d1.png","email":"hello@storycomet.app"},{"@type":"WebSite","@id":"https://storycomet.app/#website","name":"StoryComet","url":"https://storycomet.app/","description":"Explore interactive picture books with read-aloud narration, word highlighting and playful 3D scenes in five languages. Read the first three stories free.","inLanguage":"en","publisher":{"@id":"https://storycomet.app/#organization"}},{"@type":"WebPage","@id":"https://storycomet.app/#webpage","url":"https://storycomet.app/","name":"Interactive Picture Books & Read-Aloud Stories | StoryComet","description":"Explore interactive picture books with read-aloud narration, word highlighting and playful 3D scenes in five languages. Read the first three stories free.","inLanguage":"en","isPartOf":{"@id":"https://storycomet.app/#website"}}]}</script>
+</head>
+  <body>
+    <button id="account-open" class="account-open" aria-haspopup="dialog">Parent account</button>
+    <dialog id="account-dialog" class="panel-shell folio-dialog" aria-labelledby="account-title">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <button id="account-close" class="account-close folio-close" aria-label="Close account">×</button>
+      <header class="folio-head">
+        <div class="portrait medallion" aria-hidden="true"><i class="icon icon-account"></i></div>
+        <div>
+          <span class="eyebrow account-eyebrow">STORYCOMET · PARENT ACCOUNT</span>
+          <h2 id="account-title">Your reading account</h2>
+          <p id="account-intro" class="panel-description">For parents and grown-ups. The first three books are free. Sign in to save progress, add readers, collect pins, and enjoy quizzes.</p>
+        </div>
+      </header>
+      <div class="folio-rule"><i class="icon icon-star"></i></div>
+      <div id="account-signed-out">
+        <ul class="folio-benefits two-up">
+          <li><span class="row-icon"><i class="icon icon-book" aria-hidden="true"></i></span><span><b>Track your progress</b><small>Pick up where you left off</small></span></li>
+          <li><span class="row-icon"><i class="icon icon-moon" aria-hidden="true"></i></span><span><b>Add your kids</b><small>A reading space for each child</small></span></li>
+          <li><span class="row-icon"><i class="icon icon-star" aria-hidden="true"></i></span><span><b>Collect achievement pins</b><small>Celebrate every finished story</small></span></li>
+          <li><span class="row-icon"><i class="icon icon-magic" aria-hidden="true"></i></span><span><b>Try the story quizzes</b><small>See what you remember</small></span></li>
+        </ul>
+        <div class="panel-actions">
+          <button id="account-google" class="account-primary pill-button tall"><span class="google-g" aria-hidden="true"><svg viewBox="0 0 48 48" width="24" height="24"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.5 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.3l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.6 5.9c4.4-4.1 7-10.1 7-17.6z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.5-.8-3-.8-4.6s.3-3.1.8-4.6l-7.9-6.1C1 16.5 0 20.1 0 24s1 7.5 2.6 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.3 0 11.6-2.1 15.5-5.7l-7.6-5.9c-2.1 1.4-4.8 2.3-7.9 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/></svg></span><span>Continue with Google</span></button>
+        </div>
+        <div class="account-divider">or use email</div>
+        <form id="account-email-form" class="folio-form">
+          <label for="account-email">Email address</label>
+          <input id="account-email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com" />
+          <div class="panel-actions"><button class="account-primary pill-button tall" type="submit"><i class="icon icon-magic"></i><span>Email me a code</span></button></div>
+        </form>
+        <form id="account-code-form" class="folio-form" hidden>
+          <label for="account-code">Sign-in code</label>
+          <input id="account-code" name="code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6,8}" minlength="6" maxlength="8" required />
+          <div class="panel-actions"><button class="account-primary pill-button tall" type="submit"><i class="icon icon-star"></i><span>Sign in</span></button></div>
+          <button id="account-change-email" type="button" class="account-text-button">Use a different email</button>
+        </form>
+      </div>
+      <div id="account-signed-in" hidden>
+        <p id="account-identity" class="status-line"></p>
+        <p id="account-membership" class="account-membership status-line" role="status"></p>
+        <div class="panel-actions">
+          <button id="account-journey" class="account-primary pill-button small"><i class="icon icon-book"></i><span>Your reading journey</span></button>
+          <button id="account-billing" class="account-primary pill-button small" type="button" hidden>Manage billing</button>
+          <button id="account-sign-out" class="account-primary pill-button small"><i class="icon icon-home"></i><span>Sign out</span></button>
+        </div>
+      </div>
+      <p id="account-status" class="status-line" role="status" aria-live="polite"></p>
+      <a class="account-plans-link" href="/pricing">Explore membership →</a>
+      <p class="account-legal status-line"><a href='/privacy'>Privacy</a> · <a href='/terms'>Terms</a> · <a href='/privacy#analytics'>Analytics</a></p>
+    </dialog>
+    <dialog id="pricing-dialog" class="panel-shell folio-dialog pricing-dialog" aria-labelledby="pricing-dialog-title">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <button class="folio-close" onclick="this.closest('dialog').close()" aria-label="Close membership">×</button>
+      <header class="folio-head">
+        <div class="portrait medallion" aria-hidden="true"><i class="icon icon-magic"></i></div>
+        <div>
+          <span class="eyebrow">STORYCOMET · EARLY-BIRD PRICING</span>
+          <h2 id="pricing-dialog-title">A little more wonder</h2>
+          <p class="panel-description">A whole world of stories: every book on the shelf, in every language. Choose yearly StoryComet membership, or make room for stories for a lifetime.</p>
+        </div>
+      </header>
+      <div class="folio-rule"><i class="icon icon-star"></i></div>
+      <p id="pricing-notice" class="status-line" role="status" aria-live="polite"></p>
+      <button id="pricing-retry" class="pill-button small" type="button" hidden>Check membership again</button>
+      <div class="plan-stage">
+        <div class="plan-grid">
+        <div class="plan-hang">
+        <img class="sign-hook" data-src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/wood-sign/hook.808e94015a3cc08d.webp" alt="" aria-hidden="true" />
+        <article class="plan-card">
+          <img class="sign-rope" data-src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/wood-sign/rope.efc0c56a4955b8f2.webp" alt="" aria-hidden="true" />
+          <canvas class="sign-sky" data-sky="https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/sky.874540564572448d.webp" data-paper="https://api.storycomet.app/storage/v1/object/public/story-assets/public/textures/paper.7b1612c72db0354d.webp" aria-hidden="true"></canvas>
+          <img class="sign-charm sign-comet" data-src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/wood-sign/comet.9da8ed168491ae3a.webp" alt="" aria-hidden="true" data-glow-x="0.17" data-glow-y="0.55" />
+          <div class="sign-face">
+            <span class="eyebrow brush" style="--i: 0">A YEAR OF WONDER</span>
+            <h3 class="brush" style="--i: 1">Yearly</h3>
+            <p class="plan-price brush" style="--i: 2"><strong>$39</strong><span>per year · USD</span></p>
+            <p class="plan-saving brush" style="--i: 3">Standard <s>$79</s> · Save $40</p>
+            <ul><li class="brush" style="--i: 4">A whole year of stories</li><li class="brush" style="--i: 5">Renews yearly · Cancel anytime</li><li class="brush" style="--i: 6">Stays with your account</li></ul>
+            <button class="pill-button small wood" data-plan="year">Choose yearly</button>
+          </div>
+        </article>
+        </div>
+        <div class="plan-hang">
+        <img class="sign-hook" data-src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/wood-sign/hook.808e94015a3cc08d.webp" alt="" aria-hidden="true" />
+        <article class="plan-card plan-lifetime">
+          <img class="sign-rope" data-src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/wood-sign/rope.efc0c56a4955b8f2.webp" alt="" aria-hidden="true" />
+          <canvas class="sign-sky" data-sky="https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/sky.874540564572448d.webp" data-paper="https://api.storycomet.app/storage/v1/object/public/story-assets/public/textures/paper.7b1612c72db0354d.webp" aria-hidden="true"></canvas>
+          <img class="sign-charm sign-crescent" data-src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/wood-sign/crescent.e16f323c94bfad86.webp" alt="" aria-hidden="true" data-glow-x="0.42" data-glow-y="0.5" />
+          <div class="sign-face">
+            <span class="eyebrow brush" style="--i: 0">KEEP THE WONDER</span>
+            <h3 class="brush" style="--i: 1">Lifetime</h3>
+            <p class="plan-price brush" style="--i: 2"><strong>$79</strong><span>one payment · USD</span></p>
+            <p class="plan-saving brush" style="--i: 3">Standard <s>$149</s> · Save $70</p>
+            <ul><li class="brush" style="--i: 4">Every book, forever</li><li class="brush" style="--i: 5">One payment, no bills</li><li class="brush" style="--i: 6">Stays with your account</li></ul>
+            <button class="pill-button small wood" data-plan="lifetime">Choose lifetime</button>
+          </div>
+        </article>
+        </div>
+        </div>
+        <div class="plan-shelf" aria-hidden="true"></div>
+      </div>
+      <p class="status-line">For parents and grown-ups · Secure checkout with Stripe · Prices in USD, plus applicable tax · <a href="/pricing">All the details</a></p>
+    </dialog>
+    <div id="app">
+      <canvas id="gl" aria-label="Otto and the Shy Moon, a pop-up book" tabindex="0"></canvas>
+      <div id="focus-veil" hidden></div>
+
+      <div id="interface" hidden>
+        <a class="brand storycomet-logo hud" style="--i: 0" href="#" aria-label="Story Comet home">
+          <img class="logo-symbol" src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/brand/storycomet-symbol.546985a7de0c49d1.png" alt="" width="256" height="200" />
+          <img class="logo-wordmark" src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/brand/storycomet-wordmark.199bba4889a58a32.png" alt="" width="800" height="120" />
+        </a>
+
+        <div class="progress-dots hud" style="--i: 1" id="dots" role="group" aria-label="Reading progress"></div>
+
+        <div class="top-actions">
+          <button class="round-button hud" style="--i: 2" id="btn-sound" aria-label="Sound on or off" data-i18n-aria="ariaSound" data-tip="Sound" data-i18n-tip="tipSound">
+            <i class="icon icon-sound"></i>
+          </button>
+          <button class="round-button hud" style="--i: 3" id="btn-look" aria-label="Look closer" data-i18n-aria="tipLook" data-tip="Look closer" data-i18n-tip="tipLook">
+            <i class="icon icon-look"></i>
+          </button>
+          <button class="round-button hud lang-button" style="--i: 4" id="btn-language" aria-label="Language" data-i18n-aria="tipLanguage" data-tip="Language" data-i18n-tip="tipLanguage">
+            <img class="flag" src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/flags/en.9cad712248ca2513.webp" alt="" />
+          </button>
+          <button class="round-button hud account-button" style="--i: 5" id="btn-account" aria-label="Profiles" data-i18n-aria="tipProfiles" data-tip="Profiles" data-i18n-tip="tipProfiles">
+            <i class="icon icon-account"></i>
+            <img class="avatar" alt="" hidden />
+            <i class="pro-pin" aria-hidden="true"></i>
+          </button>
+          <button class="round-button hud" style="--i: 6" id="btn-settings" aria-label="Settings" data-i18n-aria="tipSettings" data-tip="Settings" data-i18n-tip="tipSettings">
+            <i class="icon icon-settings"></i>
+          </button>
+        </div>
+        <div class="language-menu" id="language-menu" hidden role="menu" aria-label="Read in" data-i18n-aria="ariaReadIn">
+          <button data-lang="en" role="menuitemradio"><img class="flag" src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/flags/en.9cad712248ca2513.webp" alt="" /><span>English</span></button>
+          <button data-lang="fr" role="menuitemradio"><img class="flag" src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/flags/fr.fae89a83d4b5047a.webp" alt="" /><span>Français</span></button>
+          <button data-lang="es" role="menuitemradio"><img class="flag" src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/flags/es.8fe7cbf218f7153a.webp" alt="" /><span>Español</span></button>
+          <button data-lang="ja" role="menuitemradio"><img class="flag" src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/flags/ja.8bc7c3308b6b1ee4.webp" alt="" /><span>日本語</span></button>
+          <button data-lang="zh" role="menuitemradio"><img class="flag" src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/flags/zh.1ed4c40d6291cbc6.webp" alt="" /><span>中文</span></button>
+        </div>
+
+        <div class="shelf-strip" id="shelf-strip" hidden>
+          <div class="shelf-heading"><span class="shelf-title" data-i18n="pickBook">Pick a book</span><a class="sr-only" href="/stories/">All stories</a></div>
+          <div class="shelf-row">
+            <button class="shelf-nav" id="shelf-prev" aria-label="Previous books" data-i18n-aria="ariaPrevBooks" title="Previous books" data-i18n-title="ariaPrevBooks">&#8249;</button>
+            <div class="shelf-books"></div>
+            <button class="shelf-nav" id="shelf-next" aria-label="Next books" data-i18n-aria="ariaNextBooks" title="Next books" data-i18n-title="ariaNextBooks">&#8250;</button>
+          </div>
+          <div class="shelf-dots" aria-hidden="true"></div>
+        </div>
+
+        <section class="text-panel hud" style="--i: 2" id="text-panel" aria-live="polite" hidden>
+          <i class="corner tl" aria-hidden="true"></i>
+          <i class="corner br" aria-hidden="true"></i>
+          <div class="text-panel-inner">
+            <span class="page-eyebrow" id="page-eyebrow">Page 1</span>
+            <h2 class="page-heading" id="page-heading">The dark window</h2>
+            <p class="page-words" id="page-words"></p>
+            <div class="page-foot">
+              <span class="page-hint" id="page-hint"></span>
+              <span class="zoom-hint" data-i18n="tapWords">tap the words to hear them · tap the card to zoom</span>
+              <button class="read-done" id="read-done" type="button" hidden><i class="star" aria-hidden="true"></i><span data-i18n="iReadIt">I read it!</span></button>
+            </div>
+          </div>
+        </section>
+
+        <div class="word-zoom" id="word-zoom" hidden><img alt="" hidden /><span class="zoom-label"></span></div>
+        <div class="vocab-card" id="vocab-card" hidden role="button" aria-label="Hear the word again" data-i18n-aria="ariaHearAgain">
+          <img alt="" hidden />
+          <div class="vocab-text">
+            <span class="vocab-script"></span>
+            <span class="vocab-roman"></span>
+            <span class="vocab-meaning"></span>
+            <small class="vocab-note"></small>
+            <small class="vocab-lang"></small>
+          </div>
+        </div>
+
+        <div class="hint-card hud" style="--i: 6" id="hint" hidden>
+          <i class="icon icon-hand"></i>
+          <p id="hint-text"></p>
+        </div>
+
+        <section class="quiz" id="quiz" hidden aria-label="Story quiz" data-i18n-aria="ariaQuiz"></section>
+
+        <div class="reader-bar hud" style="--i: 5" id="reader-bar">
+          <button class="round-button big" id="btn-prev" aria-label="Previous page" data-i18n-aria="ariaPrev" data-tip="Back" data-i18n-tip="tipBack">
+            <i class="icon icon-back"></i>
+          </button>
+          <div class="reader-center">
+            <button class="pill-button quiz-pill" id="btn-quiz" hidden aria-label="Quiz time" data-i18n-aria="quizTime">
+            <i class="icon icon-star"></i><span data-i18n="quizTime">Quiz time!</span></button>
+            <button class="pill-button small phrase-pill" id="btn-phrasebook" hidden aria-label="Phrasebook" data-i18n-aria="ariaPhrasebook">
+            <i class="icon icon-abc"></i><span data-i18n="words">Words</span></button>
+          <button class="pill-button primary" id="btn-read" aria-label="Read to me">
+              <i class="icon icon-play"></i><span data-i18n="readToMe">Read to me</span>
+            </button>
+            <div class="mode-toggle" role="group" aria-label="Reading mode" data-i18n-aria="ariaMode">
+              <button class="pill-button small close-pill" id="btn-close-book" aria-label="Close the book and go back to the shelf" data-i18n-aria="ariaClose">
+                <i class="icon icon-home"></i><span data-i18n="closeBook">Close book</span>
+              </button>
+              <button class="pill-button small" id="mode-listen" aria-pressed="true">
+                <i class="icon icon-listen"></i><span data-i18n="readToMe">Read to me</span>
+              </button>
+              <button class="pill-button small" id="mode-self" aria-pressed="false">
+                <i class="icon icon-abc"></i><span data-i18n="illRead">I'll read</span>
+              </button>
+            </div>
+          </div>
+          <button class="round-button big" id="btn-next" aria-label="Next page" data-i18n-aria="ariaNext" data-tip="Next" data-i18n-tip="tipNext">
+            <i class="icon icon-next"></i>
+          </button>
+        </div>
+
+        <div class="word-tip" id="word-tip" hidden><span></span></div>
+        <div class="magic-word" id="magic-word" hidden><span></span></div>
+      </div>
+
+      <div id="loading">
+        <div class="loading-sky" aria-hidden="true">
+          <canvas class="loading-night" id="loading-night"></canvas>
+          <canvas class="loading-night loading-comets" id="loading-comets" aria-hidden="true"></canvas>
+          <div class="loading-veil"></div>
+          <div class="loading-moon"><img id="loading-moon-art" alt="" /></div>
+          <div class="loading-stars"></div>
+        </div>
+        <section class="loading-card" id="loading-card" aria-label="Opening the book">
+          <i class="corner tl" aria-hidden="true"></i>
+          <i class="corner tr" aria-hidden="true"></i>
+          <i class="corner bl" aria-hidden="true"></i>
+          <i class="corner br" aria-hidden="true"></i>
+          <span class="eyebrow" data-i18n="eyebrow">A STORYCOMET POP-UP BOOK</span>
+          <h1>
+            <span class="storycomet-logo loading-brand" role="img" aria-label="Story Comet">
+              <img class="logo-symbol" src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/brand/storycomet-symbol.546985a7de0c49d1.png" alt="" width="256" height="200" />
+              <img class="logo-wordmark" src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/brand/storycomet-wordmark.199bba4889a58a32.png" alt="" width="800" height="120" />
+            </span>
+            <img class="loading-logo" id="loading-logo" alt="" hidden width="1400" height="942" />
+            <i class="quill" aria-hidden="true">🪶</i>
+          </h1>
+          <p class="loading-blurb" id="loading-blurb">
+            Pop-up stories that read themselves aloud, light up every word, and jump out of the page when you touch them.
+            <i class="quill" aria-hidden="true">🪶</i>
+          </p>
+          <div class="loading-progress" role="progressbar" aria-label="Loading the book"><i></i></div>
+          <p id="loading-copy" role="status" aria-live="polite">Fluffing the clouds…</p>
+          <p id="loading-bytes" class="loading-bytes" aria-hidden="true"></p>
+          <button class="pill-button primary" id="btn-open" hidden>
+            <i class="icon icon-book"></i><span data-i18n="openBook">Open the book</span>
+          </button>
+          <button class="pill-button small" id="btn-back" hidden>
+            <i class="icon icon-book"></i><span data-i18n="backToShelf">Back to the shelf</span>
+          </button>
+          <div class="loading-footnote" data-i18n="footnote">Best with sound on · Touch everything</div>
+        </section>
+      </div>
+
+      <div id="panel" hidden></div>
+      <div id="souvenirs" class="board" hidden></div>
+      <div id="toast" role="status" aria-live="polite"></div>
+      <div id="tooltip" role="tooltip" hidden></div>
+    </div>
+    <script type="module" src="src/main.js"></script>
+  <noscript><main style="position:fixed;inset:0;z-index:200;background:#fffaf0;color:#3c3349;overflow:auto;padding:32px;font:18px/1.6 system-ui"><h1>Interactive picture books for children</h1><p>Explore interactive picture books with read-aloud narration, word highlighting and playful 3D scenes in five languages. Read the first three stories free.</p><p>Browse the <a href="/stories/">complete story library</a> without JavaScript. Turn on JavaScript to open the interactive reader.</p><ul><li><a href="/stories/otto-shy-moon/">Otto and the Shy Moon</a> — Otto floats up on his red balloon to find the moon and bring her back.</li><li><a href="/stories/nia-runaway-kite/">Nia and the Runaway Kite</a> — Nia chases her kite over the river, up the hill and into the clouds.</li><li><a href="/stories/fin-glowing-sea/">Fin and the Glowing Sea</a> — Fin dives deeper than ever to bring back the lantern fish&#39;s lost light.</li><li><a href="/stories/pim-big-wish/">Pim and the Big Wish</a> — A tiny prince, one rose and a wish that goes wrong: a story that reads itself aloud and grows when you touch it.</li><li><a href="/stories/mila-firebird/">Mila and the Firebird Feather</a> — A hut on chicken legs, three tasks and a sleeping Firebird: a snowy tale that reads itself aloud and glows when you touch it.</li><li><a href="/stories/kiko-paper-crane/">Kiko and the Paper Crane</a> — A fox kit, a paper crane and a moon that will not wait: a lantern-lit story that reads itself aloud and glows when you touch it.</li><li><a href="/stories/noy-rain-rocket/">Noy and the Rain Rocket</a> — The rice is dry, the sky is empty, and Noy&#39;s little bamboo rockets keep going wrong: a try-again story that reads itself aloud and rains when you touch it.</li><li><a href="/stories/pong-water-festival/">Pong and the Water Festival</a> — A little elephant who hates getting wet, on the wettest day of the Thai year: a splashy story that reads itself aloud and sprays when you touch it.</li><li><a href="/stories/nadim-swordfish/">Nadim and the Swordfish</a> — Hundreds of swordfish leap onto the beach and every big plan fails, until a small boy has a soft idea: a legend that reads itself aloud and leaps when you touch it.</li><li><a href="/stories/kaguya-moon-bamboo/">Kaguya and the Moon Bamboo</a> — An old bamboo cutter finds a tiny girl in a glowing stalk, and she belongs to the moon. Learn Japanese words as the story goes.</li><li><a href="/stories/colette-paris-postcard/">Colette and the Paris Postcard</a> — A postcard from Grandma sends Colette across Paris collecting French words like souvenirs, from the bakery to the sparkling tower.</li><li><a href="/stories/mei-year-beast/">Mei and the Year Beast</a> — A beast called Nian comes down the mountain every New Year&#39;s Eve, until a brave girl learns the three things it fears. Learn Chinese words as the story goes.</li><li><a href="/stories/ruby-golden-gate/">Ruby and the Golden Gate</a> — One morning the fog swallows the Golden Gate Bridge, and Ruby and her dog Biscuit ride a cable car, a ferry and a kite-filled park to find it, keeping English words along the way.</li><li><a href="/stories/whit-london-bells/">Whit and the London Bells</a> — Whit walks to London with his cat Tabby to find streets paved with gold, and finds a red bus, a queen with a mouse problem and bells that tell him to turn again, keeping English words along the way.</li><li><a href="/stories/lucia-tooth-mouse/">Lucía and the Tooth Mouse</a> — Lucía loses her first tooth in the Plaza Mayor, and that night Ratoncito Pérez sneaks out of his biscuit tin and across Madrid to fetch it, collecting Spanish words like souvenirs.</li></ul><a href="/pricing">Membership</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></main></noscript>
+</body>
+</html>

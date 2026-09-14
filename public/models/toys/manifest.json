@@ -1,0 +1,453 @@
+{
+  "mode": "Hunyuan 3D v3.1 text-to-3D (pro, PBR, 40k faces) via Higgsfield, repacked with tools/repack_glb.py --max 768",
+  "heights": {
+    "house": 0.3,
+    "tree": 0.34,
+    "owl": 0.26,
+    "moon": 0.28,
+    "cat": 0.26,
+    "blocks": 0.22,
+    "rocket": 0.34,
+    "elephant": 0.26,
+    "crane": 0.26,
+    "snowglobe": 0.26,
+    "boat": 0.24,
+    "naga": 0.3,
+    "kite": 0.32,
+    "sheep": 0.2,
+    "turtle": 0.14,
+    "jar": 0.24,
+    "rose": 0.3,
+    "matryoshka": 0.3,
+    "lantern": 0.3,
+    "frog": 0.16,
+    "tuktuk": 0.22,
+    "merlion": 0.3,
+    "otter": 0.26,
+    "daruma": 0.26,
+    "fuji": 0.3,
+    "bamboo": 0.34,
+    "eiffel": 0.36,
+    "croissant": 0.16,
+    "pigeon": 0.22,
+    "dragon": 0.28,
+    "redlantern": 0.3,
+    "drum": 0.24,
+    "cablecar": 0.24,
+    "sealion": 0.24,
+    "goldengate": 0.24,
+    "bus": 0.24,
+    "raven": 0.26,
+    "crown": 0.22,
+    "churro": 0.24,
+    "perez": 0.28,
+    "tooth": 0.22
+  },
+  "books": {
+    "otto-shy-moon": [
+      "owl",
+      "moon",
+      "house"
+    ],
+    "nia-runaway-kite": [
+      "kite",
+      "sheep",
+      "tree"
+    ],
+    "fin-glowing-sea": [
+      "turtle",
+      "jar",
+      "boat"
+    ],
+    "pim-big-wish": [
+      "rocket",
+      "rose",
+      "blocks"
+    ],
+    "mila-firebird": [
+      "snowglobe",
+      "matryoshka",
+      "cat"
+    ],
+    "kiko-paper-crane": [
+      "crane",
+      "lantern",
+      "moon"
+    ],
+    "noy-rain-rocket": [
+      "naga",
+      "frog",
+      "rocket"
+    ],
+    "pong-water-festival": [
+      "elephant",
+      "tuktuk",
+      "blocks"
+    ],
+    "nadim-swordfish": [
+      "merlion",
+      "otter",
+      "boat"
+    ],
+    "kaguya-moon-bamboo": [
+      "bamboo",
+      "daruma",
+      "fuji"
+    ],
+    "colette-paris-postcard": [
+      "eiffel",
+      "croissant",
+      "pigeon"
+    ],
+    "mei-year-beast": [
+      "redlantern",
+      "dragon",
+      "drum"
+    ],
+    "ruby-golden-gate": [
+      "cablecar",
+      "sealion",
+      "goldengate"
+    ],
+    "whit-london-bells": [
+      "bus",
+      "raven",
+      "crown"
+    ],
+    "lucia-tooth-mouse": [
+      "churro",
+      "perez",
+      "tooth"
+    ],
+    "yiyi-01": [
+      "owl",
+      "moon",
+      "house"
+    ],
+    "yiyi-02": [
+      "kite",
+      "sheep",
+      "tree"
+    ],
+    "yiyi-03": [
+      "turtle",
+      "jar",
+      "boat"
+    ],
+    "yiyi-04": [
+      "rocket",
+      "blocks",
+      "cat"
+    ],
+    "yiyi-05": [
+      "crane",
+      "dragon",
+      "elephant"
+    ],
+    "yiyi-06": [
+      "frog",
+      "lamp",
+      "lantern"
+    ],
+    "yiyi-07": [
+      "rose",
+      "train",
+      "snowglobe"
+    ],
+    "yiyi-08": [
+      "otter",
+      "daruma",
+      "drum"
+    ],
+    "yiyi-09": [
+      "crayons",
+      "owl",
+      "moon"
+    ],
+    "yiyi-10": [
+      "house",
+      "kite",
+      "sheep"
+    ],
+    "yiyi-11": [
+      "tree",
+      "turtle",
+      "jar"
+    ],
+    "yiyi-12": [
+      "boat",
+      "rocket",
+      "blocks"
+    ],
+    "yiyi-13": [
+      "cat",
+      "crane",
+      "dragon"
+    ],
+    "yiyi-14": [
+      "elephant",
+      "frog",
+      "lamp"
+    ],
+    "yiyi-15": [
+      "lantern",
+      "rose",
+      "train"
+    ],
+    "yiyi-16": [
+      "snowglobe",
+      "otter",
+      "daruma"
+    ],
+    "yiyi-17": [
+      "drum",
+      "crayons",
+      "owl"
+    ],
+    "yiyi-18": [
+      "moon",
+      "house",
+      "kite"
+    ],
+    "yiyi-19": [
+      "sheep",
+      "tree",
+      "turtle"
+    ],
+    "yiyi-20": [
+      "jar",
+      "boat",
+      "rocket"
+    ],
+    "yiyi-21": [
+      "blocks",
+      "cat",
+      "crane"
+    ],
+    "yiyi-22": [
+      "dragon",
+      "elephant",
+      "frog"
+    ],
+    "yiyi-23": [
+      "lamp",
+      "lantern",
+      "rose"
+    ],
+    "yiyi-24": [
+      "train",
+      "snowglobe",
+      "otter"
+    ],
+    "yiyi-25": [
+      "daruma",
+      "drum",
+      "crayons"
+    ],
+    "yiyi-26": [
+      "owl",
+      "moon",
+      "house"
+    ],
+    "yiyi-27": [
+      "kite",
+      "sheep",
+      "tree"
+    ],
+    "yiyi-28": [
+      "turtle",
+      "jar",
+      "boat"
+    ],
+    "yiyi-29": [
+      "rocket",
+      "blocks",
+      "cat"
+    ],
+    "yiyi-30": [
+      "crane",
+      "dragon",
+      "elephant"
+    ],
+    "yiyi-31": [
+      "frog",
+      "lamp",
+      "lantern"
+    ],
+    "yiyi-32": [
+      "rose",
+      "train",
+      "snowglobe"
+    ],
+    "yiyi-33": [
+      "otter",
+      "daruma",
+      "drum"
+    ],
+    "yiyi-34": [
+      "crayons",
+      "owl",
+      "moon"
+    ],
+    "yiyi-35": [
+      "house",
+      "kite",
+      "sheep"
+    ],
+    "yiyi-36": [
+      "tree",
+      "turtle",
+      "jar"
+    ],
+    "yaya-01": [
+      "frog",
+      "lamp",
+      "lantern"
+    ],
+    "yaya-02": [
+      "rose",
+      "train",
+      "snowglobe"
+    ],
+    "yaya-03": [
+      "otter",
+      "daruma",
+      "drum"
+    ],
+    "yaya-04": [
+      "crayons",
+      "owl",
+      "moon"
+    ],
+    "yaya-05": [
+      "house",
+      "kite",
+      "sheep"
+    ],
+    "yaya-06": [
+      "tree",
+      "turtle",
+      "jar"
+    ],
+    "yaya-07": [
+      "boat",
+      "rocket",
+      "blocks"
+    ],
+    "yaya-08": [
+      "cat",
+      "crane",
+      "dragon"
+    ],
+    "yaya-09": [
+      "elephant",
+      "frog",
+      "lamp"
+    ],
+    "yaya-10": [
+      "lantern",
+      "rose",
+      "train"
+    ]
+  },
+  "labels": {
+    "bamboo": "Bamboo",
+    "blocks": "Blocks",
+    "boat": "Sailboat",
+    "cat": "Cat",
+    "crane": "Paper crane",
+    "croissant": "Croissant",
+    "daruma": "Daruma",
+    "dragon": "Dragon",
+    "drum": "Drum",
+    "eiffel": "Eiffel Tower",
+    "elephant": "Elephant",
+    "frog": "Frog",
+    "fuji": "Mount Fuji",
+    "house": "Little house",
+    "jar": "Glowing jar",
+    "kite": "Kite",
+    "lantern": "Lantern",
+    "matryoshka": "Matryoshka",
+    "merlion": "Merlion",
+    "moon": "Sleepy moon",
+    "naga": "Naga",
+    "otter": "Otter",
+    "owl": "Owl",
+    "pigeon": "Pigeon",
+    "redlantern": "Red lantern",
+    "rocket": "Rocket",
+    "rose": "Rose",
+    "sheep": "Sheep",
+    "snowglobe": "Snow globe",
+    "tree": "Tree",
+    "tuktuk": "Tuk-tuk",
+    "turtle": "Turtle",
+    "cablecar": "Cable car",
+    "sealion": "Sea lion",
+    "goldengate": "Golden Gate",
+    "bus": "Red bus",
+    "raven": "Raven",
+    "crown": "Crown",
+    "churro": "Churro",
+    "perez": "Ratoncito P\u00e9rez",
+    "tooth": "Little tooth"
+  },
+  "sounds": {
+    "bamboo": "rustle",
+    "blocks": "thunk",
+    "boat": "splash",
+    "cat": "meow",
+    "crane": "cranecall",
+    "croissant": "crumble",
+    "daruma": "boing",
+    "dragon": "drum",
+    "drum": "drum",
+    "eiffel": "bell",
+    "elephant": "trumpet",
+    "frog": "croak",
+    "fuji": "gust",
+    "house": "thunk",
+    "jar": "fizz",
+    "kite": "gust",
+    "lantern": "shimmer",
+    "matryoshka": "giggle",
+    "merlion": "splash",
+    "moon": "shimmer",
+    "naga": "thunder",
+    "otter": "otter",
+    "owl": "hoot",
+    "pigeon": "flutter",
+    "redlantern": "shimmer",
+    "rocket": "launch",
+    "rose": "shimmer",
+    "sheep": "baa",
+    "snowglobe": "shimmer",
+    "tree": "rustle",
+    "tuktuk": "tuktuk",
+    "turtle": "bubbles",
+    "cablecar": "bell",
+    "sealion": "howl",
+    "goldengate": "shimmer",
+    "bus": "bell",
+    "raven": "caw",
+    "crown": "shimmer",
+    "churro": "fizz",
+    "perez": "giggle",
+    "tooth": "boing"
+  },
+  "pending": {
+    "note": "Models still to make through Higgsfield (image-to-3D from docs/toy-refs/<name>.png, painted in the shelf toys' own style, then tools/repack_glb.py --max 768): until public/models/toys/<name>.glb exists the same painting stands on the shelf as a cut-out card (public/models/toys/cards/<name>.webp).",
+    "toys": [
+      "cablecar",
+      "sealion",
+      "goldengate",
+      "bus",
+      "raven",
+      "crown",
+      "churro",
+      "perez",
+      "tooth"
+    ]
+  }
+}

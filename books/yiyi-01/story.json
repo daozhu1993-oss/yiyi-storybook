@@ -1,0 +1,161 @@
+{
+  "id": "yiyi-01",
+  "series": "yiyi",
+  "title": "春天里最重要的事",
+  "subtitle": "一一成长系列 · 第 1 本（新生儿）",
+  "author": "一一与爸爸妈妈",
+  "ageRange": "新生儿",
+  "readingLevel": "亲子伴读",
+  "blurb": "一一成长系列第 1 本（新生儿）：《春天里最重要的事》—— 出生·春天的第一份礼物。",
+  "cover": "art/cover.jpg",
+  "scenes": "scenes.js",
+  "pagesCount": 11,
+  "spine": "#e27b58",
+  "colors": {
+    "cloth": "#e27b58",
+    "endpaper": {
+      "base": "#fff5eb",
+      "ink": "#e27b58",
+      "pattern": "stars"
+    }
+  },
+  "pins": [
+    {
+      "id": "pin_yiyi-01",
+      "name": "第1本 春天里最重要的事 纪念徽章",
+      "icon": "🌟"
+    }
+  ],
+  "pages": [
+    {
+      "id": "p1",
+      "heading": "第 1 页",
+      "text": "3{月底}。{春天}，{来了}。",
+      "image": "art/page-1.jpg",
+      "scene": "scene-1",
+      "words": [
+        "月底",
+        "春天",
+        "来了"
+      ]
+    },
+    {
+      "id": "p2",
+      "heading": "第 2 页",
+      "text": "{春天的第}{一件好事}——{花儿开了}。",
+      "image": "art/page-2.jpg",
+      "scene": "scene-2",
+      "words": [
+        "春天的第",
+        "一件好事",
+        "花儿开了"
+      ]
+    },
+    {
+      "id": "p3",
+      "heading": "第 3 页",
+      "text": "{第二件好}事—— {燕子回来}了。",
+      "image": "art/page-3.jpg",
+      "scene": "scene-3",
+      "words": [
+        "第二件好",
+        "燕子回来"
+      ]
+    },
+    {
+      "id": "p4",
+      "heading": "第 4 页",
+      "text": "{第三件好}事—— {太阳}，{暖暖的}。",
+      "image": "art/page-4.jpg",
+      "scene": "scene-4",
+      "words": [
+        "第三件好",
+        "太阳",
+        "暖暖的"
+      ]
+    },
+    {
+      "id": "p5",
+      "heading": "第 5 页",
+      "text": "{可是绕绕}{知道}——{今天}，还有一件事。",
+      "image": "art/page-5.jpg",
+      "scene": "scene-5",
+      "words": [
+        "可是绕绕",
+        "知道",
+        "今天",
+        "还有一件"
+      ]
+    },
+    {
+      "id": "p6",
+      "heading": "第 6 页",
+      "text": "{爸爸}，{走个不停}。",
+      "image": "art/page-6.jpg",
+      "scene": "scene-6",
+      "words": [
+        "爸爸",
+        "走个不停"
+      ]
+    },
+    {
+      "id": "p7",
+      "heading": "第 7 页",
+      "text": "{妈妈}，{轻轻呼吸}。",
+      "image": "art/page-7.jpg",
+      "scene": "scene-7",
+      "words": [
+        "妈妈",
+        "轻轻呼吸"
+      ]
+    },
+    {
+      "id": "p8",
+      "heading": "第 8 页",
+      "text": "{然后}——哇！",
+      "image": "art/page-8.jpg",
+      "scene": "scene-8",
+      "words": [
+        "然后"
+      ]
+    },
+    {
+      "id": "p9",
+      "heading": "第 9 页",
+      "text": "{春天最好}{的好事}——{是你来了}。",
+      "image": "art/page-9.jpg",
+      "scene": "scene-9",
+      "words": [
+        "春天最好",
+        "的好事",
+        "是你来了"
+      ]
+    },
+    {
+      "id": "p10",
+      "heading": "第 10 页",
+      "text": "{一一}，{欢迎你来}。",
+      "image": "art/page-10.jpg",
+      "scene": "scene-10",
+      "words": [
+        "一一",
+        "欢迎你来"
+      ]
+    },
+    {
+      "id": "p11",
+      "heading": "第 11 页",
+      "text": "{给爸爸妈}{妈的话} {春天里最}美的事，不是花开，不是草长——是一个小生命第一次睁开眼睛，看见这个世界，也看见了你们。 在那一声啼哭响起的瞬间，你们的人生就多了一个叫\"爸爸\"、一个叫\"妈妈\"的新身份。没有岗前培训，没有操作手册，只有一颗扑通扑通跳动的心，和一双愿意学习的、笨拙却温柔的手。 一一来到这个春天的意义，不只是她来到了你们身边，更是你们——作为父母——的春天开始了。 未来的日子会有很多个\"第一次\"等着你们和她一起经历。别急，慢慢来。春天才刚刚开始呢。",
+      "image": "art/page-11.jpg",
+      "scene": "scene-11",
+      "words": [
+        "给爸爸妈",
+        "妈的话",
+        "春天里最",
+        "美的事",
+        "不是花开",
+        "不是草长"
+      ]
+    }
+  ]
+}

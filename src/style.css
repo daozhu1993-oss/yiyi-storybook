@@ -1,0 +1,1656 @@
+/* Storylight — Otto and the Shy Moon
+   Generated RGBA artwork (GPT Image 2 via Higgsfield, cut out losslessly) supplies the
+   wooden, paper and gold-foil surfaces and every icon is its own transparent PNG.
+   Labels, focus states and hit areas stay native HTML. */
+:root {
+  --midnight: #141a33;
+  --navy: #1d2649;
+  --cream: #f8f0dd;
+  --paper: #f3e8cf;
+  --ink: #2c2a3e;
+  --ink-soft: #5a5470;
+  --honey: #d9a45c;
+  --oak: #c98d4f;
+  --gold: #e6bd66;
+  --coral: #e8604a;
+  --sky: #8fb8e6;
+  --ui-font: "Fredoka", "Baloo 2", system-ui, sans-serif;
+  --read-font: "Andika", "Fredoka", system-ui, sans-serif;
+  --spring: cubic-bezier(0.2, 1.35, 0.3, 1);
+  --soft: cubic-bezier(0.22, 0.8, 0.2, 1);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: var(--midnight); }
+body {
+  font-family: var(--ui-font);
+  color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+button { font: inherit; cursor: pointer; }
+img { display: block; }
+[hidden] { display: none !important; }
+
+#app { position: fixed; inset: 0; }
+#gl { position: absolute; inset: 0; width: 100%; height: 100%; display: block; outline: none; }
+#sparkles { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: transparent; overflow: hidden; pointer-events: none; z-index: 30; }
+#sparkles::backdrop { display: none; }
+#focus-veil { position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, #05081a55, #05081aaa); z-index: 4; animation: fade-in 300ms both; }
+
+#interface { position: absolute; inset: 0; pointer-events: none; z-index: 5; }
+#interface > * { pointer-events: auto; }
+
+/* ---------- entrance choreography ---------- */
+.hud { animation: hud-pop 700ms var(--spring) both; animation-delay: calc(var(--i, 0) * 90ms + 150ms); }
+@keyframes hud-pop {
+  from { opacity: 0; transform: translateY(18px) scale(0.85); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* ---------- icons: one transparent PNG each ---------- */
+.icon {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: center / contain no-repeat;
+  pointer-events: none;
+  transition: transform 250ms var(--spring);
+}
+.icon-play { background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/play.b923a70e2f71f2a2.webp"); }
+.icon-pause { background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/pause.15d6646784f09b43.webp"); }
+.icon-next { background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/next.dc7e787b49815b48.webp"); }
+.icon-back { background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/back.18c2cac8ae4c18e2.webp"); }
+.icon-sound { background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/sound.d56e4ce5efc1cbff.webp"); }
+.icon-listen { background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/listen.a3d2cb78fc3a543c.webp"); }
+.icon-magic { background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/magic.4a2e9880963cdf1a.webp"); }
+.icon-home { background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/home.cb2bbd65e073cb8b.webp"); }
+.icon-book { background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/book.d05eed603c2ba1a1.webp"); }
+.icon-moon { background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/moon.b46fc687b5e3aa8e.webp"); }
+.icon-star { background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/star.35ce01e1ac338d99.webp"); }
+.icon-gear { background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/gear.559fcb58d9cfea50.webp"); }
+.icon-account { background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/account.daa08c2cad4503a2.webp"); }
+.icon-hand { background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/hand.621acc491720839c.webp"); }
+.icon-abc { background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/abc.c70c0686a7719a7c.webp"); }
+.icon-look { background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/look.741fe92c1b9a4986.webp"); }
+.icon-music { background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/music.66c42a3231ab2f38.webp"); }
+.icon-settings { background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/settings.563a5e5163297563.webp"); }
+
+/* ---------- wooden controls ---------- */
+.round-button {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/round.afdab066e34f07c6.webp") center / 100% 100% no-repeat;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 5px 9px #05081a70;
+  transition: transform 260ms var(--spring);
+}
+.round-button .icon { width: 27px; height: 27px; }
+.round-button.big { width: 78px; height: 78px; }
+.round-button.big .icon { width: 38px; height: 38px; }
+.round-button:hover { transform: translateY(-3px) scale(1.08) rotate(-3deg); box-shadow: 0 9px 14px #05081a80; }
+.round-button:hover .icon { transform: scale(1.12); }
+.round-button:active { transform: translateY(1px) scale(0.94); box-shadow: 0 2px 4px #05081a70; transition-duration: 80ms; }
+.round-button:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+.round-button.muted .icon { opacity: 0.75; }
+.round-button.muted::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: var(--coral);
+  border-radius: 2px;
+  transform: rotate(-42deg);
+  box-shadow: 0 0 0 2px #fff9ec;
+}
+.round-button.bump { animation: bump 450ms var(--spring); }
+@keyframes bump { 0% { transform: scale(1); } 40% { transform: scale(1.18) rotate(6deg); } 100% { transform: scale(1); } }
+
+.pill-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 66px;
+  padding: 10px 34px;
+  border: 0;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.01em;
+  background: transparent;
+  border-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/pill.f374995659899b10.webp") 112 fill / 33px / 0 stretch;
+  border-radius: 999px;
+  box-shadow: 0 6px 10px #05081a70;
+  transition: transform 260ms var(--spring), color 200ms;
+  white-space: nowrap;
+}
+.pill-button .icon { width: 26px; height: 26px; }
+.pill-button:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 10px 16px #05081a80; }
+.pill-button:hover .icon { transform: scale(1.15) rotate(-6deg); }
+.pill-button:active, .pill-button[aria-pressed="true"] {
+  border-image-source: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/pill-pressed.86ee68b30db5e1d0.webp");
+  color: var(--cream);
+  transform: translateY(1px);
+}
+.pill-button:active { transition-duration: 80ms; transform: translateY(2px) scale(0.97); }
+.pill-button[aria-pressed="true"] .icon { opacity: 1; }
+.pill-button:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+.pill-button.small { min-height: 44px; padding: 6px 18px; font-size: 15px; border-image-width: 22px; }
+.pill-button.small .icon { width: 20px; height: 20px; }
+.pill-button.primary { min-width: 236px; font-size: 22px; }
+.pill-button .label-swap { display: inline-block; animation: label-in 350ms var(--spring); }
+@keyframes label-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* ---------- HUD ---------- */
+.brand {
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  width: 172px;
+  height: 58px;                 /* the round buttons' height: the logo box is centred on that row */
+  display: flex;
+  align-items: center;
+  opacity: 0.94;
+  transition: transform 300ms var(--spring), opacity 200ms;
+}
+.brand img { width: 100%; height: auto; }
+.brand:hover { opacity: 1; transform: scale(1.04) rotate(-1deg); }
+
+.top-actions {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  display: flex;
+  gap: 12px;
+}
+
+.progress-dots {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 9px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: #0b0f2666;
+  /* backdrop-filter removed: it flashes black boxes in Chrome */
+}
+.progress-dots.hud { animation-name: dots-in; }
+@keyframes dots-in { from { opacity: 0; transform: translate(-50%, -14px); } to { opacity: 1; transform: translate(-50%, 0); } }
+.progress-dots i {
+  width: 15px;
+  height: 15px;
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/star.35ce01e1ac338d99.webp") center / contain no-repeat;
+  opacity: 0.28;
+  opacity: 0.38;
+  transition: opacity 400ms, transform 400ms var(--spring);
+}
+.progress-dots i:hover { transform: scale(1.3); opacity: 0.9; }
+.progress-dots i.read { opacity: 0.85; }
+.progress-dots i.current { opacity: 1; transform: scale(1.5); animation: dot-pulse 2.2s ease-in-out infinite; }
+@keyframes dot-pulse { 0%, 100% { transform: scale(1.5); } 50% { transform: scale(1.75) rotate(12deg); } }
+.progress-dots i.read { filter: drop-shadow(0 0 4px #ffd97a99); }
+/* the star for a page just read lands in the row and bounces */
+.progress-dots i.earned { animation: dot-earned 900ms var(--spring) both; }
+@keyframes dot-earned { 0% { transform: scale(2.6) rotate(-50deg); opacity: 1; filter: drop-shadow(0 0 14px #ffd97a); } 55% { transform: scale(1.25) rotate(12deg); } 100% { transform: scale(1.5); filter: drop-shadow(0 0 4px #ffd97a99); } }
+.star-flight {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  z-index: 70;
+  pointer-events: none;
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/star.35ce01e1ac338d99.webp") center / contain no-repeat;
+  filter: drop-shadow(0 0 12px #ffd97a);
+}
+.star-flight b { position: absolute; left: 100%; top: -6px; margin-left: 4px; font-family: "Baloo 2", var(--ui-font); font-size: 18px; font-weight: 800; color: var(--cream); text-shadow: 0 0 8px #ffd97a, 0 2px 6px #05081a; white-space: nowrap; }
+/* self-read: the star button that says the page was read (it waits a little before appearing) */
+.read-done {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 8px 16px 8px 10px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffe9a8, #e8b45a);
+  color: #5a3a12;
+  font-family: "Baloo 2", var(--ui-font);
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 10px #05081a44, inset 0 1px 0 #fff8;
+  animation: tip-in 500ms var(--spring) both;
+  pointer-events: auto;
+  white-space: nowrap;
+  align-self: flex-start;
+  flex: 0 0 auto;
+}
+.read-done:hover { transform: scale(1.05); }
+.read-done .star { width: 24px; height: 24px; background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/star.35ce01e1ac338d99.webp") center / contain no-repeat; filter: drop-shadow(0 0 6px #fff4c7); }
+.read-done[hidden] { display: none; }
+
+/* ---------- the reading card (flat, big, no perspective) ---------- */
+.text-panel {
+  position: absolute;
+  left: 3.5vw;
+  top: 50%;
+  width: clamp(340px, 37vw, 560px);
+  max-height: 84vh;
+  transform: translateY(-50%);
+  transform-origin: 50% 50%;
+  padding: 0;
+  color: var(--ink);
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/textures/paper.7b1612c72db0354d.webp") center / cover, var(--paper);
+  border-radius: 8px;
+  box-shadow:
+    0 0 0 1px #d4b982,
+    inset 0 0 0 5px #fff9ec,
+    inset 0 0 0 6px #d4b98266,
+    0 14px 34px #05081a55,
+    0 3px 10px #05081a44;
+  cursor: zoom-in;
+  transition: transform 700ms var(--spring), box-shadow 500ms;
+  z-index: 6;
+  /* the card never grows past its max-height: the inner column scrolls, the corners stay put, and
+     the text fades out at whichever edge has more to read */
+  display: flex;
+  flex-direction: column;
+}
+.text-panel[hidden] { display: none; }
+.text-panel-inner {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #d4b98299 transparent;
+}
+.text-panel.overflowing:not(.at-end) .text-panel-inner { -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 110px), transparent calc(100% - 18px)); mask-image: linear-gradient(to bottom, #000 calc(100% - 110px), transparent calc(100% - 18px)); }
+.text-panel.overflowing.scrolled.at-end .text-panel-inner { -webkit-mask-image: linear-gradient(to bottom, transparent 18px, #000 90px); mask-image: linear-gradient(to bottom, transparent 18px, #000 90px); }
+.text-panel.overflowing.scrolled:not(.at-end) .text-panel-inner { -webkit-mask-image: linear-gradient(to bottom, transparent 18px, #000 90px, #000 calc(100% - 110px), transparent calc(100% - 18px)); mask-image: linear-gradient(to bottom, transparent 18px, #000 90px, #000 calc(100% - 110px), transparent calc(100% - 18px)); }
+.text-panel.hud { animation: panel-in 900ms var(--spring) both; animation-delay: 300ms; }
+@keyframes panel-in {
+  from { opacity: 0; transform: translate(-40px, -50%) rotate(-4deg) scale(0.9); }
+  to { opacity: 1; transform: translate(0, -50%) rotate(0) scale(1); }
+}
+.text-panel.turning { animation: panel-turn 420ms var(--soft) both; }
+@keyframes panel-turn {
+  0% { opacity: 1; transform: translate(0, -50%); }
+  100% { opacity: 0; transform: translate(-30px, -50%) rotate(-3deg) scale(0.96); }
+}
+.text-panel.arriving { animation: panel-arrive 700ms var(--spring) both; }
+@keyframes panel-arrive {
+  0% { opacity: 0; transform: translate(30px, -50%) rotate(2deg) scale(0.96); }
+  100% { opacity: 1; transform: translate(0, -50%); }
+}
+.text-panel.focus {
+  transform: translate(calc(50vw - 50% - 3.5vw), -50%) scale(1.3);
+  cursor: zoom-out;
+  box-shadow: 0 0 0 1px #d4b982, inset 0 0 0 5px #fff9ec, inset 0 0 0 6px #d4b98266, 0 50px 120px #05081acc;
+  z-index: 8;
+}
+.text-panel .corner {
+  position: absolute;
+  width: 74px;
+  height: 74px;
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/corner.a562b92bf6f5ba2b.webp") center / contain no-repeat;
+  opacity: 0.9;
+  pointer-events: none;
+}
+.text-panel .corner.tl { left: 10px; top: 10px; }
+.text-panel .corner.br { right: 10px; bottom: 10px; transform: scale(-1); }
+.text-panel-inner { padding: 44px 46px 30px 50px; display: flex; flex-direction: column; gap: 10px; }
+.page-eyebrow { font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: #a5642f; font-weight: 600; }
+.page-heading {
+  margin: 0 0 6px;
+  font-family: "Baloo 2", var(--ui-font);
+  font-weight: 800;
+  font-size: clamp(24px, min(2.5vw, 4.2vh), 38px);   /* follows the card's width, capped by the screen height */
+  line-height: 1.05;
+  color: #8d4f1f;
+  animation: heading-in 600ms var(--spring) both;
+  animation-delay: 120ms;
+}
+@keyframes heading-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.page-words {
+  margin: 0;
+  font-family: var(--read-font);
+  font-size: clamp(21px, min(2.25vw, 3.8vh), 34px);   /* 34px on a wide screen, smaller as the card narrows or the screen shortens */
+  line-height: 1.58;
+  font-weight: 400;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+.text-panel.size-large .page-words { font-size: clamp(24px, min(2.65vw, 4.4vh), 40px); line-height: 1.5; }
+.page-words .word {
+  display: inline-block;
+  padding: 0 4px;
+  margin: 0 -4px;
+  border-radius: 10px;
+  cursor: pointer;
+  animation: word-in 520ms var(--spring) both;
+  animation-delay: calc(var(--i, 0) * 32ms + 200ms);
+  transition: background-color 160ms, color 160ms, transform 220ms var(--spring), box-shadow 160ms;
+}
+@keyframes word-in { from { opacity: 0; transform: translateY(14px) rotate(-3deg) scale(0.9); } to { opacity: 1; transform: none; } }
+.page-words .word:hover { background: #ffd97a; transform: translateY(-3px) scale(1.06); }
+.page-words .word.link { text-decoration: underline dotted #d9a45c; text-decoration-thickness: 3px; text-underline-offset: 6px; }
+.page-words .word.active {
+  background: #ffd166;
+  color: #1e1d2e;
+  box-shadow: 0 3px 0 #e0952f;
+  transform: translateY(-3px) scale(1.08);
+}
+.page-words .word.spoken { color: #1e1d2e; }
+.page-words .word.link.lit:not(.active) { text-decoration-style: solid; text-decoration-color: #e0952f; color: #7a4a10; }
+.page-words .word.said { animation: word-said 500ms var(--spring); }
+@keyframes word-said { 0% { transform: scale(1); } 40% { transform: scale(1.25) rotate(-3deg); } 100% { transform: scale(1); } }
+.text-panel.self-read .page-words .word { color: #3a3552; }
+.page-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 6px; border-top: 1px solid #c9b48a66; padding-top: 12px; }
+.page-hint { display: none; }
+.zoom-hint { font-size: 12px; letter-spacing: 0.06em; color: #a58d66; text-align: left; }
+
+/* the big word that pops out when you tap one */
+.word-zoom {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 9;
+  pointer-events: none;
+  padding: 22px 54px;
+  border-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/tag.dd31da96c8d4e59c.webp") 60 fill / 34px / 0 stretch;
+  color: var(--ink);
+  font-family: var(--read-font);
+  font-weight: 700;
+  font-size: 84px;
+  line-height: 1;
+  white-space: nowrap;
+  border-radius: 26px;
+  box-shadow: 0 22px 44px #05081a99;
+  animation: word-zoom 1400ms var(--spring) both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.word-zoom img {
+  display: block;
+  width: clamp(200px, 24vw, 330px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 3px solid #e6c98a;
+  box-shadow: 0 12px 26px #05081a55, inset 0 0 0 2px #fff7e6;
+  background: #f7efdc;
+}
+/* a picture card: painted meaning above, the word beneath */
+.word-zoom.has-picture {
+  padding: 20px 28px 18px;
+  border-image: none;
+  background: #f7efdc url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/textures/paper.7b1612c72db0354d.webp") center / 600px;
+  border: 3px solid #d9a45c;
+  border-radius: 28px;
+  box-shadow: 0 26px 60px #05081a99, inset 0 0 0 5px #fff7e6, inset 0 0 0 7px #e2c07a66;
+  animation-duration: 2700ms;
+}
+.word-zoom.has-picture .zoom-label { font-size: 64px; }
+@keyframes word-zoom {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.3) rotate(-8deg); }
+  18% { opacity: 1; transform: translate(-50%, -50%) scale(1.08) rotate(2deg); }
+  30% { transform: translate(-50%, -50%) scale(1) rotate(0); }
+  80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -60%) scale(0.9); }
+}
+
+.hint-card {
+  position: absolute;
+  right: 22px;
+  bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 300px;
+  padding: 14px 22px 14px 32px;
+  border-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/tag.dd31da96c8d4e59c.webp") 60 fill / 26px / 0 stretch;
+  color: var(--ink);
+  border-radius: 22px;
+  box-shadow: 0 8px 18px #05081a66;
+}
+.hint-card.swap { animation: hint-in 600ms var(--spring); }
+.hint-card p { margin: 0; font-size: 15px; line-height: 1.35; color: #4a3b2a; }
+.hint-card .icon { width: 30px; height: 30px; flex: none; animation: hand-tap 1.6s ease-in-out infinite; }
+@keyframes tooltip-in { from { opacity: 0; transform: translate(-50%, 16px) scale(0.92); } to { opacity: 1; transform: translate(-50%, 8px); } }
+@keyframes hint-in { from { opacity: 0; transform: translateY(14px) scale(0.9) rotate(2deg); } to { opacity: 1; transform: none; } }
+@keyframes hand-tap { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px) rotate(-6deg); } }
+
+.reader-bar {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.reader-bar.hud { animation-name: bar-in; }
+@keyframes bar-in { from { opacity: 0; transform: translate(-50%, 40px); } to { opacity: 1; transform: translate(-50%, 0); } }
+.reader-center { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.mode-toggle { display: flex; gap: 8px; }
+
+.word-tip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -100%);
+  padding: 8px 18px;
+  border-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/tag.dd31da96c8d4e59c.webp") 60 fill / 22px / 0 stretch;
+  color: var(--ink);
+  font-family: var(--read-font);
+  font-size: 22px;
+  font-weight: 700;
+  white-space: nowrap;
+  pointer-events: none;
+  border-radius: 18px;
+  box-shadow: 0 6px 12px #05081a80;
+  animation: tip-in 260ms var(--spring);
+}
+/* the pop-in keeps the tag's own centring, so it never flashes at the anchor's corner first */
+@keyframes tip-in { from { opacity: 0; transform: translate(-50%, -100%) translateY(14px) scale(0.9) rotate(2deg); } to { opacity: 1; transform: translate(-50%, -100%); } }
+.magic-word {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  font-family: "Baloo 2", var(--ui-font);
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.2;            /* a two-line label stays tight (never more than 1.5 lines of leading) */
+  width: max-content;          /* as wide as its words wherever it pops (not squeezed against the screen edge) */
+  max-width: min(88vw, 520px);
+  text-align: center;
+  color: var(--cream);
+  text-shadow: 0 0 18px #ffd97a, 0 3px 0 #a86a2c, 0 8px 22px #05081a;
+  animation: magic-word 1.4s var(--spring) forwards;
+}
+@keyframes magic-word {
+  0% { opacity: 0; transform: translate(-50%, -30%) scale(0.4) rotate(-6deg); }
+  20% { opacity: 1; transform: translate(-50%, -60%) scale(1.1) rotate(2deg); }
+  70% { opacity: 1; transform: translate(-50%, -80%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -120%) scale(1.05); }
+}
+
+/* ---------- loading / title screen ---------- */
+.loading-bytes { margin: -4px 0 0; font-size: 13px; letter-spacing: 0.04em; color: #8c6a3c; font-variant-numeric: tabular-nums; min-height: 1.2em; }
+.loading-bytes:empty { display: none; }
+#loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(ellipse at 50% 30%, #2a3566 0%, #141a33 55%, #0a0d1f 100%);
+  z-index: 20;
+  transition: opacity 900ms var(--soft);
+}
+#loading.fade { opacity: 0; pointer-events: none; }
+#loading.fade .loading-card { animation: card-leave 800ms var(--soft) both; }
+@keyframes card-leave { to { opacity: 0; transform: translateY(-30px) scale(1.06); } }
+.loading-sky { position: absolute; inset: 0; overflow: hidden; background: #0b1030; }
+/* the shader sky (src/nightsky.js) fills the screen; a cloth texture veil sits over it */
+.loading-night { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.loading-comets { pointer-events: none; }   /* the shooting stars, drawn over the sky and under the moon and the card */
+.loading-veil { position: absolute; inset: 0; background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/textures/paper.7b1612c72db0354d.webp") center / 520px repeat; mix-blend-mode: soft-light; opacity: 0.35; pointer-events: none; }
+.loading-sky.shader .loading-veil { display: none; }          /* the shader folds the grain in itself */
+.loading-sky.shader .loading-moon { animation: none; }         /* ...and moves the moon on its clock */
+/* the moon: a painted picture when public/ui/moon.webp is there (its glow comes from the shader),
+   the plain disc otherwise */
+.loading-moon img { position: absolute; inset: -22%; width: 144%; height: 144%; object-fit: contain; display: none; filter: drop-shadow(0 0 40px #ffe9a866); }
+.loading-moon.painted { background: none; box-shadow: none; }
+.loading-moon.painted img { display: block; }
+.loading-moon {
+  position: absolute;
+  left: 50%;
+  top: 8%;
+  width: 260px;
+  height: 260px;
+  margin-left: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, #fff6d8, #f0d998 60%, #d9b56a);
+  box-shadow: 0 0 80px 30px #ffe9a866, 0 0 200px 90px #ffd97a22;
+  animation: moon-float 7s ease-in-out infinite;
+}
+.loading-sky.shader .loading-stars { display: none; }
+.loading-stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1.6px 1.6px at 12% 22%, #fff 60%, transparent),
+    radial-gradient(1.2px 1.2px at 28% 12%, #ffe9a8 60%, transparent),
+    radial-gradient(2px 2px at 68% 18%, #fff 60%, transparent),
+    radial-gradient(1.4px 1.4px at 82% 34%, #fff 60%, transparent),
+    radial-gradient(1.2px 1.2px at 42% 30%, #ffe9a8 60%, transparent),
+    radial-gradient(1.8px 1.8px at 90% 70%, #fff 60%, transparent),
+    radial-gradient(1.2px 1.2px at 8% 72%, #fff 60%, transparent),
+    radial-gradient(1.5px 1.5px at 22% 86%, #ffe9a8 60%, transparent),
+    radial-gradient(1.2px 1.2px at 58% 80%, #fff 60%, transparent),
+    radial-gradient(1.6px 1.6px at 74% 90%, #fff 60%, transparent),
+    radial-gradient(1.2px 1.2px at 36% 60%, #fff 60%, transparent),
+    radial-gradient(1.4px 1.4px at 50% 8%, #fff 60%, transparent);
+  animation: twinkle 3s ease-in-out infinite alternate;
+}
+@keyframes moon-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+@keyframes twinkle { from { opacity: 0.55; } to { opacity: 1; } }
+
+.loading-card {
+  position: relative;
+  width: min(640px, 92vw);
+  padding: 40px 48px 34px;
+  text-align: center;
+  color: var(--ink);
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/textures/paper.7b1612c72db0354d.webp") center / cover, var(--paper);
+  border-radius: 6px;
+  box-shadow:
+    0 0 0 1px #d4b982,
+    0 0 0 6px var(--navy),
+    0 30px 80px #05081acc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  animation: hud-pop 900ms var(--spring) both;
+}
+.loading-card > :not(.corner) { animation: heading-in 700ms var(--spring) both; }
+/* the corners only fade: heading-in's transform kept overriding the mirroring below (all four came in the same way up) */
+.loading-card > .corner { animation: fade-in 700ms both; }
+.loading-card > :nth-child(5) { animation-delay: 150ms; }
+.loading-card > :nth-child(6) { animation-delay: 250ms; }
+.loading-card > :nth-child(7) { animation-delay: 350ms; }
+.loading-card > :nth-child(8) { animation-delay: 450ms; }
+.loading-card .corner {
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/corner.a562b92bf6f5ba2b.webp") center / contain no-repeat;
+  opacity: 0.95;
+}
+.loading-card .corner.tl { left: 10px; top: 10px; }
+.loading-card .corner.tr { right: 10px; top: 10px; transform: scaleX(-1); }
+.loading-card .corner.bl { left: 10px; bottom: 10px; transform: scaleY(-1); }
+.loading-card .corner.br { right: 10px; bottom: 10px; transform: scale(-1); }
+.eyebrow { font-size: 11px; letter-spacing: 0.28em; color: #a5642f; font-weight: 600; }
+.loading-card h1 { margin: 0; line-height: 0; }
+.loading-logo { width: 380px; max-width: 80vw; height: auto; animation: logo-float 5s ease-in-out infinite; }
+@keyframes logo-float { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-6px) rotate(-1deg); } }
+.loading-blurb { margin: 0; max-width: 420px; font-size: 16px; line-height: 1.55; color: #5a4a35; }
+.loading-progress {
+  width: 260px;
+  height: 10px;
+  border-radius: 6px;
+  background: #d9c8a4;
+  overflow: hidden;
+  box-shadow: inset 0 1px 2px #8a6c3f66;
+}
+.loading-progress i {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--honey), var(--gold));
+  transition: width 400ms var(--soft);
+}
+#loading-copy { margin: 0; font-size: 14px; color: #8c6a3c; min-height: 20px; }
+.loading-footnote { margin-top: 6px; font-size: 12px; letter-spacing: 0.08em; color: #a58d66; }
+#btn-open { animation: hud-pop 700ms var(--spring) both, open-nudge 2.4s ease-in-out 1.2s infinite; }
+@keyframes open-nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+
+/* ---------- profiles: who is reading ---------- */
+.account-button .avatar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 18%;
+  box-shadow: 0 0 0 2px #fff9ec, 0 2px 4px #05081a66;
+  pointer-events: none;
+}
+.account-button.has-avatar .icon { display: none; }
+/* the Pro pin: a member's badge hung on the corner button and on the parent row of the profiles folio */
+.pro-pin {
+  display: none;
+  width: 28px;
+  height: 28px;
+  background: url("/media/public/ui/pro-pin.b381232d3762550f.webp") center / contain no-repeat;
+  filter: drop-shadow(0 2px 3px #05081a66);
+  pointer-events: none;
+}
+.account-button .pro-pin { position: absolute; right: -7px; bottom: -5px; transform: rotate(-8deg); }
+.account-button.pro .pro-pin { display: block; }
+.account-button .pro-pin.pop { animation: pin-pop 700ms var(--spring) both; }
+@keyframes pin-pop { from { transform: rotate(-8deg) scale(0); } 60% { transform: rotate(6deg) scale(1.25); } to { transform: rotate(-8deg) scale(1); } }
+.settings-row .row-icon { position: relative; }
+.settings-row .row-icon .pro-pin { display: block; position: absolute; right: -10px; bottom: -8px; width: 26px; height: 26px; transform: rotate(-8deg); }
+.pro-tag {
+  display: inline-block;
+  vertical-align: 2px;
+  margin-left: 6px;
+  padding: 1px 8px 2px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffe08a, #e2b14e);
+  color: #4a2d0e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  box-shadow: inset 0 1px 0 #fff6d6, 0 1px 2px #05081a33;
+}
+.profile-list { display: grid; gap: 12px; margin-top: 8px; }
+.profile-card {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 2px solid #d4b98266;
+  background: #fff9ec99;
+  animation: heading-in 500ms var(--spring) both;
+}
+.profile-card:nth-child(2) { animation-delay: 70ms; }
+.profile-card:nth-child(3) { animation-delay: 140ms; }
+.profile-card.active { border-color: var(--gold); box-shadow: 0 0 0 3px #ffd97a44, 0 8px 18px #05081a22; background: #fff9ec; }
+.profile-avatar { width: 72px; height: 72px; padding: 7px; border-radius: 50%; background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/round.afdab066e34f07c6.webp") center / 100% 100% no-repeat; box-shadow: 0 4px 8px #05081a44; }
+.profile-avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: 50% 18%; display: block; }
+.profile-info { min-width: 0; display: grid; gap: 3px; }
+.profile-info b { font-family: "Baloo 2", var(--ui-font); font-size: 22px; font-weight: 800; color: #3d2a17; line-height: 1.1; }
+.profile-info small { color: #8c6a3c; font-size: 13px; }
+.profile-info .board-bar { margin: 3px 0 2px; }
+.profile-stats { display: flex; flex-wrap: wrap; gap: 3px 14px; font-size: 13px; color: #6b5740; }
+.profile-stats span { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+.profile-stats .icon { width: 15px; height: 15px; }
+.profile-stats .chip-star { font-style: normal; color: #c9963a; font-size: 15px; }
+.profile-stats .chip-check { font-style: normal; color: #3f8f5a; font-weight: 800; }
+.profile-actions { display: grid; gap: 8px; }
+.profile-actions .pill-button { min-width: 0; }
+.profile-now { display: inline-flex; align-items: center; justify-content: center; padding: 7px 14px; border-radius: 999px; background: var(--gold); color: #5a3a12; font-weight: 800; font-size: 13px; letter-spacing: 0.04em; }
+.pill-button.danger { color: #9b2f1f; }
+.profile-form input[type="text"], .profile-form input[type="date"] {
+  font: inherit;
+  font-size: 15px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #b8975f;
+  background: #fff9ec;
+  color: var(--ink);
+  width: 230px;
+  max-width: 50vw;
+}
+.profile-form input:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.avatar-picker { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin: 6px 0 4px; }
+.avatar-picker button { padding: 3px; border: 3px solid transparent; border-radius: 50%; background: #fff9ec; cursor: pointer; aspect-ratio: 1; transition: transform 200ms var(--spring), border-color 200ms; }
+.avatar-picker button img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: 50% 18%; display: block; }
+.avatar-picker button:hover { transform: scale(1.08); }
+.avatar-picker button[aria-checked="true"] { border-color: var(--gold); box-shadow: 0 0 0 3px #ffd97a55; transform: scale(1.06); }
+@media (max-width: 640px) {
+  .profile-card { grid-template-columns: 56px 1fr; }
+  .profile-avatar { width: 56px; height: 56px; padding: 5px; }
+  .profile-actions { grid-column: 1 / -1; grid-auto-flow: column; }
+  .avatar-picker { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ---------- account dialogs on the same paper as the settings folio ---------- */
+dialog.folio-dialog { position: fixed; inset: 0; margin: auto; border: 0; font-family: var(--ui-font); }
+dialog.folio-dialog::backdrop { background: #0a0d1fcc; }
+dialog.folio-dialog[open] { display: block; }
+.folio-dialog .folio-close {
+  position: absolute; right: 16px; top: 14px; z-index: 2;
+  width: 40px; height: 40px; border: 0; border-radius: 50%;
+  background: #fff9ec url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/close.6290d8da03c89278.webp") center / 22px 22px no-repeat; color: transparent; font-size: 0; cursor: pointer;
+  box-shadow: 0 0 0 1px #d4b982, 0 2px 6px #05081a33;
+  transition: transform 200ms var(--spring);
+}
+.folio-dialog .folio-close:hover { transform: scale(1.1) rotate(8deg); }
+.folio-head .portrait.medallion { display: grid; place-items: center; background-color: transparent; }
+.folio-head .portrait.medallion .icon { width: 44px; height: 44px; }
+.folio-dialog .folio-form { display: grid; gap: 8px; margin-top: 8px; }
+.folio-dialog label { font-weight: 600; font-size: 15px; color: #3d2a17; }
+.folio-dialog input {
+  font: inherit; font-size: 16px; padding: 10px 14px; border-radius: 10px;
+  border: 1px solid #b8975f; background: #fff9ec; color: var(--ink); width: 100%; box-sizing: border-box;
+}
+.folio-dialog input:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.folio-dialog .panel-actions { flex-direction: column; align-items: center; gap: 10px; margin-top: 14px; }
+.folio-dialog .panel-actions .pill-button { width: min(100%, 340px); box-sizing: border-box; }
+.folio-dialog .panel-actions .pill-button.tall { width: min(100%, 420px); min-height: 68px; font-size: 20px; gap: 12px; }
+.folio-dialog .google-g { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 1px #d4b982, 0 2px 4px #05081a22; }
+.folio-dialog .google-g svg { width: 22px; height: 22px; }
+.folio-dialog .account-divider { text-align: center; font-size: 12px; letter-spacing: 0.1em; color: #8c6a3c; margin: 12px 0 4px; }
+.folio-dialog .account-text-button { background: none; border: 0; color: #8d4f1f; text-decoration: underline; font: inherit; font-size: 14px; cursor: pointer; padding: 6px 0; justify-self: center; }
+.folio-dialog .status-line a { color: #8d4f1f; }
+.folio-benefits { list-style: none; padding: 0; margin: 4px 0 0; }
+.folio-benefits li { display: grid; grid-template-columns: 46px 1fr; align-items: center; gap: 14px; padding: 9px 0; border-bottom: 1px dashed #b8975f55; animation: heading-in 500ms var(--spring) both; }
+.folio-benefits li:nth-child(2) { animation-delay: 60ms; } .folio-benefits li:nth-child(3) { animation-delay: 120ms; } .folio-benefits li:nth-child(4) { animation-delay: 180ms; }
+.folio-benefits li:last-child { border-bottom: 0; }
+.folio-benefits.two-up { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; margin: 2px 0 6px; }
+.folio-benefits.two-up li { padding: 7px 0; }
+.folio-benefits.two-up li:nth-last-child(2) { border-bottom: 0; }
+@media (max-width: 640px) { .folio-benefits.two-up { grid-template-columns: 1fr; } .folio-benefits.two-up li:nth-last-child(2) { border-bottom: 1px dashed #b8975f55; } }
+.folio-benefits .row-icon { width: 46px; height: 46px; display: grid; place-items: center; background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/tile.26d4a3e3569a5f83.webp") center / 100% 100% no-repeat; }
+.folio-benefits .row-icon .icon { width: 24px; height: 24px; }
+.folio-benefits b { display: block; font-weight: 600; font-size: 16px; color: #3d2a17; }
+.folio-benefits small { display: block; font-size: 12px; color: #8c6a3c; margin-top: 2px; }
+@media (max-width: 640px) {
+  .folio-dialog .folio-head { flex-direction: column; text-align: center; }
+  /* a phone: less paper margin so the wooden buttons keep their shape (the pill ends are fixed slices,
+     the label must fit between them), smaller corner ornaments out of the buttons' way */
+  .folio-dialog.panel-shell { padding-left: 22px; padding-right: 22px; }
+  .folio-dialog .corner { width: 54px; height: 54px; }
+  .folio-dialog .panel-actions .pill-button, .folio-dialog .panel-actions .pill-button.tall { width: 100%; min-width: 0; font-size: 18px; padding: 10px 18px; gap: 10px; white-space: normal; }
+  .folio-dialog .google-g { width: 30px; height: 30px; flex: none; }
+  .folio-dialog .google-g svg { width: 20px; height: 20px; }
+}
+
+/* the membership folio, after the wood concept in docs/concepts/plan-cards/wood.png: two painted oak
+   signboards hanging from rope on brass hooks, above a wooden shelf, on the folio's paper. Each
+   board is its own stack of layers, all files in public/ui/wood-sign (Higgsfield versions replace
+   them by name): the board (an arched honey-oak rim with carved stars, a caramel face and a night-sky
+   panel painted into the top), the loading screen's sky shader on a small canvas masked to that
+   panel (sky-mask.png, cut from the board's blue paint), the shooting comet or the crescent moon
+   floating in the panel with the shader's glow under it, the rope and hook, the star and comet
+   pendants, the painted lettering (cream and gold with a dark edge, centred, star dividers) that
+   brushes itself on line by line whenever the folio opens, and the wooden button. The boards sway a
+   little on their ropes; the shelf below is the app's own wood. */
+dialog.pricing-dialog.panel-shell { width: min(900px, 96vw); overflow: auto; padding-left: 34px; padding-right: 34px; }
+.plan-stage {
+  position: relative;
+  margin: 8px -20px 24px;
+  padding: 104px 26px 0;
+  perspective: 1600px;
+}
+/* no preserve-3d anywhere in here: the boards' drop shadow flattens them anyway, and a 3D rendering
+   context under the perspective made Chrome hit-test the boards as empty (nothing on them hoverable) */
+.plan-grid {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 48px;
+}
+/* the board: the painted image at its own proportions; everything on it is placed in percentages of it,
+   and the lettering is sized against its width (container query units) so it always fits the face */
+/* the hanger: a still box that holds the brass hook; the board (rope included) swings inside it
+   around the hook's ring */
+.plan-hang { position: relative; flex: 0 1 330px; min-width: 0; }
+.sign-hook { position: absolute; left: 45.18%; top: -14.04%; width: 8.27%; height: auto; z-index: 5; filter: drop-shadow(0 3px 3px #00000044); pointer-events: none; }
+.plan-card {
+  --tilt: 4deg;
+  --sway: -1.1deg;
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 941 / 1470;
+  container-type: inline-size;
+  background: url("/media/public/ui/wood-sign/board.1959e54e85aa87fb.webp") center / 100% 100% no-repeat;
+  filter: drop-shadow(8px 16px 14px #2a180a66);
+  transform-origin: 50% -8.75%;   /* the hook's ring */
+  transform: rotateY(var(--tilt)) rotate(var(--sway));
+  animation: sign-arrive 450ms var(--spring) both;
+}
+.plan-card.plan-lifetime { --tilt: -4deg; --sway: 1.1deg; animation-delay: 90ms; }
+@keyframes sign-arrive { from { opacity: 0; } to { opacity: 1; } }
+/* the rope and its hook: the loop's ends land on the board's two holes (19% and 81% across, 12% down) */
+.sign-rope {
+  position: absolute;
+  left: 50%;
+  bottom: 87.5%;
+  width: 62%;
+  height: auto;
+  transform: translateX(-50%) translateZ(6px);
+  filter: drop-shadow(0 4px 4px #00000044);
+  pointer-events: none;
+  z-index: 3;
+}
+/* the sky panel: the shader canvas, masked to the painted sky in the arch */
+.sign-sky {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-mask: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/wood-sign/sky-mask.3ff0802279c6cf8f.webp") center / 100% 100% no-repeat;
+  mask: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/wood-sign/sky-mask.3ff0802279c6cf8f.webp") center / 100% 100% no-repeat;
+  pointer-events: none;
+  z-index: 1;
+}
+.sign-charm { position: absolute; height: auto; pointer-events: none; z-index: 2; filter: drop-shadow(0 0 10px #ffd98a88); }
+.sign-comet { left: 25%; top: 4.5%; width: 40%; animation: comet-drift 7s ease-in-out infinite; }
+.sign-crescent { left: 37%; top: 3.6%; width: 24%; animation: crescent-float 8s ease-in-out infinite; }
+@keyframes comet-drift { 0%, 100% { transform: translate(0, 0) rotate(0deg); } 50% { transform: translate(3%, -4%) rotate(-2deg); } }
+@keyframes crescent-float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-5%) rotate(3deg); } }
+/* the magic in the sky panel (masked to the painted sky like the shader): an aurora wash, a glow
+   under the charm, twinkling four-point sparkles and rising motes (built by src/pricing.js) */
+.sign-aurora, .sign-magic {
+  position: absolute;
+  inset: 0;
+  -webkit-mask: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/wood-sign/sky-mask.3ff0802279c6cf8f.webp") center / 100% 100% no-repeat;
+  mask: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/wood-sign/sky-mask.3ff0802279c6cf8f.webp") center / 100% 100% no-repeat;
+  pointer-events: none;
+}
+.sign-aurora { z-index: 1; mix-blend-mode: screen; background: radial-gradient(60% 90% at 28% 40%, #7fb4ff55, transparent 62%), radial-gradient(55% 80% at 74% 30%, #d9a6ff44, transparent 60%), radial-gradient(40% 60% at 50% 90%, #ffd98a33, transparent 60%); animation: aurora-drift 11s ease-in-out infinite alternate; }
+@keyframes aurora-drift { from { transform: translateX(-3%) scale(1.05); opacity: 0.7; } to { transform: translateX(3%) scale(1.12); opacity: 1; } }
+.sign-glow { position: absolute; width: 20cqw; height: 20cqw; border-radius: 50%; transform: translate(-50%, -50%); background: radial-gradient(circle, #fff6d0dd 0%, #ffd77a88 30%, #ffb84a00 68%); mix-blend-mode: screen; pointer-events: none; z-index: 1; animation: glow-pulse 3.2s ease-in-out infinite; }
+@keyframes glow-pulse { 0%, 100% { opacity: 0.75; transform: translate(-50%, -50%) scale(1); } 50% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); } }
+.sign-magic { z-index: 2; }
+.sign-magic i {
+  position: absolute;
+  width: var(--s, 8px);
+  height: var(--s, 8px);
+  margin: calc(var(--s, 8px) / -2) 0 0 calc(var(--s, 8px) / -2);
+  background: radial-gradient(circle, #fff 0 18%, #ffe9a8 32%, #ffd66a00 64%);
+  clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%);
+  opacity: 0;
+  animation: magic-twinkle var(--d, 2.4s) ease-in-out infinite;
+  animation-delay: var(--t, 0s);
+}
+@keyframes magic-twinkle { 0%, 100% { opacity: 0; transform: scale(0.2) rotate(0deg) translateY(0); } 50% { opacity: 1; transform: scale(1) rotate(45deg) translateY(-5px); } }
+.sign-magic i.mote { clip-path: none; border-radius: 50%; background: radial-gradient(circle, #fff6d6cc, #fff6d600 70%); animation-name: magic-mote; }
+@keyframes magic-mote { 0% { opacity: 0; transform: translateY(8px) scale(0.6); } 40% { opacity: 0.9; } 100% { opacity: 0; transform: translateY(-24px) scale(1.1); } }
+.sign-charm { animation-name: comet-drift, charm-glow; animation-duration: 7s, 3s; animation-timing-function: ease-in-out, ease-in-out; animation-iteration-count: infinite, infinite; }
+.sign-crescent { animation-name: crescent-float, charm-glow; animation-duration: 8s, 3s; }
+@keyframes charm-glow { 0%, 100% { filter: drop-shadow(0 0 6px #ffd98a77); } 50% { filter: drop-shadow(0 0 16px #ffe9a8cc); } }
+/* the lettering: painted cream and gold with a thin dark edge, centred on the face under the sky panel */
+.sign-face {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  top: 23%;
+  bottom: 5.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.3cqw;
+  z-index: 3;
+  color: #fbecc8;
+  --edge: #43230a;
+  --outline: 0 1px 0 var(--edge), 0 -1px 0 var(--edge), 1px 0 0 var(--edge), -1px 0 0 var(--edge), 0 3px 4px #00000066;
+}
+.sign-face .eyebrow { color: #f3c14f; font-size: 3.9cqw; letter-spacing: 0.2em; font-weight: 800; text-shadow: 0 1px 0 #43230a, 0 2px 3px #00000055; transform: translateZ(8px); }
+.sign-face h3 { margin: 0.2cqw 0 0; font-family: "Baloo 2", var(--ui-font); font-size: 13.5cqw; font-weight: 800; color: #fbecc8; line-height: 1.02; text-shadow: var(--outline); transform: translateZ(18px); }
+.plan-price { margin: 0.4cqw 0 0; display: flex; flex-direction: column; align-items: center; line-height: 1; transform: translateZ(26px); }
+.plan-price strong { font-family: "Baloo 2", var(--ui-font); font-size: 20cqw; font-weight: 800; color: #f6c445; line-height: 1; text-shadow: var(--outline), 0 5px 8px #00000055; }
+.plan-price span { font-size: 4.8cqw; font-weight: 700; margin-top: 0.4cqw; text-shadow: 0 1px 0 #43230a; }
+.plan-saving { margin: 0.4cqw 0 0; font-size: 4.3cqw; font-weight: 600; color: #f7e3b8; text-shadow: 0 1px 0 #43230a; transform: translateZ(12px); }
+.plan-saving s { opacity: 0.7; }
+.sign-face ul { list-style: none; margin: 1.2cqw 0 0; padding: 0; font-size: 5.9cqw; line-height: 1.22; font-weight: 700; text-shadow: 0 1px 0 #43230a, 0 2px 3px #00000044; transform: translateZ(12px); width: 100%; }
+/* the star dividers sit on the line itself (its pseudo-elements belong to the quill) */
+.sign-face ul li + li { margin-top: 0.4cqw; padding-top: 4cqw; background-image: linear-gradient(90deg, transparent 14%, #e2b14e 30%, #e2b14e 70%, transparent 86%), url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/star.35ce01e1ac338d99.webp"); background-size: 100% 1px, 3.6cqw 3.6cqw; background-position: center 1.8cqw, center 0; background-repeat: no-repeat; }
+.sign-face .pill-button.wood {
+  /* the app's own wooden pill (public/ui/pill.png: a cream face in a wood rim), sized to the board */
+  position: relative;
+  margin: auto -10% 0;
+  width: 120%;
+  box-sizing: border-box;
+  min-height: 16cqw;
+  padding: 1cqw 3cqw;
+  font-size: 6cqw;
+  letter-spacing: 0;
+  color: var(--ink);
+  border: 0;
+  border-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/pill.f374995659899b10.webp") 112 fill / 33px / 0 stretch;
+  border-radius: 999px;
+  background: transparent;
+  box-shadow: 0 6px 10px #05081a70;
+  text-shadow: none;
+  transform: translateZ(30px);
+  overflow: visible;
+  transition: transform 320ms var(--spring), box-shadow 320ms, filter 320ms;
+}
+/* hover: the button lifts and glows gold, a shine sweeps across the wood, the pendant kicks, and
+   src/pricing.js showers the app's own stars around it */
+.sign-face .pill-button.wood::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(115deg, transparent 30%, #fff6d688 48%, #fff6d6cc 52%, transparent 70%);
+  background-size: 260% 100%;
+  background-position: 120% 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.sign-face .pill-button.wood:hover:not(:disabled) {
+  transform: translateZ(30px) translateY(-5px) scale(1.06) rotate(-1deg);
+  box-shadow: 0 12px 20px #00000066, 0 0 0 0.6cqw #ffd97a55, 0 0 26px #ffd97acc, 0 0 60px #ffb84a77;
+  filter: brightness(1.06) saturate(1.05);
+}
+.sign-face .pill-button.wood:hover:not(:disabled)::after { animation: sign-shine 900ms ease-out both; }
+@keyframes sign-shine { from { opacity: 1; background-position: 120% 0; } to { opacity: 0; background-position: -60% 0; } }
+.sign-face .pill-button.wood:hover:not(:disabled)::before { animation: charm-kick 900ms var(--spring) both; }
+@keyframes charm-kick { 0% { transform: rotate(-8deg); } 30% { transform: rotate(22deg) scale(1.15); } 60% { transform: rotate(-14deg); } 100% { transform: rotate(4deg); } }
+.sign-face .pill-button.wood:active:not(:disabled) { transform: translateZ(30px) translateY(-1px) scale(1.02); transition-duration: 90ms; }
+.sign-face .pill-button.wood:disabled { opacity: 0.75; cursor: default; transform: translateZ(30px); }
+/* the pendants: a star charm dangling from one button, a comet charm from the other */
+.sign-face .pill-button.wood::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: -2%;
+  width: 17%;
+  aspect-ratio: 64 / 78;
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/chalkboard/star.d497d696b301a801.webp") center / contain no-repeat;
+  filter: drop-shadow(0 6px 6px #00000055);
+  transform-origin: 50% 0;
+  animation: charm-swing 4s ease-in-out infinite;
+  pointer-events: none;
+}
+.plan-lifetime .sign-face .pill-button.wood::before { left: auto; right: -2%; background-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/chalkboard/comet.99a5d1c926469f98.webp"); aspect-ratio: 64 / 92; animation-delay: -2s; }
+@keyframes charm-swing { 0%, 100% { transform: rotate(-8deg); } 50% { transform: rotate(6deg); } }
+/* the shelf the boards hang above: the app's own wood, with two brackets */
+.plan-shelf {
+  position: relative;
+  height: 26px;
+  margin: 18px 0 0;
+  border-radius: 3px 3px 5px 5px;
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/textures/wood.bc5bd695f02f5b0c.webp") center / 420px;
+  box-shadow: inset 0 4px 0 #fff3d066, inset 0 -5px 0 #4b2a1077, 0 10px 14px #2a180a44, 0 1px 0 #d4b982;
+  transform: translateZ(2px);
+}
+/* the writing: a quill glides along each line, one line after another, every time the folio opens,
+   and the lettering appears behind its nib with a feathered ink edge and a sparkle at the tip.
+   --pen is the nib's position along the line (a registered property, so it animates); the line's
+   mask follows it, the quill and its sparkle ride on it. Without @property support the mask is
+   simply absent and the words are plainly there. */
+@property --pen { syntax: "<percentage>"; inherits: true; initial-value: 100%; }
+.brush { position: relative; --pen: 100%; }
+.pricing-dialog[open] .brush {
+  -webkit-mask-image: linear-gradient(90deg, #000 0, #000 calc(var(--pen) - 3%), transparent calc(var(--pen) + 5%));
+  mask-image: linear-gradient(90deg, #000 0, #000 calc(var(--pen) - 3%), transparent calc(var(--pen) + 5%));
+  animation: quill-write 560ms cubic-bezier(0.3, 0, 0.7, 1) both;
+  animation-delay: calc(var(--i, 0) * 180ms + 180ms);
+}
+.pricing-dialog[open] .plan-lifetime .brush { animation-delay: calc(var(--i, 0) * 180ms + 300ms); }
+@keyframes quill-write { from { --pen: -6%; } to { --pen: 106%; } }
+/* the quill itself: at the nib, dipping a little as it writes, gone once the line is done */
+.pricing-dialog[open] .brush::after {
+  content: "";
+  position: absolute;
+  left: var(--pen);
+  top: 50%;
+  width: 1.5em;
+  height: 1.7em;
+  margin: -1.45em 0 0 -0.35em;
+  background: url("data:image/webp;base64,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") center / contain no-repeat;   /* the painted quill, inlined (about 15 KB) so the folio needs no extra file */
+  transform-origin: 20% 95%;
+  filter: drop-shadow(0 3px 3px #00000055);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+  animation: quill-hand 560ms cubic-bezier(0.3, 0, 0.7, 1) both;
+  animation-delay: inherit;
+}
+@keyframes quill-hand {
+  0% { opacity: 0; transform: rotate(-14deg) translateY(4px); }
+  8% { opacity: 1; }
+  30% { transform: rotate(-6deg) translateY(0); }
+  55% { transform: rotate(-16deg) translateY(2px); }
+  80% { transform: rotate(-8deg) translateY(0); }
+  92% { opacity: 1; }
+  100% { opacity: 0; transform: rotate(-10deg) translateY(-6px); }
+}
+/* the sparkle at the tip of the nib */
+.pricing-dialog[open] .brush::before {
+  content: "";
+  position: absolute;
+  left: var(--pen);
+  top: 50%;
+  width: 0.5em;
+  height: 0.5em;
+  margin: -0.3em 0 0 -0.35em;
+  background: radial-gradient(circle, #fff 0 22%, #ffe9a8 36%, #ffd66a00 66%);
+  clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+  animation: nib-spark 560ms linear both;
+  animation-delay: inherit;
+}
+@keyframes nib-spark { 0% { opacity: 0; transform: scale(0.4) rotate(0); } 12% { opacity: 1; } 50% { transform: scale(1.1) rotate(90deg); } 88% { opacity: 1; } 100% { opacity: 0; transform: scale(0.3) rotate(180deg); } }
+#pricing-notice:empty { display: none; }
+#pricing-notice[data-kind="error"] { color: #9b2f1f; }
+#pricing-notice[data-kind="success"] { color: #3f8f5a; }
+@media (prefers-reduced-motion: reduce) { .plan-card, .sign-charm, .sign-magic i, .sign-glow, .sign-aurora, .sign-face .pill-button.wood::before { animation: none; } .plan-card { transform: none; } .pricing-dialog[open] .brush, .pricing-dialog[open] .brush::before, .pricing-dialog[open] .brush::after { animation: none; } .pricing-dialog[open] .brush { -webkit-mask-image: none; mask-image: none; } .pricing-dialog[open] .brush::before, .pricing-dialog[open] .brush::after { display: none; } }
+@media (max-height: 900px) { .plan-hang { flex-basis: 290px; } .plan-stage { padding-top: 92px; } }
+@media (max-width: 1040px) { .plan-stage { margin-left: 0; margin-right: 0; } }
+@media (max-width: 720px) { dialog.pricing-dialog.panel-shell { padding-left: 16px; padding-right: 16px; } .plan-stage { padding-left: 0; padding-right: 0; } .plan-grid { flex-direction: column; align-items: center; gap: 110px; } .plan-hang { flex-basis: auto; width: min(330px, 84vw); } .plan-card { --tilt: 0deg; } }
+
+/* ---------- settings folio ---------- */
+#panel {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #0a0d1fcc;
+  z-index: 24;   /* above the book card (#loading, 20): a folio opened from the card's screen covers it */
+  animation: fade-in 250ms both;
+}
+.panel-shell {
+  position: relative;
+  width: min(620px, 94vw);
+  max-height: calc(100dvh - 40px);
+  overflow: auto;
+  padding: 34px 46px 30px;
+  color: var(--ink);
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/textures/paper.7b1612c72db0354d.webp") center / cover, var(--paper);
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #d4b982, inset 0 0 0 6px #fff9ec, inset 0 0 0 7px #d4b98266, 0 0 0 8px var(--navy), 0 30px 80px #05081acc;
+  animation: hud-pop 600ms var(--spring) both;
+  scrollbar-width: thin;
+  scrollbar-color: #b8975f #ecdfc2;
+}
+.panel-shell .corner {
+  position: absolute;
+  width: 74px;
+  height: 74px;
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/corner.a562b92bf6f5ba2b.webp") center / contain no-repeat;
+  pointer-events: none;
+}
+.panel-shell .corner.tl { left: 10px; top: 10px; }
+.panel-shell .corner.tr { right: 10px; top: 10px; transform: scaleX(-1); }
+.panel-shell .corner.bl { left: 10px; bottom: 10px; transform: scaleY(-1); }
+.panel-shell .corner.br { right: 10px; bottom: 10px; transform: scale(-1); }
+.folio-head { display: flex; align-items: center; gap: 22px; padding: 6px 10px 0; }
+.folio-head .portrait {
+  flex: none;
+  width: 104px;
+  height: 104px;
+  padding: 11px;
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/round.afdab066e34f07c6.webp") center / 100% 100% no-repeat;
+  border-radius: 50%;
+  box-shadow: 0 6px 10px #05081a55;
+  animation: hud-pop 700ms var(--spring) both;
+}
+.folio-head .portrait img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: 50% 18%; }
+.panel-shell h2 { margin: 2px 0 4px; font-family: "Baloo 2", var(--ui-font); font-size: 36px; font-weight: 800; color: #3d2a17; line-height: 1; }
+.panel-shell .panel-description { margin: 0; color: #6b5740; font-size: 14px; line-height: 1.5; }
+.folio-rule { display: flex; align-items: center; gap: 10px; margin: 18px 0 8px; }
+.folio-rule::before, .folio-rule::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, #c9a45f, transparent); }
+.folio-rule .icon { width: 16px; height: 16px; opacity: 0.8; }
+.folio-section { display: flex; align-items: center; gap: 10px; margin: 0 0 4px; font-family: "Baloo 2", var(--ui-font); font-size: 20px; font-weight: 800; color: #8d4f1f; }
+.folio-section .icon { width: 26px; height: 26px; }
+.settings-row {
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 0;
+  border-bottom: 1px dashed #b8975f55;
+  animation: heading-in 500ms var(--spring) both;
+}
+.settings-row:nth-of-type(2) { animation-delay: 60ms; }
+.settings-row:nth-of-type(3) { animation-delay: 120ms; }
+.settings-row:nth-of-type(4) { animation-delay: 180ms; }
+.settings-row:nth-of-type(5) { animation-delay: 240ms; }
+.settings-row:nth-of-type(6) { animation-delay: 300ms; }
+/* on a phone the control drops under its label instead of squeezing the label into a sliver */
+@media (max-width: 640px) { .settings-row { grid-template-columns: 44px 1fr; row-gap: 8px; } .settings-row > :nth-child(3) { grid-column: 2; justify-self: start; } }
+.settings-row:nth-of-type(7) { animation-delay: 360ms; }
+.settings-row:nth-of-type(8) { animation-delay: 420ms; }
+.settings-row .row-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/tile.26d4a3e3569a5f83.webp") center / 100% 100% no-repeat;
+}
+.settings-row .row-icon .icon { width: 24px; height: 24px; }
+.settings-row label { font-weight: 600; font-size: 16px; color: #3d2a17; }
+.settings-row small { display: block; font-weight: 400; font-size: 12px; color: #8c6a3c; margin-top: 2px; }
+.row-control { display: flex; justify-content: flex-end; }
+.settings-row select, .settings-row input[type="range"] { accent-color: var(--coral); }
+.settings-row select {
+  font: inherit;
+  font-size: 14px;
+  padding: 7px 34px 7px 12px;
+  border-radius: 10px;
+  border: 1px solid #b8975f;
+  background: #fff9ec url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/icons/next.dc7e787b49815b48.webp") right 8px center / 18px no-repeat;
+  color: var(--ink);
+  appearance: none;
+  max-width: 230px;
+  transition: transform 200ms var(--spring), box-shadow 200ms;
+}
+.settings-row select:hover { transform: translateY(-1px); box-shadow: 0 4px 10px #05081a22; }
+.settings-row input[type="range"] { width: 180px; height: 8px; }
+.switch {
+  width: 64px;
+  height: 34px;
+  border: 0;
+  border-radius: 17px;
+  background: #cdb88e;
+  position: relative;
+  transition: background 250ms;
+  box-shadow: inset 0 2px 4px #5a3d1a33;
+  padding: 0;
+}
+.switch i {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 30px;
+  height: 30px;
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/round.afdab066e34f07c6.webp") center / 100% 100% no-repeat;
+  transition: transform 350ms var(--spring);
+}
+.switch[aria-checked="true"] { background: var(--coral); }
+.switch[aria-checked="true"] i { transform: translateX(30px); }
+.panel-actions { display: flex; justify-content: center; gap: 12px; margin-top: 22px; }
+.status-line { font-size: 12px; color: #8c6a3c; margin-top: 14px; text-align: center; line-height: 1.5; }
+
+#toast {
+  position: absolute;
+  left: 50%;
+  top: 92px;
+  transform: translate(-50%, -14px) scale(0.95);
+  padding: 10px 22px;
+  border-image: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/tag.dd31da96c8d4e59c.webp") 60 fill / 22px / 0 stretch;
+  color: var(--ink);
+  font-size: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms, transform 500ms var(--spring);
+  border-radius: 18px;
+  box-shadow: 0 6px 12px #05081a80;
+  z-index: 7;
+}
+#toast.show { opacity: 1; transform: translate(-50%, 0) scale(1); }
+#tooltip {
+  position: absolute;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: #0b0f26e6;
+  color: var(--cream);
+  font-size: 13px;
+  pointer-events: none;
+  transform: translate(-50%, 8px);
+  white-space: nowrap;
+  animation: tooltip-in 200ms var(--spring);
+  z-index: 9;
+}
+
+/* ---------- small screens ---------- */
+@media (max-width: 900px) {
+  .brand { width: 120px; top: 12px; left: 14px; height: 48px; }
+  .top-actions { top: 12px; right: 12px; gap: 8px; }
+  .round-button { width: 48px; height: 48px; }
+  .round-button .icon { width: 22px; height: 22px; }
+  .progress-dots { top: 25px; gap: 6px; padding: 6px 10px; }   /* centred on the header row, like the desktop */
+  .progress-dots i { width: 11px; height: 11px; }
+  .text-panel { left: 3vw; right: 3vw; width: auto; top: auto; bottom: 112px; transform: none; max-height: 44vh; }
+  .text-panel.hud { animation-name: panel-in-mobile; }
+  @keyframes panel-in-mobile { from { opacity: 0; transform: translateY(40px) scale(0.94); } to { opacity: 1; transform: none; } }
+  .text-panel.turning { animation-name: panel-turn-mobile; }
+  @keyframes panel-turn-mobile { to { opacity: 0; transform: translateX(-30px) scale(0.97); } }
+  .text-panel.arriving { animation-name: panel-arrive-mobile; }
+  @keyframes panel-arrive-mobile { from { opacity: 0; transform: translateX(30px) scale(0.97); } to { opacity: 1; transform: none; } }
+  .text-panel.focus { transform: translateY(-16vh) scale(1.08); }
+  .text-panel .corner { width: 54px; height: 54px; }
+  .text-panel-inner { padding: 26px 22px 18px 26px; gap: 6px; }
+  .page-eyebrow { font-size: 11px; }
+  .page-heading { font-size: clamp(20px, 6vw, 26px); }
+  .page-words { font-size: clamp(17px, 5.2vw, 23px); line-height: 1.5; }
+  .text-panel.size-large .page-words { font-size: clamp(19px, 6vw, 27px); }
+  .text-panel.overflowing:not(.at-end) .text-panel-inner { -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 72px), transparent calc(100% - 12px)); mask-image: linear-gradient(to bottom, #000 calc(100% - 72px), transparent calc(100% - 12px)); }
+  .text-panel.overflowing.scrolled.at-end .text-panel-inner { -webkit-mask-image: linear-gradient(to bottom, transparent 12px, #000 60px); mask-image: linear-gradient(to bottom, transparent 12px, #000 60px); }
+  .text-panel.overflowing.scrolled:not(.at-end) .text-panel-inner { -webkit-mask-image: linear-gradient(to bottom, transparent 12px, #000 60px, #000 calc(100% - 72px), transparent calc(100% - 12px)); mask-image: linear-gradient(to bottom, transparent 12px, #000 60px, #000 calc(100% - 72px), transparent calc(100% - 12px)); }
+  .zoom-hint { display: none; }
+  .page-foot { display: none; }
+  .hint-card { display: none; }
+  .reader-bar { left: 50%; bottom: 16px; gap: 12px; }
+  .round-button.big { width: 58px; height: 58px; }
+  .round-button.big .icon { width: 28px; height: 28px; }
+  .pill-button.primary { min-width: 170px; font-size: 18px; min-height: 54px; padding: 8px 22px; }
+  .mode-toggle { display: none; }
+  .word-zoom { font-size: 56px; padding: 16px 34px; }
+  .word-zoom img { width: clamp(150px, 42vw, 230px); }
+  .word-zoom.has-picture .zoom-label { font-size: 44px; }
+  .magic-word { font-size: 40px; }
+}
+@media (max-height: 600px) {
+  .text-panel-inner { padding: 24px 30px 16px 34px; gap: 4px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hint-card .icon, .loading-moon, .loading-stars, .progress-dots i.current, .loading-logo, #btn-open { animation: none; }
+}
+
+/* ---------- the bookshelf ---------- */
+#loading.book { background: transparent; place-items: end center; padding-bottom: 28px; pointer-events: none; }
+#loading.book .loading-sky { display: none; }
+#loading.book .loading-card { pointer-events: auto; width: min(460px, 90vw); padding: 26px 30px 22px; gap: 10px; }
+#loading.book .loading-logo { width: 280px; }
+#loading.book .loading-blurb { font-size: 20px; line-height: 1.5; max-width: 400px; }
+/* the quill: when a book's logo arrives it is drawn in from the left, then the blurb, a feather
+   riding the ink edge */
+.loading-card h1, .loading-blurb { position: relative; }
+.loading-card.predraw .loading-blurb { opacity: 0; }
+.loading-card .quill { position: absolute; left: 0; top: 50%; font-size: 46px; line-height: 1; font-style: normal; transform: translate(-50%, -80%) rotate(-30deg); opacity: 0; pointer-events: none; filter: drop-shadow(0 3px 4px #05081a55); z-index: 2; }
+.loading-card.draw .loading-logo { -webkit-mask-image: linear-gradient(90deg, #000 45%, transparent 55%); mask-image: linear-gradient(90deg, #000 45%, transparent 55%); -webkit-mask-size: 220% 100%; mask-size: 220% 100%; animation: ink-wipe 1.5s var(--soft) both, logo-float 5s ease-in-out 1.5s infinite; }
+.loading-card.draw .loading-blurb { -webkit-mask-image: linear-gradient(90deg, #000 45%, transparent 55%); mask-image: linear-gradient(90deg, #000 45%, transparent 55%); -webkit-mask-size: 220% 100%; mask-size: 220% 100%; animation: ink-wipe 1.2s var(--soft) 1.35s both; }
+.loading-card.draw h1 .quill { animation: quill-sweep 1.5s var(--soft) both; }
+.loading-card.draw .loading-blurb .quill { animation: quill-sweep 1.2s var(--soft) 1.35s both; }
+@keyframes ink-wipe { from { -webkit-mask-position: 100% 0; mask-position: 100% 0; } to { -webkit-mask-position: 0 0; mask-position: 0 0; } }
+@keyframes quill-sweep {
+  0% { left: 0%; opacity: 0; transform: translate(-50%, -80%) rotate(-30deg); }
+  8% { opacity: 1; }
+  25% { transform: translate(-50%, -86%) rotate(-22deg); }
+  50% { transform: translate(-50%, -76%) rotate(-34deg); }
+  75% { transform: translate(-50%, -86%) rotate(-24deg); }
+  92% { opacity: 1; }
+  100% { left: 100%; opacity: 0; transform: translate(-50%, -80%) rotate(-30deg); }
+}
+#loading.book .eyebrow, #loading.book .loading-footnote { display: none; }
+#interface.view-shelf .progress-dots, #interface.view-shelf #btn-look, #interface.view-shelf .reader-bar, #interface.view-shelf .hint-card, #interface.view-shelf .text-panel { display: none !important; }
+.shelf-strip {
+  /* spans the width and centres its children: the pop-in animation owns `transform`, so the
+     strip must not rely on translateX(-50%) for centring */
+  position: absolute; left: 0; right: 0; bottom: 26px;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  pointer-events: none; z-index: 6;
+}
+.shelf-strip > * { pointer-events: auto; }
+.shelf-strip.arriving { animation: hud-pop 700ms var(--spring) both; }
+.shelf-title { font-family: "Baloo 2", var(--ui-font); font-weight: 800; font-size: 22px; color: #fff3d6; text-shadow: 0 2px 0 #5a3a1a, 0 6px 18px #00000088; letter-spacing: 0.02em; }
+.shelf-row { display: flex; align-items: center; gap: 14px; }
+.shelf-books { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.shelf-nav {
+  flex: none;
+  font: 800 34px/1 "Baloo 2", var(--ui-font); cursor: pointer; width: 52px; height: 52px; border: 0; border-radius: 50%;
+  display: grid; place-items: center; padding: 0 0 6px;   /* the chevron glyph hangs low in its em box: lift it to the centre */
+  color: #3a2410; background: radial-gradient(circle at 35% 30%, #ffe8b8, #e9b56b 70%, #c98a44);
+  box-shadow: 0 0 0 3px var(--navy), 0 8px 18px #05081a99, inset 0 -3px 0 #a86a2c;
+  transition: transform 220ms var(--spring), opacity 200ms;
+}
+.shelf-nav:hover { transform: scale(1.08); }
+.shelf-nav:active { transform: scale(0.96); }
+.shelf-nav:disabled { opacity: 0.35; cursor: default; transform: none; }
+.shelf-row.single .shelf-nav { display: none; }
+.shelf-dots { display: flex; gap: 8px; }
+.shelf-dots i { width: 9px; height: 9px; border-radius: 50%; background: #ffffff66; box-shadow: 0 0 0 2px #05081a66; }
+.shelf-dots i.on { background: #ffd97a; }
+.shelf-book {
+  font: inherit; text-align: left; cursor: pointer; min-width: 180px;
+  padding: 10px 16px 9px; border: 0; border-radius: 14px; color: var(--ink);
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/textures/paper.7b1612c72db0354d.webp") center / cover, var(--paper);
+  box-shadow: 0 0 0 1px #d4b982, 0 0 0 4px var(--navy), 0 10px 24px #05081a99;
+  transition: transform 220ms var(--spring), box-shadow 220ms;
+}
+.shelf-book { display: flex; flex-direction: column; gap: 7px; width: 214px; min-width: 0; }
+.shelf-logo { display: block; position: relative; height: 58px; }
+.shelf-logo img { display: block; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 2px 2px #05081a33); }
+.shelf-logo b { display: none; font-family: "Baloo 2", var(--ui-font); font-size: 17px; line-height: 1.1; text-align: center; }
+.shelf-logo.missing img { display: none; }
+.shelf-logo.missing b { display: grid; place-items: center; height: 100%; }
+.shelf-progress { display: block; height: 8px; border-radius: 4px; background: #e6d7b8; box-shadow: inset 0 1px 2px #00000022; overflow: hidden; }
+.shelf-progress i { display: block; height: 100%; border-radius: 4px; background: linear-gradient(90deg, #ffd97a, #e0a83a); box-shadow: inset 0 -1px 0 #b8781f66; transition: width 700ms var(--spring); }
+.shelf-bar-row { display: flex; align-items: center; gap: 8px; }
+.shelf-bar-row .shelf-progress { flex: 1; }
+/* the quiz: a small check badge per question, green for each right answer, like the counter's
+   check (stars belong to the pages) - on the shelf card and the souvenir board */
+.shelf-quiz, .quiz-marks { display: inline-flex; gap: 3px; flex: none; }
+.shelf-quiz i, .quiz-marks i {
+  display: inline-grid;
+  place-items: center;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #cdbf9f;
+  color: #fff9ec;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 9px;
+  line-height: 1;
+  box-shadow: inset 0 0 0 1px #00000014;
+}
+.shelf-quiz i::before, .quiz-marks i::before { content: "✓"; opacity: 0.5; }
+.shelf-quiz i.on, .quiz-marks i.on { background: linear-gradient(135deg, #9be29a, #3fa860); box-shadow: inset 0 0 0 1px #dbf5d6, 0 1px 3px #00000055; }
+.shelf-quiz i.on::before, .quiz-marks i.on::before { opacity: 1; }
+.quiz-marks { margin-top: 6px; gap: 4px; }
+.quiz-marks i { width: 16px; height: 16px; font-size: 11px; }
+.shelf-meta { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.shelf-meta small { display: block; font-size: 12px; color: #7a6a4a; white-space: nowrap; }
+.shelf-pins { display: flex; gap: 3px; }
+.shelf-pins img { width: 20px; height: 20px; object-fit: contain; }
+.shelf-pins img.missing { filter: brightness(0) opacity(0.22); }
+.shelf-book:hover, .shelf-book.hover { transform: translateY(-4px) scale(1.03); box-shadow: 0 0 0 1px #ffd97a, 0 0 0 4px var(--navy), 0 16px 30px #05081aaa; }
+.shelf-book.soon { opacity: 0.8; }
+.shelf-book.soon small { color: #a08a5a; }
+@media (max-width: 720px) {
+  /* the cards stack under the title (nothing clips their shadows); the round arrows keep their shape beside them */
+  .shelf-strip { bottom: 12px; gap: 6px; }
+  .shelf-row { width: 100%; box-sizing: border-box; padding: 0 14px; gap: 8px; justify-content: space-between; }   /* the arrows a thumb's margin in from the edges */
+  .shelf-books { flex-direction: column; gap: 8px; }   /* stacked outright (wrapping would size the row for three cards abreast and push the arrows to the edges) */
+  .shelf-nav { width: 44px; height: 44px; font-size: 28px; }
+  .shelf-book { width: 160px; padding: 8px 10px 7px; gap: 5px; }
+  .shelf-logo { height: 44px; }
+  .shelf-logo b { font-size: 14px; }
+  .shelf-meta small { font-size: 11px; }
+  .shelf-pins img { width: 16px; height: 16px; }
+  .shelf-title { font-size: 18px; }
+}
+#interface.book-closed .reader-bar, #interface.book-closed .progress-dots, #interface.book-closed #btn-look, #interface.book-closed .hint-card { display: none !important; }
+
+
+/* ---------- the end-of-story quiz ---------- */
+.quiz { position: absolute; inset: 0; z-index: 30; pointer-events: auto; display: flex; align-items: center; justify-content: center;
+  background: radial-gradient(ellipse at 50% 40%, #1b2450cc, #05081aee); }
+.quiz-inner { position: relative; width: min(920px, 94vw); display: flex; flex-direction: column; align-items: center; gap: 22px; }
+.quiz-stars { display: flex; gap: 14px; }
+.quiz-stars i { width: 34px; height: 34px; background: #ffffff33; box-shadow: 0 0 0 3px #05081a66;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); transition: background 300ms, transform 400ms var(--spring); }
+.quiz-stars i.on { background: #ffd97a; transform: scale(1.25) rotate(12deg); }
+.quiz-stars i.half { background: #ffe9a8aa; }
+.quiz-card { position: relative; width: min(720px, 92vw); padding: 22px 34px 26px; border-radius: 22px; text-align: center; color: var(--ink);
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/textures/paper.7b1612c72db0354d.webp") center / cover, var(--paper); box-shadow: 0 0 0 1px #d4b982, 0 0 0 5px var(--navy), 0 24px 50px #05081aaa; }
+.quiz-card.arriving { animation: hud-pop 600ms var(--spring) both; }
+.quiz-eyebrow { display: block; font: 700 12px/1 var(--ui-font); letter-spacing: 0.14em; text-transform: uppercase; color: #a08a5a; margin-bottom: 8px; }
+.quiz-question { margin: 0; font: 800 clamp(24px, 3.6vw, 36px)/1.15 "Baloo 2", var(--ui-font); }
+.quiz-options { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; }
+.quiz-option { --i: 0; font: inherit; cursor: pointer; border: 0; padding: 12px 12px 10px; border-radius: 22px; width: clamp(150px, 22vw, 230px); color: var(--ink);
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/textures/paper.7b1612c72db0354d.webp") center / cover, var(--paper); box-shadow: 0 0 0 1px #d4b982, 0 0 0 5px var(--navy), 0 18px 34px #05081a99;
+  animation: quiz-pop 700ms var(--spring) both; animation-delay: calc(var(--i) * 140ms); transition: transform 220ms var(--spring), box-shadow 220ms, filter 300ms, opacity 300ms; }
+.quiz-option:hover { transform: translateY(-8px) rotate(-2deg) scale(1.05); box-shadow: 0 0 0 1px #ffd97a, 0 0 0 5px var(--navy), 0 26px 40px #05081aaa; }
+.quiz-option .quiz-pic { display: block; border-radius: 14px; overflow: hidden; aspect-ratio: 1; background: #f6ead0; }
+.quiz-option img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.quiz-option b { display: block; margin-top: 10px; font: 800 clamp(18px, 2.4vw, 26px)/1 "Baloo 2", var(--ui-font); text-transform: capitalize; }
+.quiz-option.correct { animation: quiz-win 900ms var(--spring) both; box-shadow: 0 0 0 4px #ffd97a, 0 0 0 9px var(--navy), 0 0 60px #ffd97a99, 0 26px 40px #05081aaa; z-index: 2; }
+.quiz-option.wrong { animation: quiz-shake 600ms ease both; filter: grayscale(0.7) brightness(0.8); }
+.quiz-option.dim { opacity: 0.45; filter: grayscale(0.5); transform: scale(0.94); }
+.quiz-option.reveal { animation: quiz-reveal 1200ms ease-in-out infinite; box-shadow: 0 0 0 4px #ffd97a, 0 0 0 9px var(--navy), 0 0 40px #ffd97a88; z-index: 2; }
+.quiz-done { text-align: center; color: #fff3d6; }
+.quiz-done.arriving { animation: hud-pop 700ms var(--spring) both; }
+.quiz-trophy { font-size: 96px; line-height: 1; color: #ffd97a; text-shadow: 0 0 40px #ffd97a99, 0 6px 0 #5a3a1a; animation: quiz-spin 1400ms var(--spring) both; }
+.quiz-done h2 { margin: 6px 0 4px; font: 800 44px/1.1 "Baloo 2", var(--ui-font); text-shadow: 0 2px 0 #5a3a1a, 0 6px 18px #00000088; }
+.quiz-score { margin: 0 0 18px; font: 600 18px/1.3 var(--ui-font); opacity: 0.9; }
+.quiz-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.quiz-close { position: absolute; top: -8px; right: -8px; width: 44px; height: 44px; border: 0; border-radius: 50%; cursor: pointer; font: 700 26px/1 var(--ui-font); color: #3a2410;
+  background: radial-gradient(circle at 35% 30%, #ffe8b8, #e9b56b 70%, #c98a44); box-shadow: 0 0 0 3px var(--navy), 0 8px 18px #05081a99; }
+.quiz-confetti { position: absolute; inset: 0; pointer-events: none; overflow: visible; }
+.quiz-confetti i { position: absolute; display: block; border-radius: 3px; animation: quiz-confetti 1900ms cubic-bezier(0.2, 0.6, 0.4, 1) both; }
+.quiz-pill .icon-star::before { content: "★"; }
+.quiz-pill.arriving { animation: hud-pop 600ms var(--spring) both; }
+@keyframes quiz-pop { 0% { transform: translateY(60px) scale(0.3) rotate(-12deg); opacity: 0; } 60% { transform: translateY(-12px) scale(1.08) rotate(3deg); opacity: 1; } 100% { transform: none; opacity: 1; } }
+@keyframes quiz-win { 0% { transform: scale(1); } 40% { transform: scale(1.18) rotate(-4deg); } 70% { transform: scale(1.06) rotate(3deg); } 100% { transform: scale(1.1); } }
+@keyframes quiz-shake { 0%, 100% { transform: translateX(0); } 20% { transform: translateX(-14px) rotate(-3deg); } 40% { transform: translateX(12px) rotate(3deg); } 60% { transform: translateX(-8px); } 80% { transform: translateX(6px); } }
+@keyframes quiz-reveal { 0%, 100% { transform: scale(1.04); } 50% { transform: scale(1.12) rotate(2deg); } }
+@keyframes quiz-spin { 0% { transform: scale(0) rotate(-180deg); } 70% { transform: scale(1.2) rotate(10deg); } 100% { transform: scale(1) rotate(0); } }
+@keyframes quiz-confetti { 0% { transform: translate(0, 0) rotate(0); opacity: 1; } 100% { transform: translate(var(--dx), calc(var(--dy) + 520px)) rotate(var(--r)); opacity: 0; } }
+@media (max-width: 720px) { .quiz-options { gap: 12px; } .quiz-option { width: 30vw; padding: 8px 8px 6px; border-radius: 16px; } .quiz-card { padding: 16px 18px 18px; } }
+
+/* quiz polish: word cascade, speaking waves, press bounce, ripple and stamp */
+.quiz-word { display: inline-block; animation: quiz-word 500ms var(--spring) both; animation-delay: calc(140ms + var(--k) * 70ms); }
+@keyframes quiz-word { 0% { transform: translateY(14px) scale(0.7); opacity: 0; } 100% { transform: none; opacity: 1; } }
+.quiz-voice { display: none; position: absolute; right: 18px; bottom: 12px; height: 18px; gap: 3px; align-items: flex-end; }
+.quiz.speaking .quiz-voice { display: flex; }
+.quiz-voice i { width: 4px; height: 6px; border-radius: 2px; background: #c98a44; animation: quiz-wave 700ms ease-in-out infinite alternate; }
+.quiz-voice i:nth-child(2) { animation-delay: 120ms; } .quiz-voice i:nth-child(3) { animation-delay: 240ms; } .quiz-voice i:nth-child(4) { animation-delay: 360ms; }
+@keyframes quiz-wave { from { height: 4px; } to { height: 18px; } }
+.quiz.speaking .quiz-card { animation: quiz-bob 1600ms ease-in-out infinite; }
+@keyframes quiz-bob { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-4px) rotate(-0.4deg); } }
+.quiz-option { position: relative; overflow: visible; }
+.quiz-option.pressed { transform: scale(0.94) !important; transition: transform 80ms; }
+.quiz-option .quiz-pic img { transition: transform 300ms var(--spring); }
+.quiz-option:hover .quiz-pic img { transform: scale(1.08) rotate(1.5deg); }
+.quiz-stamp { position: absolute; top: -18px; right: -14px; width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; font: 900 30px/1 "Baloo 2", var(--ui-font); color: #5a3a1a;
+  background: radial-gradient(circle at 35% 30%, #fff1c0, #ffd97a 60%, #e0a93a); box-shadow: 0 0 0 3px var(--navy), 0 8px 18px #05081a99; transform: scale(0) rotate(-40deg); }
+.quiz-option.correct .quiz-stamp { animation: quiz-stamp 700ms var(--spring) 200ms both; }
+@keyframes quiz-stamp { 0% { transform: scale(0) rotate(-40deg); } 70% { transform: scale(1.3) rotate(8deg); } 100% { transform: scale(1) rotate(-6deg); } }
+.quiz-ripple { position: absolute; inset: -6px; border-radius: 28px; border: 4px solid #ffd97a; opacity: 0; pointer-events: none; }
+.quiz-option.correct .quiz-ripple { animation: quiz-ripple 900ms ease-out 2; }
+.quiz-option.reveal .quiz-ripple { animation: quiz-ripple 1300ms ease-out infinite; }
+@keyframes quiz-ripple { 0% { transform: scale(0.96); opacity: 0.9; } 100% { transform: scale(1.25); opacity: 0; } }
+.quiz.celebrate .quiz-stars i.on { animation: quiz-star 700ms var(--spring); }
+@keyframes quiz-star { 0% { transform: scale(0.5) rotate(-60deg); } 60% { transform: scale(1.6) rotate(20deg); } 100% { transform: scale(1.25) rotate(12deg); } }
+.quiz-pill { animation: quiz-beckon 1800ms ease-in-out infinite; }
+@keyframes quiz-beckon { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px) rotate(-1.5deg); } }
+
+/* ---------- souvenirs: the counter in the corner ---------- */
+.souvenir-chip {
+  position: absolute;
+  top: 31px;                    /* 32 px tall: its middle sits on the header row's centre line (47 px), with the logo and the buttons */
+  left: 208px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 14px 6px 10px;
+  border: 0;
+  border-radius: 999px;
+  color: #fff3d6;
+  background: linear-gradient(180deg, #2b345f, #1b2450);
+  box-shadow: 0 0 0 2px #e6bd6666, 0 8px 18px #05081a80, inset 0 1px 0 #ffffff33;
+  font: 700 17px/1 "Baloo 2", var(--ui-font);
+  cursor: pointer;
+  transition: transform 300ms var(--spring), box-shadow 200ms;
+  z-index: 7;
+}
+.souvenir-chip:hover { transform: translateY(-2px) scale(1.04); box-shadow: 0 0 0 2px #e6bd66, 0 12px 22px #05081a90, inset 0 1px 0 #ffffff33; }
+.souvenir-chip:active { transform: scale(0.97); }
+.souvenir-chip.bump { animation: chip-bump 700ms var(--spring); }
+@keyframes chip-bump { 0% { transform: scale(1); } 30% { transform: scale(1.22) rotate(-4deg); } 60% { transform: scale(0.96) rotate(2deg); } 100% { transform: scale(1); } }
+.souvenir-chip span { display: inline-flex; align-items: center; gap: 6px; }
+.souvenir-chip .chip-star { font-style: normal; color: var(--gold); font-size: 20px; text-shadow: 0 0 10px #ffd97a88; }
+.souvenir-chip .chip-pin { width: 18px; height: 18px; border-radius: 50% 50% 50% 0; background: linear-gradient(135deg, #ff8b6b, #e2493d); box-shadow: inset 0 0 0 2px #ffd2c5, 0 2px 4px #00000066; transform: rotate(-45deg); }
+.souvenir-chip .chip-pins b { color: #fff; }
+.souvenir-chip .chip-check { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg, #9be29a, #3fa860); color: #fff; font-style: normal; font-size: 12px; font-weight: 800; box-shadow: inset 0 0 0 2px #dbf5d6, 0 2px 4px #00000066; }
+.souvenir-chip .chip-quiz b { color: #fff; }
+.souvenir-chip small { font-size: 12px; opacity: 0.75; margin-left: -4px; }
+.pin-flight { position: fixed; left: 0; top: 0; width: 96px; height: auto; pointer-events: none; z-index: 40; filter: drop-shadow(0 8px 12px #00000066); }
+/* a star or a check on its way to the counter (the same arc as a pin) */
+.glyph-flight { width: auto; font-style: normal; font-weight: 800; line-height: 1; font-family: "Baloo 2", var(--ui-font); }
+.star-flight { font-size: 44px; color: var(--gold); text-shadow: 0 0 18px #ffd97a, 0 3px 0 #a86a2c; }
+.check-flight { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; font-size: 26px; color: #fff; background: linear-gradient(135deg, #9be29a, #3fa860); box-shadow: inset 0 0 0 3px #dbf5d6, 0 0 18px #9be29a99; }
+/* the counter stays in view over the quiz, so a right answer's check has somewhere to land */
+body.quiz-open .souvenir-chip { z-index: 31; }
+@media (max-width: 900px) { .souvenir-chip { left: 146px; top: 21px; padding: 5px 12px 5px 9px; font-size: 15px; } }   /* a tablet: beside the logo on the header row, like the desktop */
+/* a phone: the header row is the symbol and the round buttons; the counter takes its own centred row
+   under them, and the page stars a row under that */
+@media (max-width: 640px) {
+  .brand { width: 62px; left: 12px; }   /* the symbol is 256x200: 62 wide makes it 48 tall, the buttons' height */
+  .brand.storycomet-logo > .logo-symbol { width: 100%; }
+  .brand.storycomet-logo > .logo-wordmark { display: none; }
+  .souvenir-chip { left: 0; right: 0; width: fit-content; margin: 0 auto; top: 68px; }
+  .progress-dots { top: 112px; }
+}
+
+/* ---------- the souvenir board ---------- */
+.board { position: absolute; inset: 0; display: grid; place-items: center; background: #0a0d1fd0; z-index: 24; animation: fade-in 250ms both; }
+.board-shell {
+  position: relative;
+  width: min(860px, 95vw);
+  max-height: calc(100dvh - 32px);
+  overflow: auto;
+  padding: 30px 40px 26px;
+  color: var(--ink);
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/textures/paper.7b1612c72db0354d.webp") center / cover, var(--paper);
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px #d4b982, inset 0 0 0 6px #fff9ec, inset 0 0 0 7px #d4b98266, 0 0 0 8px #6b3f22, 0 30px 80px #05081acc;
+  animation: hud-pop 600ms var(--spring) both;
+  scrollbar-width: thin;
+  scrollbar-color: #b8975f #ecdfc2;
+}
+.board-shell .corner { position: absolute; width: 74px; height: 74px; background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/ui/corner.a562b92bf6f5ba2b.webp") center / contain no-repeat; pointer-events: none; }
+.board-shell .corner.tl { left: 10px; top: 10px; }
+.board-shell .corner.tr { right: 10px; top: 10px; transform: scaleX(-1); }
+.board-shell .corner.bl { left: 10px; bottom: 10px; transform: scaleY(-1); }
+.board-shell .corner.br { right: 10px; bottom: 10px; transform: scale(-1); }
+.board-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; padding: 4px 8px 0; }
+.board-head h2 { margin: 2px 0 4px; font-family: "Baloo 2", var(--ui-font); font-size: 38px; font-weight: 800; color: #3d2a17; line-height: 1; }
+.board-head .panel-description { margin: 0; color: #6b5740; font-size: 14px; line-height: 1.5; max-width: 420px; }
+.board-totals { display: flex; gap: 14px; flex: none; }
+.board-totals .total { display: flex; flex-direction: column; align-items: center; min-width: 96px; padding: 10px 14px 8px; border-radius: 16px; background: #1b2450; color: #fff3d6; box-shadow: 0 0 0 2px #e6bd6688, 0 8px 16px #05081a55; animation: hud-pop 700ms var(--spring) both; }
+.board-totals .total:nth-child(2) { animation-delay: 80ms; }
+.board-totals .total b { font: 800 34px/1 "Baloo 2", var(--ui-font); color: var(--gold); }
+.board-totals .total b small { font-size: 16px; color: #fff3d6aa; }
+.board-totals .total span { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; margin-top: 4px; }
+.board-badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 10px; padding: 0 8px; }
+.badge { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px 5px 8px; border-radius: 999px; background: #e9dcc0; color: #8a7a60; font: 600 13px/1 var(--ui-font); box-shadow: inset 0 0 0 1px #d4b98288; filter: grayscale(1); opacity: 0.6; }
+.badge i { font-style: normal; font-size: 16px; }
+.badge.earned { filter: none; opacity: 1; color: #3d2a17; background: linear-gradient(180deg, #fff3d6, #f6d98a); box-shadow: 0 0 0 1px #e0a83a, 0 3px 6px #05081a33; animation: hud-pop 600ms var(--spring) both; }
+.board-rows { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
+.board-row { display: grid; grid-template-columns: 58px 1fr auto; align-items: center; gap: 16px; padding: 10px 14px; border-radius: 16px; background: #fff9ec99; box-shadow: inset 0 0 0 1px #d4b98266; animation: word-in 500ms var(--spring) both; }
+.board-row:nth-child(2) { animation-delay: 40ms; } .board-row:nth-child(3) { animation-delay: 80ms; } .board-row:nth-child(4) { animation-delay: 120ms; } .board-row:nth-child(5) { animation-delay: 160ms; } .board-row:nth-child(6) { animation-delay: 200ms; } .board-row:nth-child(n+7) { animation-delay: 240ms; }
+.board-row.complete { background: linear-gradient(90deg, #fff3d6, #fbe7b8); box-shadow: inset 0 0 0 1px #e0a83a; }
+.board-cover { padding: 0; border: 0; background: none; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 10px #05081a55; transition: transform 250ms var(--spring); cursor: pointer; }
+.board-cover:hover { transform: scale(1.08) rotate(-2deg); }
+.board-cover img { width: 58px; height: 74px; object-fit: cover; display: block; }
+.board-info b { display: block; font: 800 18px/1.15 "Baloo 2", var(--ui-font); color: #3d2a17; }
+.board-info small { display: block; margin-top: 4px; font-size: 12px; color: #7a6a52; }
+.board-bar { height: 8px; margin-top: 6px; border-radius: 999px; background: #e3d3b0; overflow: hidden; box-shadow: inset 0 1px 2px #00000022; }
+.board-bar i { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #e2493d, #ffb347); transition: width 800ms var(--soft); }
+.pin-slots { display: flex; align-items: center; gap: 6px; }
+.pin-slot { position: relative; width: 52px; height: 52px; display: grid; place-items: center; border-radius: 50%; background: #e9dcc0; box-shadow: inset 0 2px 4px #00000022; }
+.pin-slot img { width: 42px; height: 42px; object-fit: contain; transition: transform 300ms var(--spring); }
+.pin-slot.found { background: radial-gradient(circle at 50% 40%, #fff7e0, #f2d99a); box-shadow: 0 0 0 2px #e0a83a88, 0 4px 8px #05081a33; }
+.pin-slot.found:hover img { transform: scale(1.25) rotate(-8deg); }
+.pin-slot.missing img { filter: brightness(0) opacity(0.28); }
+.pin-slot.missing i { position: absolute; font: 800 20px/1 "Baloo 2", var(--ui-font); color: #9a8a6a; font-style: normal; }
+.board-rosette { display: grid; place-items: center; width: 34px; height: 34px; margin-left: 4px; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #ffe9a8, #e0a83a); color: #7a4a10; font-size: 18px; box-shadow: 0 3px 6px #05081a44; animation: chip-bump 900ms var(--spring); }
+.board-foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 18px; padding: 0 8px; }
+.board-foot small { color: #7a6a52; font-size: 12px; line-height: 1.4; }
+@media (max-width: 720px) {
+  .board-shell { padding: 22px 18px 20px; }
+  .board-head { flex-direction: column; }
+  .board-row { grid-template-columns: 44px 1fr; }
+  .board-cover img { width: 44px; height: 56px; }
+  .pin-slots { grid-column: 1 / -1; }
+  .pin-slot { width: 44px; height: 44px; } .pin-slot img { width: 34px; height: 34px; }
+}
+
+/* ---------- souvenir words (language books) ---------- */
+.page-words .word.foreign {
+  padding: 2px 8px 0;
+  margin: 0 -2px;
+  border-radius: 10px;
+  color: #8d3a12;
+  font-weight: 700;
+  background: linear-gradient(180deg, #fff6e3, #ffe9c2);
+  box-shadow: inset 0 0 0 1.5px #e0a83a88, 0 2px 0 #d9a45c55;
+  vertical-align: baseline;
+}
+.page-words .word.foreign:hover { background: #ffd97a; }
+.page-words .word.foreign ruby { ruby-position: over; ruby-align: center; }
+.page-words .word.foreign rt {
+  font: 500 0.42em/1 "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Noto Sans SC", "PingFang SC", "Yu Gothic", system-ui, sans-serif;
+  color: #a5642f;
+  letter-spacing: 0.02em;
+  padding-bottom: 2px;
+}
+.page-words .word.foreign rt:lang(fr) { font-family: var(--ui-font); font-style: italic; }
+.page-words .word.foreign.active { background: #ffd166; color: #1e1d2e; }
+.page-words .word.foreign.active rt { color: #7a4a10; }
+.text-panel.self-read .page-words .word.foreign { color: #8d3a12; }
+
+.vocab-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-width: 320px;
+  max-width: min(680px, 92vw);
+  padding: 22px 30px 20px 22px;
+  transform: translate(-50%, -50%);
+  color: var(--ink);
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/textures/paper.7b1612c72db0354d.webp") center / cover, var(--paper);
+  border-radius: 14px;
+  box-shadow: 0 0 0 1px #d4b982, inset 0 0 0 5px #fff9ec, inset 0 0 0 6px #d4b98266, 0 0 0 7px #8d3a12, 0 30px 70px #05081acc;
+  cursor: pointer;
+  z-index: 9;
+  animation: vocab-in 500ms var(--spring) both;
+}
+.vocab-card::before { content: ""; position: absolute; inset: -14px; border: 3px dashed #e0a83a88; border-radius: 22px; pointer-events: none; }
+.vocab-card.arriving { animation: vocab-in 500ms var(--spring) both; }
+@keyframes vocab-in { from { opacity: 0; transform: translate(-50%, -50%) rotate(-4deg) scale(0.7); } to { opacity: 1; transform: translate(-50%, -50%) rotate(0) scale(1); } }
+.vocab-card img { width: 168px; height: 168px; object-fit: cover; border-radius: 12px; box-shadow: 0 0 0 4px #fff9ec, 0 0 0 5px #d4b982, 0 8px 18px #05081a44; transform: rotate(-3deg); }
+.vocab-card:not(.has-picture) img { display: none; }
+.vocab-text { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.vocab-script { font: 800 clamp(40px, 6vw, 64px)/1.1 "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Noto Sans SC", "PingFang SC", "Baloo 2", var(--ui-font); color: #8d3a12; }
+.vocab-script:lang(fr) { font-family: "Baloo 2", var(--ui-font); }
+.vocab-roman { font: 600 24px/1.2 var(--ui-font); color: #a5642f; font-style: italic; }
+.vocab-meaning { font: 700 26px/1.2 "Baloo 2", var(--ui-font); color: #3d2a17; }
+.vocab-meaning::before { content: "= "; color: #c9a45f; }
+.vocab-note { font-size: 13px; color: #7a6a52; }
+.vocab-lang { margin-top: 6px; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #a5642f; }
+@media (max-width: 720px) { .vocab-card { flex-direction: column; text-align: center; padding: 20px; } .vocab-text { align-items: center; } .vocab-card img { width: 120px; height: 120px; } }
+
+.phrase-pill .icon-abc { width: 20px; height: 20px; }
+.phrase-count { margin: 6px 0 0; font: 600 13px/1 var(--ui-font); color: #8d4f1f; }
+.phrase-count b { font-size: 16px; }
+.phrase-page { margin-top: 14px; }
+.phrase-page span { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #a5642f; padding: 3px 8px; border-radius: 999px; background: #efe0c2; }
+.phrase-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 8px; margin-bottom: 6px; }
+.phrase-row { position: relative; display: grid; grid-template-columns: 56px 1fr 32px; align-items: center; gap: 12px; padding: 8px 10px; border: 0; border-radius: 14px; text-align: left; color: var(--ink); background: #fff9ec99; box-shadow: inset 0 0 0 1px #d4b98266; cursor: pointer; transition: transform 250ms var(--spring), background 200ms; }
+.phrase-row:hover { background: #fff3d6; transform: translateY(-2px); }
+.phrase-row.said { animation: word-said 500ms var(--spring); }
+.phrase-pic { width: 56px; height: 56px; border-radius: 10px; overflow: hidden; background: #efe0c2; box-shadow: 0 2px 6px #05081a33; }
+.phrase-pic img { width: 100%; height: 100%; object-fit: cover; }
+.phrase-pic.none img { display: none; }
+.phrase-text { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.phrase-text b { font: 700 20px/1.2 "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Noto Sans SC", "PingFang SC", "Baloo 2", var(--ui-font); color: #8d3a12; }
+.phrase-text b:lang(fr) { font-family: "Baloo 2", var(--ui-font); }
+.phrase-text i { font: 500 13px/1.2 var(--ui-font); color: #a5642f; }
+.phrase-text span { font: 600 14px/1.2 var(--ui-font); color: #3d2a17; }
+.phrase-text small { font-size: 11px; color: #7a6a52; }
+.phrase-play { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: #1b2450; box-shadow: 0 0 0 2px #e6bd6688; }
+.phrase-play .icon { width: 16px; height: 16px; }
+.phrase-stamp { position: absolute; right: 8px; top: 6px; width: 22px; height: 22px; display: grid; place-items: center; border-radius: 50%; background: #e2493d; color: #fff; font: 800 13px/1 var(--ui-font); transform: rotate(-12deg) scale(0); transition: transform 350ms var(--spring); }
+.phrase-row.heard .phrase-stamp { transform: rotate(-12deg) scale(1); }
+.phrase-row.heard { background: #fff3d6; box-shadow: inset 0 0 0 1px #e0a83a88; }
+
+.quiz-option .quiz-sub { display: block; margin-top: 2px; font: 500 15px/1.1 "Hiragino Sans", "Noto Sans JP", "Noto Sans SC", "PingFang SC", var(--ui-font); color: #fff3d6bb; }
+.quiz-points { margin: -10px 0 16px; font: 800 18px/1.2 "Baloo 2", var(--ui-font); color: var(--gold); text-shadow: 0 2px 0 #5a3a1a; }
+.quiz-points.arriving { animation: hud-pop 600ms var(--spring) both; }
+
+/* the way back to the shelf sits with the reading modes */
+.close-pill { margin-right: 6px; }
+.close-pill .icon-home { width: 20px; height: 20px; }
+
+/* ---------- language ---------- */
+.lang-button img.flag { display: block; width: 30px; height: 20px; margin: 0 auto; filter: drop-shadow(0 1px 0 rgba(61, 42, 23, 0.25)); }
+.language-menu {
+  position: absolute;
+  top: 78px;
+  right: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  border-radius: 16px;
+  background: url("https://api.storycomet.app/storage/v1/object/public/story-assets/public/textures/paper.7b1612c72db0354d.webp") center / cover, var(--paper);
+  box-shadow: 0 0 0 1px #d4b982, inset 0 0 0 4px #fff9ec, 0 14px 30px #05081a80;
+  z-index: 9;
+}
+.language-menu.arriving { animation: hud-pop 400ms var(--spring) both; }
+.language-menu button { display: flex; align-items: center; gap: 12px; min-width: 170px; padding: 8px 14px 8px 10px; border: 0; border-radius: 10px; background: transparent; color: #3d2a17; font: 600 15px/1 var(--ui-font); text-align: left; cursor: pointer; transition: background 150ms, transform 200ms var(--spring); }
+.language-menu button img.flag { display: block; width: 36px; height: 24px; flex: none; filter: drop-shadow(0 1px 0 rgba(61, 42, 23, 0.25)); }
+.language-menu button:hover { background: #fff3d6; transform: translateX(2px); }
+.language-menu button[aria-pressed="true"] { background: #ffd97a; }
+
+/* A crawlable library link on the bookshelf, using the existing shelf controls. */
+.shelf-heading{display:flex;align-items:center;justify-content:center;gap:16px}
+/* the catalogue link stays for readers of the page source and screen readers only: the shelf is the way in */
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.shelf-catalog-link{color:var(--cream);font-size:12px;text-underline-offset:3px;padding:10px 2px;white-space:nowrap}
+.shelf-catalog-link:focus-visible{outline:2px solid var(--gold);outline-offset:3px}

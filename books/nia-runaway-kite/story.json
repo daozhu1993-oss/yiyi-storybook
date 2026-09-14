@@ -1,0 +1,384 @@
+{
+  "id": "nia-runaway-kite",
+  "title": "Nia and the Runaway Kite",
+  "subtitle": "A windy-day mystery",
+  "author": "Storylight",
+  "ageRange": "3 to 7",
+  "readingLevel": "Early reader",
+  "blurb": "A windy-day mystery that reads itself aloud, lights up every word, and blows through the page when you swipe it.",
+  "cover": "art/cover.jpg",
+  "logo": "art/logo.png",
+  "portrait": "art/nia-reference.jpg",
+  "scenes": "scenes.js",
+  "colors": {
+    "cloth": "#3d86c9",
+    "endpaper": {
+      "base": "#fdf1cc",
+      "ink": "#e2493d",
+      "pattern": "kites"
+    }
+  },
+  "hero": {
+    "name": "Nia",
+    "model": "models/nia.glb",
+    "clips": [
+      "run",
+      "jump",
+      "hold",
+      "look",
+      "doze"
+    ],
+    "felt": "otto"
+  },
+  "magic": {
+    "clue": "A clue! A little red bow from the kite's tail.",
+    "achoo": "ACHOO! Out popped a kite. A blue one!",
+    "festival": "A hundred kites, dancing in the sky!",
+    "free": "Fly, kite, fly!",
+    "sleep": "Goodnight, Nia. Goodnight, kites."
+  },
+  "narrator": {
+    "openai": {
+      "model": "gpt-4o-mini-tts",
+      "voice": "fable",
+      "speed": 0.92,
+      "instructions": "You are a warm, gentle storyteller reading a picture book to a young child. Read slowly and clearly, with bright, breezy wonder. Pause briefly at full stops. Give the wind a soft whooshing voice, the ducks a cheerful quack, the sheep a woolly bleat, the crow a raspy caw, the cloud a sleepy sniffly voice, and Nia a small, brave, giggly voice. Never rush. Leave a little silence after the last word."
+    },
+    "bundled": {
+      "folder": "voice",
+      "format": "mp3",
+      "timings": true
+    }
+  },
+  "pages": [
+    {
+      "id": "door",
+      "scene": "kite-door",
+      "heading": "The windy morning",
+      "text": "{Nia} had a {red:kite} {kite}. \"{Whoosh:wind/blow}!\" went the {wind:wind/gust}. The {kite} {slipped:kite/away} from her {paws:nia/oh}. \"Oh {no:nia/oh}!\" said {Nia}. \"Where did it {go:nia/look}?\"",
+      "hint": "Swipe across the page to blow the wind. Tap Nia.",
+      "words": [
+        "Nia",
+        "red",
+        "kite",
+        "whoosh",
+        "wind",
+        "slipped",
+        "paws",
+        "no",
+        "go"
+      ]
+    },
+    {
+      "id": "meadow",
+      "scene": "kite-meadow",
+      "heading": "Which way?",
+      "text": "{Nia} {ran:nia/run} into the {meadow:grass/lean}. \"Which way?\" she said. The {grass:grass/lean} {leaned:grass/lean} to the {right:grass/lean}. \"{Follow:wind/blow} the {wind:wind/blow},\" {whispered:wind/soft} the {wind}.",
+      "hint": "Swipe to blow the wind. Tap the grass.",
+      "words": [
+        "ran",
+        "meadow",
+        "grass",
+        "leaned",
+        "right",
+        "follow",
+        "whispered"
+      ]
+    },
+    {
+      "id": "fence",
+      "scene": "kite-letgo",
+      "heading": "A clue!",
+      "text": "At the {fence:fence/rattle}, {Nia} found a {clue:bow/glow}. A little {red:bow/glow} {bow:bow/glow} from the {kite:bow/glow}'s {tail:bow/glow}! \"This way!\" said {Nia}, and {hopped:nia/hop} over the {gate:fence/rattle}.",
+      "hint": "Tap the little bow on the gate. Tap the fence.",
+      "words": [
+        "fence",
+        "clue",
+        "bow",
+        "tail",
+        "hopped",
+        "gate"
+      ]
+    },
+    {
+      "id": "river",
+      "scene": "kite-river",
+      "heading": "The ducks saw it",
+      "text": "\"{Quack:ducks/quack}!\" said the {ducks:ducks/quack}. \"We {saw:ducks/quack} it! It {flew:kite/away} over the {river:river/splash}!\" {Nia} {hopped:nia/hop} across the {stones:stones/hop}. {Splash:river/splash}!",
+      "hint": "Tap the ducks. Tap the stones to hop.",
+      "words": [
+        "quack",
+        "ducks",
+        "saw",
+        "flew",
+        "river",
+        "stones",
+        "splash"
+      ]
+    },
+    {
+      "id": "hill",
+      "scene": "kite-hill",
+      "heading": "The sheep saw it",
+      "text": "\"{Baa:sheep/baa}!\" said the {sheep:sheep/baa}. \"We {saw:sheep/baa} it! It went {up:kite/high}, {up:kite/high}, {up:kite/high}!\" So {Nia} {climbed:nia/climb} the {tall:hill/climb} {hill}.",
+      "hint": "Tap the sheep. Tap the hill to climb.",
+      "words": [
+        "baa",
+        "sheep",
+        "up",
+        "climbed",
+        "tall",
+        "hill"
+      ]
+    },
+    {
+      "id": "cloud",
+      "scene": "kite-cloud",
+      "heading": "The sneezing cloud",
+      "text": "A {cloud:cloud/tickle} {sniffed:cloud/tickle}. \"Something {tickled:cloud/tickle} me. Ah, ah, {ACHOO:cloud/sneeze}!\" Out {popped:kite/pop} a {kite}. A {blue:kite/pop} one! \"That is not {mine:nia/look},\" said {Nia}.",
+      "hint": "Tap the cloud to make it sneeze.",
+      "words": [
+        "cloud",
+        "sniffed",
+        "tickled",
+        "achoo",
+        "popped",
+        "blue",
+        "mine"
+      ]
+    },
+    {
+      "id": "oak",
+      "scene": "kite-oak",
+      "heading": "Follow me",
+      "text": "The {blue:kite/away} {kite} {flew:kite/away} to the {old:oak} {oak:oak/shake}. \"{Caw:crow/caw}!\" said the {crow:crow/caw}. \"{Follow:crow/hop} me!\" And the {crow} {flew:crow/push} up, up the {hill:oak/shake}.",
+      "hint": "Tap the crow. Tap the oak.",
+      "words": [
+        "old",
+        "oak",
+        "caw",
+        "crow",
+        "follow"
+      ]
+    },
+    {
+      "id": "festival",
+      "scene": "kite-festival",
+      "heading": "A hundred kites",
+      "text": "At the {top:sky/bright} of the {hill:sky/bright}, {Nia} {stopped:nia/look}. {Kites:kites/dance}! {Red:kites/dance} ones, {blue:kites/dance} ones, {big:kites/dance} ones, {small:kites/dance} ones. A {hundred:kites/dance} {kites} {danced:kites/dance} in the {sky:sky/bright}!",
+      "hint": "Tap the sky to make the kites dance. Swipe for wind.",
+      "words": [
+        "top",
+        "stopped",
+        "kites",
+        "big",
+        "small",
+        "hundred",
+        "danced",
+        "sky"
+      ]
+    },
+    {
+      "id": "choice",
+      "scene": "kite-choice",
+      "heading": "Fly, kite, fly!",
+      "text": "And there was her {red:kite/dance} {kite}, {dancing:kite/dance} with the {blue:kite2/dance} one. {Nia} could {pull:nia/hold} it {down:kite/down}. But she {smiled:nia/wave}. \"{Fly:kite/up}, {kite}, {fly:kite/up}!\" she said.",
+      "hint": "Tap the red kite. Tap Nia.",
+      "words": [
+        "dancing",
+        "pull",
+        "down",
+        "smiled",
+        "fly"
+      ]
+    },
+    {
+      "id": "home",
+      "scene": "kite-home",
+      "heading": "Home",
+      "text": "At {sunset:window/sunset}, {Nia} {walked:nia/walk} {home:wall/glow}. And there on the {wall:wall/glow} {hung:kite/hang} her {red:kite/hang} {kite}, with the {blue:kite2/hang} one beside it! \"You came {back:kite/hang},\" she {yawned:nia/yawn}.",
+      "hint": "Tap the two kites on the wall. Tap the lamp.",
+      "words": [
+        "sunset",
+        "walked",
+        "home",
+        "wall",
+        "hung",
+        "back",
+        "yawned"
+      ]
+    }
+  ],
+  "end": {
+    "heading": "The End",
+    "text": "You {read} the whole {story}. {Nia} is {home:nia/home}, and {two:kite2/hang} {kites:kite/hang} are safe on the {wall:wall/glow}.",
+    "prompt": "Would you let your kite fly free?"
+  },
+  "credits": "Story, 3D scenes and code made for Storylight. Title lettering, cover art, pop-up backdrops and cut-outs generated with GPT Image 2 through Higgsfield; Nia modelled and rigged through Higgsfield (Meshy); narration voice through Higgsfield text-to-speech, with optional live narration through the OpenAI speech API.",
+  "audio": {
+    "music": "audio/music.m4a",
+    "ambience": "audio/ambience.mp3",
+    "ambienceVolume": 0.3,
+    "provenance": {
+      "music": "Higgsfield sonilo_music, 60 s, job 1e1dd224-5eb3-4996-994a-53e2d0beb242",
+      "ambience": "Higgsfield mirelo_text_to_audio, 20 s, job b67f6544-67b7-466b-b717-58ed7d1ae36d"
+    }
+  },
+  "quiz": {
+    "folder": "quiz",
+    "questions": [
+      {
+        "q": "Who is the main character of the story?",
+        "options": [
+          {
+            "word": "Nia",
+            "image": "portrait"
+          },
+          {
+            "word": "ducks",
+            "image": "card"
+          },
+          {
+            "word": "sheep",
+            "image": "card"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes! Nia the rabbit is the main character.",
+        "wrong": "Not quite. The ducks and the sheep are friends Nia meets. The main character is Nia, the rabbit with the red kite."
+      },
+      {
+        "q": "What flew away from Nia?",
+        "options": [
+          {
+            "word": "kite",
+            "image": "card"
+          },
+          {
+            "word": "hat",
+            "image": "card"
+          },
+          {
+            "word": "cloud",
+            "image": "card"
+          }
+        ],
+        "answer": 0,
+        "right": "That's right! Whoosh! Her red kite tugged and flew away.",
+        "wrong": "Hmm, not that one. It was Nia's red kite that slipped from her paws and flew away."
+      },
+      {
+        "q": "Who sneezed the blue kite out?",
+        "options": [
+          {
+            "word": "cloud",
+            "image": "card"
+          },
+          {
+            "word": "crow",
+            "image": "card"
+          },
+          {
+            "word": "sheep",
+            "image": "card"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes! Achoo! The sleepy cloud sneezed, and out popped the blue kite.",
+        "wrong": "Not quite. It was the sleepy cloud. Achoo! Out popped the blue kite."
+      },
+      {
+        "q": "What clue did Nia find at the fence?",
+        "options": [
+          {
+            "word": "bow",
+            "label": "a little red bow"
+          },
+          {
+            "word": "hat",
+            "label": "a hat"
+          },
+          {
+            "word": "stones",
+            "label": "some stones"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes! A little red bow from the kite's tail.",
+        "wrong": "Not quite. Nia found a little red bow from the kite's tail."
+      },
+      {
+        "q": "Who said \"Follow me!\" and flew up the hill?",
+        "options": [
+          {
+            "word": "crow",
+            "label": "the crow"
+          },
+          {
+            "word": "ducks",
+            "label": "the ducks"
+          },
+          {
+            "word": "sheep",
+            "label": "the sheep"
+          }
+        ],
+        "answer": 0,
+        "right": "That's right! The crow said, \"Caw! Follow me!\"",
+        "wrong": "Not quite. The ducks and the sheep had seen the kite, but it was the crow who said, \"Follow me!\""
+      }
+    ]
+  },
+  "pins": [
+    {
+      "id": "kite",
+      "name": "Kite pin",
+      "page": 1,
+      "at": [
+        0.44,
+        0,
+        0.4
+      ]
+    },
+    {
+      "id": "rabbit",
+      "name": "Nia pin",
+      "page": 3,
+      "at": [
+        0.16,
+        0,
+        0.46
+      ]
+    },
+    {
+      "id": "sheep",
+      "name": "Sheep pin",
+      "page": 5,
+      "at": [
+        0.46,
+        0,
+        -0.12
+      ]
+    },
+    {
+      "id": "cloud",
+      "name": "Cloud pin",
+      "page": 7,
+      "at": [
+        0.3,
+        0,
+        0.42
+      ]
+    },
+    {
+      "id": "tree",
+      "name": "Tree pin",
+      "page": 9,
+      "at": [
+        0.46,
+        0,
+        -0.3
+      ]
+    }
+  ]
+}

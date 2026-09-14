@@ -1,0 +1,376 @@
+{
+  "id": "fin-glowing-sea",
+  "title": "Fin and the Glowing Sea",
+  "subtitle": "An underwater tale with a twist",
+  "author": "Storylight",
+  "ageRange": "3 to 7",
+  "readingLevel": "Early reader",
+  "blurb": "An underwater tale that reads itself aloud, lights up every word, and glows when you touch it.",
+  "cover": "art/cover.jpg",
+  "logo": "art/logo.png",
+  "portrait": "art/fin-reference.jpg",
+  "scenes": "scenes.js",
+  "colors": {
+    "cloth": "#1c6d78",
+    "endpaper": {
+      "base": "#0f3c4c",
+      "ink": "#9ff5ff",
+      "pattern": "bubbles"
+    }
+  },
+  "hero": {
+    "name": "Fin",
+    "model": "models/fin.glb",
+    "clips": [
+      "swim",
+      "wave",
+      "look",
+      "doze",
+      "jump"
+    ],
+    "felt": "otto"
+  },
+  "magic": {
+    "jar": "An empty jar, to fill with light.",
+    "pearl": "A pearl, bright as the moon, into the jar it went.",
+    "song": "The whale's song carried everyone up, up, up.",
+    "laugh": "The lantern fish laughed, and her light came back!",
+    "sleep": "Goodnight, Fin. Goodnight, glowing sea."
+  },
+  "narrator": {
+    "openai": {
+      "model": "gpt-4o-mini-tts",
+      "voice": "fable",
+      "speed": 0.9,
+      "instructions": "You are a warm, gentle storyteller reading a picture book to a young child at bedtime. Read slowly and clearly, with hushed underwater wonder. Pause briefly at full stops. Give the crab a quick clicky voice, the octopus a playful whisper, the whale a very low slow rumble, the lantern fish a small silvery voice, and Fin a soft, brave, curious voice. Never rush. Leave a little silence after the last word."
+    },
+    "bundled": {
+      "folder": "voice",
+      "format": "mp3",
+      "timings": true
+    }
+  },
+  "pages": [
+    {
+      "id": "reef",
+      "scene": "sea-reef",
+      "heading": "The dark reef",
+      "text": "{Fin} lived on a {reef:reef/glow}. One {night}, the {lantern:fish/dim} {fish}'s {light:fish/dim} went {out:fish/dim}. \"Don't be {sad:fish/dim},\" said {Fin}. \"I will {fetch:fin/look} you some {light:fin/look}.\"",
+      "hint": "Tap the corals. Tap the lantern fish.",
+      "words": [
+        "Fin",
+        "reef",
+        "night",
+        "lantern",
+        "fish",
+        "light",
+        "out",
+        "sad",
+        "fetch"
+      ]
+    },
+    {
+      "id": "jar",
+      "scene": "sea-dive",
+      "heading": "The empty jar",
+      "text": "{Fin} took an {empty:jar/shine} {jar:jar/shine}. She took a {deep:fin/breath} {breath:fin/breath}. {Down:fin/dive} she {dived:fin/dive}, and {bubbles:bubbles/blow} went {up:bubbles/blow}, up, up.",
+      "hint": "Tap the jar. Tap the water to blow bubbles.",
+      "words": [
+        "empty",
+        "jar",
+        "deep",
+        "breath",
+        "down",
+        "dived",
+        "bubbles",
+        "up"
+      ]
+    },
+    {
+      "id": "octopus",
+      "scene": "sea-kelp",
+      "heading": "The octopus",
+      "text": "In the {kelp:kelp/sway}, an {octopus:octopus/peek} {peeked:octopus/peek} out. \"Have you any {light:jar/shine}?\" asked {Fin}. \"{No:octopus/boo},\" said the {octopus}. \"But I can {dance:octopus/dance}!\" So it {came:octopus/follow} along.",
+      "hint": "Drag the kelp to sway it. Tap the octopus to dance.",
+      "words": [
+        "kelp",
+        "octopus",
+        "peeked",
+        "no",
+        "dance",
+        "came"
+      ]
+    },
+    {
+      "id": "crab",
+      "scene": "sea-crab",
+      "heading": "The crab",
+      "text": "\"Have you any {light:jar/shine}?\" {Fin} asked a {crab:crab/snap}. \"{No:crab/snap},\" said the {crab}. \"But I can {clap:crab/snap}!\" {Snap:crab/snap}, {snap:crab/snap}! So it {came:crab/follow} along too.",
+      "hint": "Tap the crab to clap. Tap the rocks.",
+      "words": [
+        "crab",
+        "clap",
+        "snap"
+      ]
+    },
+    {
+      "id": "jellyfish",
+      "scene": "sea-deep",
+      "heading": "The jellyfish",
+      "text": "{Deep:sea/dark} and {dark:sea/dark}. \"Have you any {light:jar/shine}?\" \"A {little:jellies/glow},\" said the {jellyfish:jellies/glow}, and {glowed:jellies/glow} {pink:jellies/glow}. One {drop:jar/shine} went in the {jar:jar/shine}. And the {jellyfish:jellies/follow} {came:jellies/follow} along.",
+      "hint": "Hover the jellyfish to light them. Tap the jar.",
+      "words": [
+        "dark",
+        "little",
+        "jellyfish",
+        "glowed",
+        "pink",
+        "drop"
+      ]
+    },
+    {
+      "id": "pearl",
+      "scene": "sea-ship",
+      "heading": "The pearl",
+      "text": "In an old {ship:ship/creak}, in an old {chest:chest/open}, {Fin} found a {pearl:pearl/glow}. \"{Bright:pearl/glow} as the {moon:pearl/glow}!\" Into the {jar:jar/shine} it {went:jar/shine}.",
+      "hint": "Tap the chest to open it. Tap the pearl.",
+      "words": [
+        "ship",
+        "chest",
+        "pearl",
+        "bright",
+        "moon",
+        "went"
+      ]
+    },
+    {
+      "id": "whale",
+      "scene": "sea-whale",
+      "heading": "Hop on, everyone!",
+      "text": "\"{Hop:fin/ride} on, {everyone:parade/cheer}!\" {rumbled:whale/sing} a {whale:whale/sing}. {Fin}, the {octopus:parade/cheer}, the {crab:parade/cheer} and the {jellyfish:parade/cheer} {rode:whale/up} {up:whale/up}, {up:whale/up}, to the {light:sea/bright}.",
+      "hint": "Tap the whale to hear her song.",
+      "words": [
+        "hop",
+        "everyone",
+        "rumbled",
+        "whale",
+        "rode",
+        "up"
+      ]
+    },
+    {
+      "id": "plankton",
+      "scene": "sea-plankton",
+      "heading": "Lights in the water",
+      "text": "The {water:sea/sparkle} {sparkled:sea/sparkle}. {Tiny:sea/sparkle} lights {danced:sea/sparkle} all around. \"{Come:jar/shine} too!\" said {Fin}. And the {jar:jar/shine} {shone:jar/shine} and {shone:jar/shine}.",
+      "hint": "Drag your finger through the water for a trail of light.",
+      "words": [
+        "water",
+        "sparkled",
+        "tiny",
+        "danced",
+        "come",
+        "shone"
+      ]
+    },
+    {
+      "id": "surprise",
+      "scene": "sea-light",
+      "heading": "The surprise",
+      "text": "{Fin} gave the {jar:jar/shine} to the {lantern:fish/glow} {fish}. But the {jar} was only a {little:jar/shine} {bright:jar/shine}. Then the {octopus:octopus/dance} {danced:octopus/dance}. The {crab:crab/snap} {clapped:crab/snap}. The {fish} {laughed:fish/glow}, and her {light:fish/glow} came {back:fish/glow}!",
+      "hint": "Tap the octopus. Tap the crab. Tap the fish.",
+      "words": [
+        "gave",
+        "clapped",
+        "laughed",
+        "back"
+      ]
+    },
+    {
+      "id": "home",
+      "scene": "sea-home",
+      "heading": "Goodnight, Fin",
+      "text": "\"A {laugh:fish/glow} is the {brightest:reef/glow} {light:reef/glow} of all,\" said the {fish}. The whole {reef:reef/glow} {glowed:reef/glow}. {Fin} {curled:fin/sleep} up in the {sand:sand/puff} and {slept:fin/sleep}.",
+      "hint": "Shh. Tap the reef to make it glow.",
+      "words": [
+        "laugh",
+        "brightest",
+        "whole",
+        "curled",
+        "slept"
+      ]
+    }
+  ],
+  "end": {
+    "heading": "The End",
+    "text": "You {read} the whole {story}. {Fin} is {asleep:fin/sleep}, and the {reef:reef/glow} is {bright:reef/glow} with {laughing:fish/glow}.",
+    "prompt": "What makes you laugh?"
+  },
+  "credits": "Story, 3D scenes and code made for Storylight. Title lettering, cover art, pop-up backdrops and cut-outs generated with GPT Image 2 through Higgsfield; Fin modelled and rigged through Higgsfield (Meshy); narration voice through Higgsfield text-to-speech, with optional live narration through the OpenAI speech API.",
+  "audio": {
+    "music": "audio/music.m4a",
+    "ambience": "audio/ambience.mp3",
+    "ambienceVolume": 0.32,
+    "provenance": {
+      "music": "Higgsfield sonilo_music, 60 s, job 14188192-55aa-400d-a417-53a911d95b7e",
+      "ambience": "Higgsfield mirelo_text_to_audio, 20 s, job ddc44572-f8e9-4714-9fef-257a069280da"
+    }
+  },
+  "quiz": {
+    "folder": "quiz",
+    "questions": [
+      {
+        "q": "Who is the main character of the story?",
+        "options": [
+          {
+            "word": "Fin",
+            "image": "portrait"
+          },
+          {
+            "word": "octopus",
+            "image": "card"
+          },
+          {
+            "word": "crab",
+            "image": "card"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes! Fin the little turtle is the main character.",
+        "wrong": "Not quite. The octopus and the crab are Fin's friends. The main character is Fin, the little sea turtle."
+      },
+      {
+        "q": "What did Fin carry to collect the light?",
+        "options": [
+          {
+            "word": "jar",
+            "image": "card"
+          },
+          {
+            "word": "chest",
+            "image": "card"
+          },
+          {
+            "word": "pearl",
+            "image": "card"
+          }
+        ],
+        "answer": 0,
+        "right": "That's right! Fin carried a little glass jar, and her friends filled it with light.",
+        "wrong": "Hmm, not that one. Fin carried a little glass jar. Every friend put a bit of light inside."
+      },
+      {
+        "q": "Who sang low and slow in the deep, deep sea?",
+        "options": [
+          {
+            "word": "whale",
+            "image": "card"
+          },
+          {
+            "word": "jellyfish",
+            "image": "card"
+          },
+          {
+            "word": "fish",
+            "image": "card"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes! The big whale sang low and slow.",
+        "wrong": "Not quite. It was the big whale who sang, low and slow, down in the deep."
+      },
+      {
+        "q": "Who gave Fin a ride up to the light?",
+        "options": [
+          {
+            "word": "whale",
+            "label": "the whale"
+          },
+          {
+            "word": "octopus",
+            "label": "the octopus"
+          },
+          {
+            "word": "crab",
+            "label": "the crab"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes! \"Hop on, everyone!\" rumbled the whale.",
+        "wrong": "Not quite. The octopus danced and the crab clapped. It was the whale who gave everyone a ride."
+      },
+      {
+        "q": "What did Fin find in the old ship's chest?",
+        "options": [
+          {
+            "word": "pearl",
+            "label": "a pearl"
+          },
+          {
+            "word": "jar",
+            "label": "a jar"
+          },
+          {
+            "word": "lantern",
+            "label": "a lantern"
+          }
+        ],
+        "answer": 0,
+        "right": "That's right! A pearl, bright as the moon.",
+        "wrong": "Hmm, not that one. In the old chest Fin found a pearl, bright as the moon."
+      }
+    ]
+  },
+  "pins": [
+    {
+      "id": "fish",
+      "name": "Fin pin",
+      "page": 1,
+      "at": [
+        0.44,
+        0,
+        0.4
+      ]
+    },
+    {
+      "id": "jar",
+      "name": "Jar pin",
+      "page": 3,
+      "at": [
+        0.16,
+        0,
+        0.46
+      ]
+    },
+    {
+      "id": "turtle",
+      "name": "Turtle pin",
+      "page": 5,
+      "at": [
+        0.46,
+        0,
+        -0.12
+      ]
+    },
+    {
+      "id": "crab",
+      "name": "Crab pin",
+      "page": 7,
+      "at": [
+        0.3,
+        0,
+        0.42
+      ]
+    },
+    {
+      "id": "lanternfish",
+      "name": "Lantern fish pin",
+      "page": 9,
+      "at": [
+        0.46,
+        0,
+        -0.3
+      ]
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+ "folder": "public/audio/sfx",
+ "mode": "Higgsfield mirelo_text_to_audio, 2-4 s each",
+ "samples": {
+  "gust": {
+   "file": "gust.mp3",
+   "job": "155c4213-2ed5-4b19-ac1c-79f43d058203",
+   "bytes": 16736
+  },
+  "flutter": {
+   "file": "flutter.mp3",
+   "job": "cbb89043-f73c-4e03-84d8-3c8fb52cb74a",
+   "bytes": 16736
+  },
+  "quack": {
+   "file": "quack.mp3",
+   "job": "cb2bb898-6884-4771-9e9f-70d0d96db4ac",
+   "bytes": 16736
+  },
+  "baa": {
+   "file": "baa.mp3",
+   "job": "962f0f19-610a-4d81-bf67-c39063ff969f",
+   "bytes": 16736
+  },
+  "caw": {
+   "file": "caw.mp3",
+   "job": "793315f0-f687-416e-8813-fa0062b4ddc9",
+   "bytes": 16736
+  },
+  "sneeze": {
+   "file": "sneeze.mp3",
+   "job": "7b2eab50-2c05-400c-9318-170a26a7be6b",
+   "bytes": 16736
+  },
+  "bubbles": {
+   "file": "bubbles.mp3",
+   "job": "1cd3ef81-756b-4d2b-bfc4-1fd016d25fe1",
+   "bytes": 16736
+  },
+  "whale": {
+   "file": "whale.mp3",
+   "job": "647c3132-fd96-4144-b6b5-a83fd4786f40",
+   "bytes": 32618
+  },
+  "shimmer": {
+   "file": "shimmer.mp3",
+   "job": "f6afff1c-ad58-426a-b293-64bbcbab04d1",
+   "bytes": 16736
+  },
+  "giggle": {
+   "file": "giggle.mp3",
+   "job": "faef419f-7296-4063-9468-69e74c2866aa",
+   "bytes": 16736
+  },
+  "boing": {
+   "file": "boing.mp3",
+   "job": "14d0ba0a-3350-4658-9cfd-9cbe94de96f1",
+   "bytes": 16736
+  },
+  "hoot": {
+   "file": "hoot.mp3",
+   "job": "05b4fa13-17dd-4fd6-9d38-e961bfc629a2",
+   "bytes": 16736
+  },
+  "meow": {
+   "file": "meow.mp3",
+   "job": "e9b1aead-6700-400f-a9ed-6c4a77dcb515",
+   "bytes": 16736
+  },
+  "snap": {
+   "file": "snap.mp3",
+   "job": "b6e4ded5-3479-47c0-a588-5314cf414940",
+   "bytes": 16736
+  },
+  "howl": {
+   "file": "howl.mp3",
+   "job": "ac66bc61-57c3-4e9c-8bbd-4d399742334b",
+   "bytes": 32618
+  },
+  "drum": {
+   "file": "drum.mp3",
+   "job": "99556399-1da7-4dc5-8e3d-e0d1efdcb504",
+   "bytes": 24677
+  },
+  "bell": {
+   "file": "bell.mp3",
+   "job": "fa0d047c-74b8-423e-8a14-16eb8b6ff22c",
+   "bytes": 32618
+  },
+  "crack": {
+   "file": "crack.mp3",
+   "job": "71a5d3ac-4fa2-44e8-96b7-86d215a0d6ce",
+   "bytes": 24677
+  },
+  "splash": {
+   "file": "splash.mp3",
+   "job": "ae41440f-af9a-4b4c-b1e1-7612ff4c45f9",
+   "bytes": 24677
+  },
+  "cranecall": {
+   "file": "cranecall.mp3",
+   "job": "37f3bdcd-22f9-4dd6-a64e-45e707a2f9e0",
+   "bytes": 24677
+  },
+  "rustle": {
+   "file": "rustle.mp3",
+   "job": "1e8b1a11-d5ff-4a92-ba45-b373986b131f",
+   "bytes": 24677
+  },
+  "cluck": {
+   "file": "cluck.mp3",
+   "job": "e5aab2e2-fdc7-4b0f-b37d-7df2d0b211da",
+   "bytes": 24677
+  },
+  "breath": {
+   "file": "breath.mp3",
+   "job": "b34812d4-b11a-4d11-919b-14a2e7f804b4",
+   "bytes": 24677
+  },
+  "croak": {
+   "file": "croak.mp3",
+   "job": "bb41be34-d115-4247-895b-34427e50997f",
+   "bytes": 24677
+  },
+  "moo": {
+   "file": "moo.mp3",
+   "job": "a384ba40-9b23-4db4-aa8c-9bf100e4d9a7",
+   "bytes": 24677
+  },
+  "fizz": {
+   "file": "fizz.mp3",
+   "job": "92c609c9-f00f-4318-9418-b2065c606703",
+   "bytes": 24677
+  },
+  "launch": {
+   "file": "launch.mp3",
+   "job": "2c962f00-5fc9-4b89-803a-68c50127ea1a",
+   "bytes": 32618
+  },
+  "thunder": {
+   "file": "thunder.mp3",
+   "job": "e4d1e9a9-bf5a-4c72-96c6-aa317a72cac7",
+   "bytes": 32618
+  },
+  "trumpet": {
+   "file": "trumpet.mp3",
+   "job": "e02f2e0d-c3fe-4aa0-9dc2-eb3d5b453a29",
+   "bytes": 24677
+  },
+  "tuktuk": {
+   "file": "tuktuk.mp3",
+   "job": "320a4700-833e-4238-a756-85991539736d",
+   "bytes": 24677
+  },
+  "monkey": {
+   "file": "monkey.mp3",
+   "job": "74ca7160-e2b3-4de5-8d2e-09545b4c1747",
+   "bytes": 24677
+  },
+  "otter": {
+   "file": "otter.mp3",
+   "job": "97014b65-1372-4b8f-95d2-1e164eb14835",
+   "bytes": 24677
+  },
+  "hornbill": {
+   "file": "hornbill.mp3",
+   "job": "58369dba-5bd4-4025-a66e-2ccfd6448397",
+   "bytes": 24677
+  },
+  "cheer": {
+   "file": "cheer.mp3",
+   "job": "1c756703-cbc5-421d-9d05-781a61b3e4cb",
+   "bytes": 32618
+  },
+  "thunk": {
+   "file": "thunk.mp3",
+   "job": "e76759b7-5a32-441b-8bb5-5af1fdc09b44",
+   "bytes": 24677
+  },
+  "laugh": {
+   "file": "laugh.mp3",
+   "job": "480192c7-c08e-468a-8214-2812064080e4",
+   "bytes": 24677
+  },
+  "crumble": {
+   "file": "crumble.mp3",
+   "job": "c13aa7c6-85ac-445b-a78e-b33c72b51616",
+   "bytes": 24677
+  },
+  "rain": {
+   "file": "rain.mp3",
+   "job": "5c5aa71d-6b8d-4e12-9789-dfb06e1b8eba",
+   "bytes": 24677
+  },
+  "khaen": {
+   "file": "khaen.mp3",
+   "job": "1f259734-ca53-4cb8-b75f-463ea3a033db",
+   "bytes": 24677
+  }
+ }
+}

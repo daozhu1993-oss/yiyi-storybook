@@ -1,0 +1,33 @@
+/* Keep the header's original position and responsive box in style.css. */
+.storycomet-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 4%;
+  text-decoration: none;
+}
+
+.storycomet-logo > img {
+  display: block;
+  flex: none;
+  height: auto;
+}
+
+.storycomet-logo > .logo-symbol { width: 20%; }
+.storycomet-logo > .logo-wordmark { width: 76%; }
+
+.loading-brand {
+  width: min(360px, 64vw);
+  margin: 10px 0 24px;
+}
+
+#loading.book .loading-brand { display: none; }
+
+.pricing-brand.storycomet-logo {
+  width: 190px;
+  height: 44px;
+  flex: none;
+}
+
+@media (max-width: 600px) {
+  .pricing-brand.storycomet-logo { width: 150px; }
+}

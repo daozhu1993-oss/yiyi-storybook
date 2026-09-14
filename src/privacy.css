@@ -1,0 +1,6 @@
+.analytics-card{margin:36px 0;padding:28px;border:1px solid #cdbf9a;border-radius:24px;background:#fffaf0;color:#3c3349;box-shadow:0 8px 28px #4331190b;scroll-margin-top:24px}
+.analytics-card .analytics-eyebrow{font-size:11px;letter-spacing:.14em;color:#75658e;font-weight:700}
+.analytics-card h2{margin:8px 0 18px;font-size:28px}
+.analytics-card p{font-size:16px;line-height:1.7}
+.analytics-card :focus-visible{outline:3px solid #9176bf;outline-offset:3px}
+@media(max-width:500px){.analytics-card{padding:22px 18px}}

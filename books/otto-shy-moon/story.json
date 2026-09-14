@@ -1,0 +1,386 @@
+{
+  "id": "otto-shy-moon",
+  "title": "Otto and the Shy Moon",
+  "subtitle": "A bedtime pop-up story",
+  "author": "Storylight",
+  "ageRange": "3 to 7",
+  "readingLevel": "Early reader",
+  "blurb": "A bedtime story that reads itself aloud, lights up every word, and pops out of the page when you touch it.",
+  "cover": "art/cover.jpg",
+  "logo": "art/logo.png",
+  "portrait": "art/otto-reference.jpg",
+  "scenes": "scenes.js",
+  "colors": {
+    "cloth": "#1b2450",
+    "endpaper": {
+      "base": "#1e2752",
+      "ink": "#ffd678",
+      "pattern": "stars"
+    }
+  },
+  "hero": {
+    "name": "Otto",
+    "model": "models/otto.glb",
+    "clips": [
+      "hang",
+      "wave",
+      "doze",
+      "look",
+      "jump"
+    ],
+    "felt": "otto"
+  },
+  "magic": {
+    "path": "The stars made a path across the sky!",
+    "moon": "There she is! The shy moon was hiding.",
+    "glow": "The moon glowed, and glowed, and GLOWED.",
+    "sleep": "Goodnight, Otto. Goodnight, Moon."
+  },
+  "narrator": {
+    "openai": {
+      "model": "gpt-4o-mini-tts",
+      "voice": "fable",
+      "speed": 0.92,
+      "instructions": "You are a warm, gentle storyteller reading a picture book to a young child at bedtime. Read slowly and clearly, with soft wonder. Pause briefly at full stops. Give the moon a soft, shy, kind voice; give the owl a wise, hooting voice; give the cat a lazy purr; give Otto a small, curious, brave voice. Never rush. Leave a little silence after the last word."
+    },
+    "bundled": {
+      "folder": "voice",
+      "format": "mp3",
+      "timings": true
+    }
+  },
+  "pages": [
+    {
+      "id": "window",
+      "scene": "bedroom-dark",
+      "heading": "The dark window",
+      "text": "{Otto} could not {sleep:otto/sleep}. He {looked:otto/look} out of his {window}. The {sky:window/night} was {dark:window/dark}. \"Where is the {moon:window}?\" said {Otto}.",
+      "hint": "Tap the lamp. Tap the blocks. Where did the moon go?",
+      "words": [
+        "Otto",
+        "sleep",
+        "window",
+        "dark",
+        "moon"
+      ]
+    },
+    {
+      "id": "balloon",
+      "scene": "bedroom-balloon",
+      "heading": "The red balloon",
+      "text": "{Otto} {found:balloon} his {big:balloon} {red:balloon} {balloon}. He {held:otto/held} on {tight:otto/held}. {Up:otto/up}, {up:otto/up}, {up:otto/up} went {Otto}! {Out:otto/out} of the {window:window/out} and into the {night:wall/night}.",
+      "hint": "Drag the balloon and let it go.",
+      "words": [
+        "found",
+        "big",
+        "red",
+        "balloon",
+        "tight",
+        "up",
+        "night"
+      ]
+    },
+    {
+      "id": "rooftops",
+      "scene": "rooftops",
+      "heading": "Over the rooftops",
+      "text": "{Otto} {floated:otto/float} over the {rooftops:town}. The {windows:town/glow} {glowed:town/glow} like little {lamps:town/glow}. A {cat} on a {chimney} said, \"{Meow:cat/meow}. The moon is not here.\"",
+      "hint": "Touch the windows to light them. Say hello to the cat.",
+      "words": [
+        "floated",
+        "over",
+        "rooftops",
+        "windows",
+        "glowed",
+        "lamps",
+        "cat",
+        "chimney"
+      ]
+    },
+    {
+      "id": "clouds",
+      "scene": "clouds",
+      "heading": "Into the clouds",
+      "text": "{Otto} {floated:otto/float} into the {clouds}. They were {soft:clouds} and {cool:cloud2}. A {sleepy:sleepy} {cloud:sleepy} {yawned:sleepy/yawn}. \"The moon is not here,\" it {puffed:sleepy/puff}.",
+      "hint": "Poke the clouds. One of them is very sleepy.",
+      "words": [
+        "clouds",
+        "soft",
+        "cool",
+        "sleepy",
+        "yawned",
+        "puffed"
+      ]
+    },
+    {
+      "id": "owl",
+      "scene": "owl-tree",
+      "heading": "The owl",
+      "text": "{Otto} {floated:otto/float} up to a {tall:tree/tall}, {tall:tree/tall} {tree}. An {owl} {blinked:owl/blink} her {big:eyes} {round:eyes} {eyes:owl}. \"{Hoo:owl/hoo}! The moon is hiding,\" she said. \"She is shy tonight.\"",
+      "hint": "The owl is watching you. Tap her to hear her hoot.",
+      "words": [
+        "tall",
+        "tree",
+        "owl",
+        "blinked",
+        "round",
+        "eyes",
+        "hiding",
+        "shy",
+        "tonight"
+      ]
+    },
+    {
+      "id": "stars",
+      "scene": "star-path",
+      "heading": "Follow the stars",
+      "text": "\"{Follow:otto/float} the {stars},\" said the {owl}. So {Otto} did. {Twinkle:stars/twinkle}, {twinkle:stars/twinkle}, {twinkle:stars/twinkle}. The {stars} made a {path:stars} across the {sky}.",
+      "hint": "Tap the stars one by one to light the path.",
+      "words": [
+        "follow",
+        "stars",
+        "twinkle",
+        "path",
+        "across",
+        "sky"
+      ]
+    },
+    {
+      "id": "hiding",
+      "scene": "behind-cloud",
+      "heading": "Behind the cloud",
+      "text": "The path ended at a {big:cloud} {dark:cloud} {cloud}. {Otto} {peeked:otto/peek} {behind:cloud/behind} it. There was the {moon}! She was {small:moon} and {pale:moon/pale}, and she was {hiding:moon/hide}.",
+      "hint": "Push the big cloud away to find the moon.",
+      "words": [
+        "path",
+        "ended",
+        "dark",
+        "cloud",
+        "peeked",
+        "behind",
+        "small",
+        "pale",
+        "hiding"
+      ]
+    },
+    {
+      "id": "hello",
+      "scene": "moon-glow",
+      "heading": "Hello, Moon",
+      "text": "\"{Hello:otto/wave}, {Moon:moon},\" {whispered:otto/whisper} {Otto}. \"I {missed:moon/smile} you.\" The {moon} {smiled:moon/smile}. She {glowed:moon/glow}, and {glowed:moon/glow}, and {GLOWED:moon/glow}, until the whole {sky} was {bright:sky/bright}.",
+      "hint": "Hold your hand near the moon and watch her glow.",
+      "words": [
+        "hello",
+        "whispered",
+        "missed",
+        "smiled",
+        "glowed",
+        "whole",
+        "bright"
+      ]
+    },
+    {
+      "id": "down",
+      "scene": "descent",
+      "heading": "Down, down, down",
+      "text": "\"{Thank:moon/smile} you, {Otto},\" said the {moon}. \"I will {light:moon/glow} your {way:moon} {home:otto/down}.\" {Down:otto/down}, {down:otto/down}, {down:otto/down} floated {Otto}. Past the {stars:stars/twinkle}. Past the {owl}. Past the {clouds}.",
+      "hint": "Everything you met is here. Can you find them all?",
+      "words": [
+        "thank",
+        "light",
+        "way",
+        "home",
+        "down",
+        "past"
+      ]
+    },
+    {
+      "id": "home",
+      "scene": "bedroom-moonlit",
+      "heading": "Goodnight",
+      "text": "{Otto} {climbed:otto/climb} into his {warm:bed/warm} {bed}. The {moon} {shone:moon/glow} in his {window:window/glow}. \"{Goodnight:otto/wave}, {Moon:moon},\" said {Otto}. \"Goodnight, {Otto},\" said the {moon}. And they both went to {sleep:otto/sleep}.",
+      "hint": "Turn off the lamp. Sweet dreams.",
+      "words": [
+        "climbed",
+        "warm",
+        "bed",
+        "shone",
+        "goodnight",
+        "both",
+        "sleep"
+      ]
+    }
+  ],
+  "end": {
+    "heading": "The End",
+    "text": "You {read} the whole {story}. {Otto} is {asleep:otto/sleep}, and the {moon} is not {shy:moon/smile} any more.",
+    "prompt": "What would you do if the moon went missing?"
+  },
+  "credits": "Story, 3D scenes and code made for Storylight. Title lettering, controls, icons, cover art and pop-up backdrop generated with GPT Image 2 through Higgsfield; narration voice through Higgsfield text-to-speech, with optional live narration through the OpenAI speech API.",
+  "audio": {
+    "music": "audio/music.m4a",
+    "ambience": "audio/ambience.mp3",
+    "ambienceVolume": 0.28,
+    "provenance": {
+      "music": "Higgsfield sonilo_music, 60 s, job b167a6ad-d3f7-4b55-b67c-39beed5b7630",
+      "ambience": "Higgsfield mirelo_text_to_audio, 20 s, job 7b35962a-46af-4979-8db8-6407655c3a11"
+    }
+  },
+  "quiz": {
+    "folder": "quiz",
+    "questions": [
+      {
+        "q": "Who is the main character of the story?",
+        "options": [
+          {
+            "word": "Otto",
+            "image": "portrait"
+          },
+          {
+            "word": "owl",
+            "image": "card"
+          },
+          {
+            "word": "cat",
+            "image": "card"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes! Otto the little bear is the main character.",
+        "wrong": "Not quite. The owl and the cat are Otto's friends. The main character is Otto, the little bear."
+      },
+      {
+        "q": "What did Otto hold to float up into the sky?",
+        "options": [
+          {
+            "word": "balloon",
+            "image": "card"
+          },
+          {
+            "word": "lamps",
+            "image": "card"
+          },
+          {
+            "word": "moon",
+            "image": "card"
+          }
+        ],
+        "answer": 0,
+        "right": "That's right! Otto held his big red balloon tight and floated up, up, up.",
+        "wrong": "Hmm, not that one. Otto held his big red balloon, and it carried him up into the night."
+      },
+      {
+        "q": "Who was hiding, shy, behind the clouds?",
+        "options": [
+          {
+            "word": "moon",
+            "image": "card"
+          },
+          {
+            "word": "owl",
+            "image": "card"
+          },
+          {
+            "word": "cat",
+            "image": "card"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes! The shy moon was hiding. Otto found her and brought her home.",
+        "wrong": "Not quite. It was the shy moon hiding behind the clouds. Otto said hello, and she smiled."
+      },
+      {
+        "q": "Who told Otto to follow the stars?",
+        "options": [
+          {
+            "word": "owl",
+            "label": "the owl"
+          },
+          {
+            "word": "cat",
+            "label": "the cat"
+          },
+          {
+            "word": "moon",
+            "label": "the moon"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes! The owl said, \"Follow the stars,\" and the stars made a path across the sky.",
+        "wrong": "Not quite. The cat said the moon was not there, and the moon was hiding. It was the owl who said to follow the stars."
+      },
+      {
+        "q": "How did the moon help Otto get home?",
+        "options": [
+          {
+            "word": "glowed",
+            "label": "she glowed"
+          },
+          {
+            "word": "yawned",
+            "label": "she yawned"
+          },
+          {
+            "word": "meow",
+            "label": "she said meow"
+          }
+        ],
+        "answer": 0,
+        "right": "Yes! The moon glowed and lit Otto's way home, down past the stars.",
+        "wrong": "Not quite. The cloud yawned and the cat said meow. The moon glowed to light Otto's way home."
+      }
+    ]
+  },
+  "pins": [
+    {
+      "id": "moon",
+      "name": "Moon pin",
+      "page": 1,
+      "at": [
+        0.44,
+        0,
+        0.4
+      ]
+    },
+    {
+      "id": "balloon",
+      "name": "Balloon pin",
+      "page": 3,
+      "at": [
+        0.16,
+        0,
+        0.46
+      ]
+    },
+    {
+      "id": "owl",
+      "name": "Owl pin",
+      "page": 5,
+      "at": [
+        0.46,
+        0,
+        -0.12
+      ]
+    },
+    {
+      "id": "bear",
+      "name": "Otto pin",
+      "page": 7,
+      "at": [
+        0.3,
+        0,
+        0.42
+      ]
+    },
+    {
+      "id": "star",
+      "name": "Star pin",
+      "page": 9,
+      "at": [
+        0.46,
+        0,
+        -0.3
+      ]
+    }
+  ]
+}

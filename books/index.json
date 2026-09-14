@@ -1,0 +1,1936 @@
+{
+  "books": [
+    {
+      "id": "yiyi-01",
+      "series": "yiyi",
+      "title": "1. 春天里最重要的事",
+      "subtitle": "一一成长系列 · 第 1 本（新生儿）",
+      "blurb": "一一成长系列第 1 本（新生儿）：《春天里最重要的事》—— 出生·春天的第一份礼物。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#e27b58",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-01",
+          "name": "第1本 春天里最重要的事 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-02",
+      "series": "yiyi",
+      "title": "2. 爸爸的手掌心",
+      "subtitle": "一一成长系列 · 第 2 本（新生儿）",
+      "blurb": "一一成长系列第 2 本（新生儿）：《爸爸的手掌心》—— 初抱·爸爸的第一抱。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#c85a48",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-02",
+          "name": "第2本 爸爸的手掌心 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-03",
+      "series": "yiyi",
+      "title": "3. 咕嘟咕嘟，一一喝奶啦",
+      "subtitle": "一一成长系列 · 第 3 本（~1个月）",
+      "blurb": "一一成长系列第 3 本（~1个月）：《咕嘟咕嘟，一一喝奶啦》—— 喝奶·小嘴巴的日常。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#dd705f",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-03",
+          "name": "第3本 咕嘟咕嘟，一一喝奶啦 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-04",
+      "series": "yiyi",
+      "title": "4. 哗啦哗啦，一一洗澡啦",
+      "subtitle": "一一成长系列 · 第 4 本（~1.5个月）",
+      "blurb": "一一成长系列第 4 本（~1.5个月）：《哗啦哗啦，一一洗澡啦》—— 洗澡·水花四溅的乐趣。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#c04e3e",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-04",
+          "name": "第4本 哗啦哗啦，一一洗澡啦 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-05",
+      "series": "yiyi",
+      "title": "5. 咯咯，一一笑啦",
+      "subtitle": "一一成长系列 · 第 5 本（~2个月）",
+      "blurb": "一一成长系列第 5 本（~2个月）：《咯咯，一一笑啦》—— 笑·第一次对世界微笑。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#e58368",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-05",
+          "name": "第5本 咯咯，一一笑啦 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-06",
+      "series": "yiyi",
+      "title": "6. 哇哇哇，一一不哭啦",
+      "subtitle": "一一成长系列 · 第 6 本（~2个月）",
+      "blurb": "一一成长系列第 6 本（~2个月）：《哇哇哇，一一不哭啦》—— 哭·深夜肠胀气。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#d96552",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-06",
+          "name": "第6本 哇哇哇，一一不哭啦 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-07",
+      "series": "yiyi",
+      "title": "7. 骨碌骨碌，一一翻过来啦",
+      "subtitle": "一一成长系列 · 第 7 本（~3个月）",
+      "blurb": "一一成长系列第 7 本（~3个月）：《骨碌骨碌，一一翻过来啦》—— 翻身·大运动第一步。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#e27b58",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-07",
+          "name": "第7本 骨碌骨碌，一一翻过来啦 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-08",
+      "series": "yiyi",
+      "title": "8. 嗡嗡嗡，一一理发啦",
+      "subtitle": "一一成长系列 · 第 8 本（~3-4个月）",
+      "blurb": "一一成长系列第 8 本（~3-4个月）：《嗡嗡嗡，一一理发啦》—— 理发·第一次推头发。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#c85a48",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-08",
+          "name": "第8本 嗡嗡嗡，一一理发啦 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-09",
+      "series": "yiyi",
+      "title": "9. 咬咬咬，一一长牙啦",
+      "subtitle": "一一成长系列 · 第 9 本（~4个月）",
+      "blurb": "一一成长系列第 9 本（~4个月）：《咬咬咬，一一长牙啦》—— 长牙·第一颗乳牙冒出。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#dd705f",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-09",
+          "name": "第9本 咬咬咬，一一长牙啦 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-10",
+      "series": "yiyi",
+      "title": "10. 第一次去公园",
+      "subtitle": "一一成长系列 · 第 10 本（~5个月）",
+      "blurb": "一一成长系列第 10 本（~5个月）：《第一次去公园》—— 公园·奶奶登场。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#c04e3e",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-10",
+          "name": "第10本 第一次去公园 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-11",
+      "series": "yiyi",
+      "title": "11. 一一的百天宴会",
+      "subtitle": "一一成长系列 · 第 11 本（百天）",
+      "blurb": "一一成长系列第 11 本（百天）：《一一的百天宴会》—— 百天·四代同堂全家福。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#e58368",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-11",
+          "name": "第11本 一一的百天宴会 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-12",
+      "series": "yiyi",
+      "title": "12. 去看外公外婆",
+      "subtitle": "一一成长系列 · 第 12 本（~5-6个月）",
+      "blurb": "一一成长系列第 12 本（~5-6个月）：《去看外公外婆》—— 出远门·第一次坐汽车。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#d96552",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-12",
+          "name": "第12本 去看外公外婆 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-13",
+      "series": "yiyi",
+      "title": "13. 外婆家的蜜瓜",
+      "subtitle": "一一成长系列 · 第 13 本（~5-6个月）",
+      "blurb": "一一成长系列第 13 本（~5-6个月）：《外婆家的蜜瓜》—— 民勤蜜瓜·甜蜜假期。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#e27b58",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-13",
+          "name": "第13本 外婆家的蜜瓜 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-14",
+      "series": "yiyi",
+      "title": "14. 啃啃啃，一一会啃啦",
+      "subtitle": "一一成长系列 · 第 14 本（~5个月）",
+      "blurb": "一一成长系列第 14 本（~5个月）：《啃啃啃，一一会啃啦》—— 会啃·用牙探索世界。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#c85a48",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-14",
+          "name": "第14本 啃啃啃，一一会啃啦 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-15",
+      "series": "yiyi",
+      "title": "15. 吃吃吃，一一会吃啦",
+      "subtitle": "一一成长系列 · 第 15 本（~6个月）",
+      "blurb": "一一成长系列第 15 本（~6个月）：《吃吃吃，一一会吃啦》—— 辅食·第一次吃米粉。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#dd705f",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-15",
+          "name": "第15本 吃吃吃，一一会吃啦 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-16",
+      "series": "yiyi",
+      "title": "16. 坐坐坐，一一会独坐",
+      "subtitle": "一一成长系列 · 第 16 本（6-7个月）",
+      "blurb": "一一成长系列第 16 本（6-7个月）：《坐坐坐，一一会独坐》—— 独坐·不靠不倚坐稳。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#c04e3e",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-16",
+          "name": "第16本 坐坐坐，一一会独坐 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-17",
+      "series": "yiyi",
+      "title": "17. 一一，听！—— 一一成长",
+      "subtitle": "一一成长系列 · 第 17 本（1岁）",
+      "blurb": "一一成长系列第 17 本（1岁）：《一一，听！—— 一一成长》—— 听觉启蒙·听世界的声音。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#e58368",
+      "pages": 14,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-17",
+          "name": "第17本 一一，听！—— 一一成长 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-18",
+      "series": "yiyi",
+      "title": "18. 噼噼啪啪拍水面",
+      "subtitle": "一一成长系列 · 第 18 本（1岁+）",
+      "blurb": "一一成长系列第 18 本（1岁+）：《噼噼啪啪拍水面》—— 拍水·感官与因果探索。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#d96552",
+      "pages": 12,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-18",
+          "name": "第18本 噼噼啪啪拍水面 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-19",
+      "series": "yiyi",
+      "title": "19. 爬爬爬，一一爬爬爬",
+      "subtitle": "一一成长系列 · 第 19 本（7-8个月）",
+      "blurb": "一一成长系列第 19 本（7-8个月）：《爬爬爬，一一爬爬爬》—— 爬行·大运动里程碑。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#e27b58",
+      "pages": 12,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-19",
+          "name": "第19本 爬爬爬，一一爬爬爬 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-20",
+      "series": "yiyi",
+      "title": "20. 怕怕怕，认生小哭包",
+      "subtitle": "一一成长系列 · 第 20 本（7-8个月）",
+      "blurb": "一一成长系列第 20 本（7-8个月）：《怕怕怕，认生小哭包》—— 认生·陌生人焦虑。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#c85a48",
+      "pages": 12,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-20",
+          "name": "第20本 怕怕怕，认生小哭包 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-21",
+      "series": "yiyi",
+      "title": "21. 捏捏捏，小手指真灵",
+      "subtitle": "一一成长系列 · 第 21 本（8-9个月）",
+      "blurb": "一一成长系列第 21 本（8-9个月）：《捏捏捏，小手指真灵》—— 精细动作·拇指食指捏。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#dd705f",
+      "pages": 12,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-21",
+          "name": "第21本 捏捏捏，小手指真灵 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-22",
+      "series": "yiyi",
+      "title": "22. 喊喊喊，叫出爸爸妈妈",
+      "subtitle": "一一成长系列 · 第 22 本（9-10个月）",
+      "blurb": "一一成长系列第 22 本（9-10个月）：《喊喊喊，叫出爸爸妈妈》—— 语言萌芽·叫出爸妈。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#c04e3e",
+      "pages": 12,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-22",
+          "name": "第22本 喊喊喊，叫出爸爸妈妈 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-23",
+      "series": "yiyi",
+      "title": "23. 指指指，一一会指物",
+      "subtitle": "一一成长系列 · 第 23 本（10-11个月）",
+      "blurb": "一一成长系列第 23 本（10-11个月）：《指指指，一一会指物》—— 指物·意向性沟通。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#e58368",
+      "pages": 12,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-23",
+          "name": "第23本 指指指，一一会指物 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-24",
+      "series": "yiyi",
+      "title": "24. 玩玩玩，公园露营日",
+      "subtitle": "一一成长系列 · 第 24 本（~11个月）",
+      "blurb": "一一成长系列第 24 本（~11个月）：《玩玩玩，公园露营日》—— 露营·户外探索。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#d96552",
+      "pages": 12,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-24",
+          "name": "第24本 玩玩玩，公园露营日 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-25",
+      "series": "yiyi",
+      "title": "25. 站站站，一一站起来",
+      "subtitle": "一一成长系列 · 第 25 本（~12个月）",
+      "blurb": "一一成长系列第 25 本（~12个月）：《站站站，一一站起来》—— 站立·动态平衡。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#e27b58",
+      "pages": 12,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-25",
+          "name": "第25本 站站站，一一站起来 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-26",
+      "series": "yiyi",
+      "title": "26. 雪雪雪，一一见下雪",
+      "subtitle": "一一成长系列 · 第 26 本（~13个月）",
+      "blurb": "一一成长系列第 26 本（~13个月）：《雪雪雪，一一见下雪》—— 下雪·第一次见雪。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#c85a48",
+      "pages": 12,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-26",
+          "name": "第26本 雪雪雪，一一见下雪 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-27",
+      "series": "yiyi",
+      "title": "27. 叮叮铛，圣诞到",
+      "subtitle": "一一成长系列 · 第 27 本（~13-14个月）",
+      "blurb": "一一成长系列第 27 本（~13-14个月）：《叮叮铛，圣诞到》—— 圣诞节·第一次过圣诞。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#dd705f",
+      "pages": 12,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-27",
+          "name": "第27本 叮叮铛，圣诞到 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-28",
+      "series": "yiyi",
+      "title": "28. 咚咚锵，一一过大年",
+      "subtitle": "一一成长系列 · 第 28 本（春节）",
+      "blurb": "一一成长系列第 28 本（春节）：《咚咚锵，一一过大年》—— 过年·贴春联挂灯笼。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#c04e3e",
+      "pages": 12,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-28",
+          "name": "第28本 咚咚锵，一一过大年 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-29",
+      "series": "yiyi",
+      "title": "29. 抱抱抱，一一拜大年",
+      "subtitle": "一一成长系列 · 第 29 本（春节）",
+      "blurb": "一一成长系列第 29 本（春节）：《抱抱抱，一一拜大年》—— 拜年·红包与祝福。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#e58368",
+      "pages": 12,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-29",
+          "name": "第29本 抱抱抱，一一拜大年 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-30",
+      "series": "yiyi",
+      "title": "30. 亮亮亮，一一回家啦",
+      "subtitle": "一一成长系列 · 第 30 本（春节）",
+      "blurb": "一一成长系列第 30 本（春节）：《亮亮亮，一一回家啦》—— 回家·团聚的温暖。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#d96552",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-30",
+          "name": "第30本 亮亮亮，一一回家啦 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-31",
+      "series": "yiyi",
+      "title": "31. 走走走，一一会走路",
+      "subtitle": "一一成长系列 · 第 31 本（1岁+）",
+      "blurb": "一一成长系列第 31 本（1岁+）：《走走走，一一会走路》—— 行走·迈出人生第一步。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#e27b58",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-31",
+          "name": "第31本 走走走，一一会走路 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-32",
+      "series": "yiyi",
+      "title": "32. 花花花，一一周岁啦",
+      "subtitle": "一一成长系列 · 第 32 本（周岁）",
+      "blurb": "一一成长系列第 32 本（周岁）：《花花花，一一周岁啦》—— 周岁·抓周与全家庆祝。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#c85a48",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-32",
+          "name": "第32本 花花花，一一周岁啦 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-33",
+      "series": "yiyi",
+      "title": "33. 自己吃，一一自己吃饭啦",
+      "subtitle": "一一成长系列 · 第 33 本（1岁+）",
+      "blurb": "一一成长系列第 33 本（1岁+）：《自己吃，一一自己吃饭啦》—— 独立·饭饭会掉勇气不会。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#dd705f",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-33",
+          "name": "第33本 自己吃，一一自己吃饭啦 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-34",
+      "series": "yiyi",
+      "title": "34. 跑跑跑，一一追泡泡",
+      "subtitle": "一一成长系列 · 第 34 本（1岁+）",
+      "blurb": "一一成长系列第 34 本（1岁+）：《跑跑跑，一一追泡泡》—— 奔跑·夏日追逐泡泡。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#c04e3e",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-34",
+          "name": "第34本 跑跑跑，一一追泡泡 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-35",
+      "series": "yiyi",
+      "title": "35. 搭搭搭，一一堆积木",
+      "subtitle": "一一成长系列 · 第 35 本（1.5岁+）",
+      "blurb": "一一成长系列第 35 本（1.5岁+）：《搭搭搭，一一堆积木》—— 建构·搭得高高倒得哈哈。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#e58368",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-35",
+          "name": "第35本 搭搭搭，一一堆积木 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yiyi-36",
+      "series": "yiyi",
+      "title": "36. 冲冲冲，一一玩水啦",
+      "subtitle": "一一成长系列 · 第 36 本（1.5岁+）",
+      "blurb": "一一成长系列第 36 本（1.5岁+）：《冲冲冲，一一玩水啦》—— 探索·夏天玩水大冒险。",
+      "author": "一一与爸爸妈妈",
+      "cover": "art/cover.jpg",
+      "spine": "#d96552",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yiyi-36",
+          "name": "第36本 冲冲冲，一一玩水啦 纪念徽章",
+          "icon": "🌟"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yaya-01",
+      "series": "yayashou",
+      "title": "芽芽兽：咕噜停一停",
+      "subtitle": "芽芽兽科普与行为习惯探索",
+      "blurb": "培养生活认知与好习惯的趣味绘本：《芽芽兽：咕噜停一停》。",
+      "author": "芽芽兽故事集",
+      "cover": "art/cover.jpg",
+      "spine": "#2f5b49",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yaya-01",
+          "name": "咕噜停一停 探索勋章",
+          "icon": "🌿"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yaya-02",
+      "series": "yayashou",
+      "title": "芽芽兽：妈妈去拿一个杯子",
+      "subtitle": "芽芽兽科普与行为习惯探索",
+      "blurb": "培养生活认知与好习惯的趣味绘本：《芽芽兽：妈妈去拿一个杯子》。",
+      "author": "芽芽兽故事集",
+      "cover": "art/cover.jpg",
+      "spine": "#3b725c",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yaya-02",
+          "name": "妈妈去拿一个杯子 探索勋章",
+          "icon": "🌿"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yaya-03",
+      "series": "yayashou",
+      "title": "芽芽兽：小灯不要黑黑",
+      "subtitle": "芽芽兽科普与行为习惯探索",
+      "blurb": "培养生活认知与好习惯的趣味绘本：《芽芽兽：小灯不要黑黑》。",
+      "author": "芽芽兽故事集",
+      "cover": "art/cover.jpg",
+      "spine": "#264f3e",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yaya-03",
+          "name": "小灯不要黑黑 探索勋章",
+          "icon": "🌿"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yaya-04",
+      "series": "yayashou",
+      "title": "芽芽兽：我们一起搭",
+      "subtitle": "芽芽兽科普与行为习惯探索",
+      "blurb": "培养生活认知与好习惯的趣味绘本：《芽芽兽：我们一起搭》。",
+      "author": "芽芽兽故事集",
+      "cover": "art/cover.jpg",
+      "spine": "#32624d",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yaya-04",
+          "name": "我们一起搭 探索勋章",
+          "icon": "🌿"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yaya-05",
+      "series": "yayashou",
+      "title": "芽芽兽：球球飞到哪儿",
+      "subtitle": "芽芽兽科普与行为习惯探索",
+      "blurb": "培养生活认知与好习惯的趣味绘本：《芽芽兽：球球飞到哪儿》。",
+      "author": "芽芽兽故事集",
+      "cover": "art/cover.jpg",
+      "spine": "#3b725c",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yaya-05",
+          "name": "球球飞到哪儿 探索勋章",
+          "icon": "🌿"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yaya-06",
+      "series": "yayashou",
+      "title": "芽芽兽：盒盒打不开",
+      "subtitle": "芽芽兽科普与行为习惯探索",
+      "blurb": "培养生活认知与好习惯的趣味绘本：《芽芽兽：盒盒打不开》。",
+      "author": "芽芽兽故事集",
+      "cover": "art/cover.jpg",
+      "spine": "#2f5b49",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yaya-06",
+          "name": "盒盒打不开 探索勋章",
+          "icon": "🌿"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yaya-07",
+      "series": "yayashou",
+      "title": "芽芽兽：积木倒啦",
+      "subtitle": "芽芽兽科普与行为习惯探索",
+      "blurb": "培养生活认知与好习惯的趣味绘本：《芽芽兽：积木倒啦》。",
+      "author": "芽芽兽故事集",
+      "cover": "art/cover.jpg",
+      "spine": "#264f3e",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yaya-07",
+          "name": "积木倒啦 探索勋章",
+          "icon": "🌿"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yaya-08",
+      "series": "yayashou",
+      "title": "芽芽兽：芽芽的小勺子",
+      "subtitle": "芽芽兽科普与行为习惯探索",
+      "blurb": "培养生活认知与好习惯的趣味绘本：《芽芽兽：芽芽的小勺子》。",
+      "author": "芽芽兽故事集",
+      "cover": "art/cover.jpg",
+      "spine": "#447e67",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yaya-08",
+          "name": "芽芽的小勺子 探索勋章",
+          "icon": "🌿"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yaya-09",
+      "series": "yayashou",
+      "title": "芽芽兽：风跑哪儿了",
+      "subtitle": "芽芽兽科普与行为习惯探索",
+      "blurb": "培养生活认知与好习惯的趣味绘本：《芽芽兽：风跑哪儿了》。",
+      "author": "芽芽兽故事集",
+      "cover": "art/cover.jpg",
+      "spine": "#264f3e",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yaya-09",
+          "name": "风跑哪儿了 探索勋章",
+          "icon": "🌿"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "yaya-10",
+      "series": "yayashou",
+      "title": "芽芽兽：这是芽芽的！",
+      "subtitle": "芽芽兽科普与行为习惯探索",
+      "blurb": "培养生活认知与好习惯的趣味绘本：《芽芽兽：这是芽芽的！》。",
+      "author": "芽芽兽故事集",
+      "cover": "art/cover.jpg",
+      "spine": "#32624d",
+      "pages": 11,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "pin_yaya-10",
+          "name": "这是芽芽的！ 探索勋章",
+          "icon": "🌿"
+        }
+      ],
+      "quizCount": 3,
+      "access": "free"
+    },
+    {
+      "id": "otto-shy-moon",
+      "title": "Otto and the Shy Moon",
+      "subtitle": "A bedtime story",
+      "blurb": "Otto floats up on his red balloon to find the moon and bring her back.",
+      "cover": "art/cover.jpg",
+      "spine": "#1b2450",
+      "pages": 10,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "moon",
+          "name": "Moon pin"
+        },
+        {
+          "id": "balloon",
+          "name": "Balloon pin"
+        },
+        {
+          "id": "owl",
+          "name": "Owl pin"
+        },
+        {
+          "id": "bear",
+          "name": "Otto pin"
+        },
+        {
+          "id": "star",
+          "name": "Star pin"
+        }
+      ],
+      "quizCount": 5,
+      "titles": {
+        "fr": "Otto et la Lune timide",
+        "es": "Otto y la Luna tímida",
+        "ja": "オットーと はずかしがりやの おつきさま",
+        "zh": "奥托和害羞的月亮"
+      },
+      "blurbs": {
+        "fr": "Otto s'envole sur son ballon rouge pour retrouver la lune et la ramener.",
+        "es": "Otto sube en su globo rojo para encontrar a la luna y traerla de vuelta.",
+        "ja": "オットーは あかい ふうせんで そらへ。おつきさまを さがして、つれてかえります。",
+        "zh": "奥托乘着红气球飞上天，去找月亮并把她带回来。"
+      },
+      "art": {
+        "fr": {
+          "logo": "art/logo.fr.png",
+          "cover": "art/cover.fr.jpg"
+        },
+        "es": {
+          "logo": "art/logo.es.png",
+          "cover": "art/cover.es.jpg"
+        },
+        "ja": {
+          "logo": "art/logo.ja.png",
+          "cover": "art/cover.ja.jpg"
+        },
+        "zh": {
+          "logo": "art/logo.zh.png",
+          "cover": "art/cover.zh.jpg"
+        }
+      },
+      "access": "free"
+    },
+    {
+      "id": "nia-runaway-kite",
+      "title": "Nia and the Runaway Kite",
+      "subtitle": "A windy day story",
+      "blurb": "Nia chases her kite over the river, up the hill and into the clouds.",
+      "cover": "art/cover.jpg",
+      "spine": "#3d86c9",
+      "pages": 10,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "kite",
+          "name": "Kite pin"
+        },
+        {
+          "id": "rabbit",
+          "name": "Nia pin"
+        },
+        {
+          "id": "sheep",
+          "name": "Sheep pin"
+        },
+        {
+          "id": "cloud",
+          "name": "Cloud pin"
+        },
+        {
+          "id": "tree",
+          "name": "Tree pin"
+        }
+      ],
+      "quizCount": 5,
+      "titles": {
+        "fr": "Nia et le cerf-volant fugueur",
+        "es": "Nia y la cometa fugitiva",
+        "ja": "ニアと にげた たこ",
+        "zh": "妮娅和飞走的风筝"
+      },
+      "blurbs": {
+        "fr": "Nia poursuit son cerf-volant au-dessus de la rivière, sur la colline et jusque dans les nuages.",
+        "es": "Nia persigue su cometa sobre el río, colina arriba y hasta las nubes.",
+        "ja": "ニアは たこを おいかけて、かわを こえ、おかを のぼり、くもの なかへ。",
+        "zh": "妮娅追着风筝越过小河，爬上山坡，钻进云里。"
+      },
+      "art": {
+        "fr": {
+          "logo": "art/logo.fr.png",
+          "cover": "art/cover.fr.jpg"
+        },
+        "es": {
+          "logo": "art/logo.es.png",
+          "cover": "art/cover.es.jpg"
+        },
+        "ja": {
+          "logo": "art/logo.ja.png",
+          "cover": "art/cover.ja.jpg"
+        },
+        "zh": {
+          "logo": "art/logo.zh.png",
+          "cover": "art/cover.zh.jpg"
+        }
+      },
+      "access": "free"
+    },
+    {
+      "id": "fin-glowing-sea",
+      "title": "Fin and the Glowing Sea",
+      "subtitle": "An underwater story",
+      "blurb": "Fin dives deeper than ever to bring back the lantern fish's lost light.",
+      "cover": "art/cover.jpg",
+      "spine": "#1c6d78",
+      "pages": 10,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "fish",
+          "name": "Fin pin"
+        },
+        {
+          "id": "jar",
+          "name": "Jar pin"
+        },
+        {
+          "id": "turtle",
+          "name": "Turtle pin"
+        },
+        {
+          "id": "crab",
+          "name": "Crab pin"
+        },
+        {
+          "id": "lanternfish",
+          "name": "Lantern fish pin"
+        }
+      ],
+      "quizCount": 5,
+      "titles": {
+        "fr": "Fin et la mer qui brille",
+        "es": "Fin y el mar que brilla",
+        "ja": "フィンと ひかる うみ",
+        "zh": "小芬和发光的大海"
+      },
+      "blurbs": {
+        "fr": "Fin plonge plus profond que jamais pour rapporter la lumière perdue du poisson-lanterne.",
+        "es": "Fin se sumerge más hondo que nunca para devolverle al pez linterna su luz perdida.",
+        "ja": "フィンは いままでで いちばん ふかく もぐって、ちょうちんあんこうの なくした ひかりを とりもどします。",
+        "zh": "小芬潜到从未到过的深处，去找回灯笼鱼丢失的光。"
+      },
+      "art": {
+        "fr": {
+          "logo": "art/logo.fr.png",
+          "cover": "art/cover.fr.jpg"
+        },
+        "es": {
+          "logo": "art/logo.es.png",
+          "cover": "art/cover.es.jpg"
+        },
+        "ja": {
+          "logo": "art/logo.ja.png",
+          "cover": "art/cover.ja.jpg"
+        },
+        "zh": {
+          "logo": "art/logo.zh.png",
+          "cover": "art/cover.zh.jpg"
+        }
+      },
+      "access": "free"
+    },
+    {
+      "id": "pim-big-wish",
+      "title": "Pim and the Big Wish",
+      "subtitle": "A story from the smallest planet",
+      "blurb": "A tiny prince, one rose and a wish that goes wrong: a story that reads itself aloud and grows when you touch it.",
+      "cover": "art/cover.jpg",
+      "spine": "#3b2f6b",
+      "pages": 10,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "rose",
+          "name": "Rose pin"
+        },
+        {
+          "id": "planet",
+          "name": "Planet pin"
+        },
+        {
+          "id": "rocket",
+          "name": "Rocket pin"
+        },
+        {
+          "id": "comet",
+          "name": "Comet pin"
+        },
+        {
+          "id": "crown",
+          "name": "Crown pin"
+        }
+      ],
+      "quizCount": 5,
+      "titles": {
+        "fr": "Pim et le grand souhait",
+        "es": "Pim y el gran deseo",
+        "ja": "ピムと おおきな ねがい",
+        "zh": "皮姆和大大的愿望"
+      },
+      "blurbs": {
+        "fr": "Un tout petit prince, une rose et un souhait qui tourne mal : une histoire qui se lit à voix haute et grandit quand on la touche.",
+        "es": "Un principito, una rosa y un deseo que sale mal: un cuento que se lee en voz alta y crece cuando lo tocas.",
+        "ja": "ちいさな おうじさまと いちりんの バラ、そして うまくいかない ねがいごと。よんでくれて、さわると おおきくなる おはなし。",
+        "zh": "一位小王子、一朵玫瑰和一个出了岔子的愿望：一个会朗读、一碰就长大的故事。"
+      },
+      "art": {
+        "fr": {
+          "logo": "art/logo.fr.png",
+          "cover": "art/cover.fr.jpg"
+        },
+        "es": {
+          "logo": "art/logo.es.png",
+          "cover": "art/cover.es.jpg"
+        },
+        "ja": {
+          "logo": "art/logo.ja.png",
+          "cover": "art/cover.ja.jpg"
+        },
+        "zh": {
+          "logo": "art/logo.zh.png",
+          "cover": "art/cover.zh.jpg"
+        }
+      },
+      "access": "pro"
+    },
+    {
+      "id": "mila-firebird",
+      "title": "Mila and the Firebird Feather",
+      "subtitle": "A tale from the birch woods",
+      "blurb": "A hut on chicken legs, three tasks and a sleeping Firebird: a snowy tale that reads itself aloud and glows when you touch it.",
+      "cover": "art/cover.jpg",
+      "spine": "#a8322c",
+      "pages": 10,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "feather",
+          "name": "Feather pin"
+        },
+        {
+          "id": "matryoshka",
+          "name": "Matryoshka pin"
+        },
+        {
+          "id": "snowflake",
+          "name": "Snowflake pin"
+        },
+        {
+          "id": "cat",
+          "name": "Cat pin"
+        },
+        {
+          "id": "cabin",
+          "name": "Cabin pin"
+        }
+      ],
+      "quizCount": 5,
+      "titles": {
+        "fr": "Mila et la plume de l'Oiseau de feu",
+        "es": "Mila y la pluma del Pájaro de Fuego",
+        "ja": "ミラと ひのとりの はね",
+        "zh": "米拉和火鸟的羽毛"
+      },
+      "blurbs": {
+        "fr": "Une isba sur pattes de poule, trois épreuves et un Oiseau de feu endormi : un conte de neige qui se lit à voix haute et s'illumine quand on le touche.",
+        "es": "Una cabaña con patas de gallina, tres pruebas y un Pájaro de Fuego dormido: un cuento nevado que se lee en voz alta y brilla cuando lo tocas.",
+        "ja": "にわとりの あしの いえ、みっつの しごと、ねむる ひのとり。よんでくれて、さわると ひかる ゆきの おはなし。",
+        "zh": "一座鸡脚小屋、三个任务和一只沉睡的火鸟：一个会朗读、一碰就发光的雪国故事。"
+      },
+      "art": {
+        "fr": {
+          "logo": "art/logo.fr.png",
+          "cover": "art/cover.fr.jpg"
+        },
+        "es": {
+          "logo": "art/logo.es.png",
+          "cover": "art/cover.es.jpg"
+        },
+        "ja": {
+          "logo": "art/logo.ja.png",
+          "cover": "art/cover.ja.jpg"
+        },
+        "zh": {
+          "logo": "art/logo.zh.png",
+          "cover": "art/cover.zh.jpg"
+        }
+      },
+      "access": "pro"
+    },
+    {
+      "id": "kiko-paper-crane",
+      "title": "Kiko and the Paper Crane",
+      "subtitle": "A race to the moon",
+      "blurb": "A fox kit, a paper crane and a moon that will not wait: a lantern-lit story that reads itself aloud and glows when you touch it.",
+      "cover": "art/cover.jpg",
+      "spine": "#2b3a7a",
+      "pages": 10,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "crane",
+          "name": "Crane pin"
+        },
+        {
+          "id": "torii",
+          "name": "Torii pin"
+        },
+        {
+          "id": "koi",
+          "name": "Koi pin"
+        },
+        {
+          "id": "tanuki",
+          "name": "Tanuki pin"
+        },
+        {
+          "id": "moon",
+          "name": "Moon pin"
+        }
+      ],
+      "quizCount": 5,
+      "titles": {
+        "fr": "Kiko et la grue de papier",
+        "es": "Kiko y la grulla de papel",
+        "ja": "キコと おりがみの つる",
+        "zh": "琪可和纸鹤"
+      },
+      "blurbs": {
+        "fr": "Un renardeau, une grue en papier et une lune qui n'attend pas : une histoire à la lanterne qui se lit à voix haute et s'illumine quand on la touche.",
+        "es": "Un zorrito, una grulla de papel y una luna que no espera: un cuento a la luz de los faroles que se lee en voz alta y brilla cuando lo tocas.",
+        "ja": "こぎつねと おりづると、まってくれない おつきさま。よんでくれて、さわると ひかる ちょうちんの おはなし。",
+        "zh": "一只小狐狸、一只纸鹤和一轮不肯等待的月亮：一个会朗读、一碰就发光的灯笼故事。"
+      },
+      "art": {
+        "fr": {
+          "logo": "art/logo.fr.png",
+          "cover": "art/cover.fr.jpg"
+        },
+        "es": {
+          "logo": "art/logo.es.png",
+          "cover": "art/cover.es.jpg"
+        },
+        "ja": {
+          "logo": "art/logo.ja.png",
+          "cover": "art/cover.ja.jpg"
+        },
+        "zh": {
+          "logo": "art/logo.zh.png",
+          "cover": "art/cover.zh.jpg"
+        }
+      },
+      "access": "pro"
+    },
+    {
+      "id": "noy-rain-rocket",
+      "title": "Noy and the Rain Rocket",
+      "subtitle": "A story from the rice fields of Laos",
+      "blurb": "The rice is dry, the sky is empty, and Noy's little bamboo rockets keep going wrong: a try-again story that reads itself aloud and rains when you touch it.",
+      "cover": "art/cover.jpg",
+      "spine": "#2f7a4f",
+      "pages": 10,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "rocket",
+          "name": "Rocket pin"
+        },
+        {
+          "id": "naga",
+          "name": "Naga pin"
+        },
+        {
+          "id": "frog",
+          "name": "Frog pin"
+        },
+        {
+          "id": "cloud",
+          "name": "Cloud pin"
+        },
+        {
+          "id": "khaen",
+          "name": "Khaen pin"
+        }
+      ],
+      "quizCount": 5,
+      "titles": {
+        "fr": "Noy et la fusée à pluie",
+        "es": "Noy y el cohete de la lluvia",
+        "ja": "ノイと あめの ロケット",
+        "zh": "诺伊和求雨火箭"
+      },
+      "blurbs": {
+        "fr": "Le riz est sec, le ciel est vide et les petites fusées en bambou de Noy ratent sans cesse : une histoire pour réessayer, qui se lit à voix haute et fait pleuvoir quand on la touche.",
+        "es": "El arroz está seco, el cielo vacío y los cohetes de bambú de Noy siguen fallando: un cuento de volver a intentarlo que se lee en voz alta y llueve cuando lo tocas.",
+        "ja": "おこめは かわき、そらは からっぽ。ノイの たけの ロケットは なんども しっぱい。よんでくれて、さわると あめが ふる、もういちど がんばる おはなし。",
+        "zh": "稻田干了，天空空空的，诺伊的小竹火箭一次次出错：一个会朗读、一碰就下雨的再试一次的故事。"
+      },
+      "art": {
+        "fr": {
+          "logo": "art/logo.fr.png",
+          "cover": "art/cover.fr.jpg"
+        },
+        "es": {
+          "logo": "art/logo.es.png",
+          "cover": "art/cover.es.jpg"
+        },
+        "ja": {
+          "logo": "art/logo.ja.png",
+          "cover": "art/cover.ja.jpg"
+        },
+        "zh": {
+          "logo": "art/logo.zh.png",
+          "cover": "art/cover.zh.jpg"
+        }
+      },
+      "access": "pro"
+    },
+    {
+      "id": "pong-water-festival",
+      "title": "Pong and the Water Festival",
+      "subtitle": "A Songkran story from Thailand",
+      "blurb": "A little elephant who hates getting wet, on the wettest day of the Thai year: a splashy story that reads itself aloud and sprays when you touch it.",
+      "cover": "art/cover.jpg",
+      "spine": "#d9488a",
+      "pages": 10,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "elephant",
+          "name": "Elephant pin"
+        },
+        {
+          "id": "bucket",
+          "name": "Bucket pin"
+        },
+        {
+          "id": "tuktuk",
+          "name": "Tuk-tuk pin"
+        },
+        {
+          "id": "lotus",
+          "name": "Lotus pin"
+        },
+        {
+          "id": "splash",
+          "name": "Splash pin"
+        }
+      ],
+      "quizCount": 5,
+      "titles": {
+        "fr": "Pong et la fête de l'eau",
+        "es": "Pong y la fiesta del agua",
+        "ja": "ポンと みずかけまつり",
+        "zh": "彭彭和泼水节"
+      },
+      "blurbs": {
+        "fr": "Un petit éléphant qui déteste être mouillé, le jour le plus arrosé de l'année thaïlandaise : une histoire pleine d'éclaboussures qui se lit à voix haute et asperge quand on la touche.",
+        "es": "Un elefantito que odia mojarse, en el día más mojado del año tailandés: un cuento salpicón que se lee en voz alta y salpica cuando lo tocas.",
+        "ja": "ぬれるのが だいきらいな こぞうさん。タイで いちばん みずびたしの ひに。よんでくれて、さわると みずが とぶ おはなし。",
+        "zh": "一只讨厌淋湿的小象，遇上泰国一年里最湿的一天：一个会朗读、一碰就喷水的故事。"
+      },
+      "art": {
+        "fr": {
+          "logo": "art/logo.fr.png",
+          "cover": "art/cover.fr.jpg"
+        },
+        "es": {
+          "logo": "art/logo.es.png",
+          "cover": "art/cover.es.jpg"
+        },
+        "ja": {
+          "logo": "art/logo.ja.png",
+          "cover": "art/cover.ja.jpg"
+        },
+        "zh": {
+          "logo": "art/logo.zh.png",
+          "cover": "art/cover.zh.jpg"
+        }
+      },
+      "access": "pro"
+    },
+    {
+      "id": "nadim-swordfish",
+      "title": "Nadim and the Swordfish",
+      "subtitle": "A legend from the shores of Singapore",
+      "blurb": "Hundreds of swordfish leap onto the beach and every big plan fails, until a small boy has a soft idea: a legend that reads itself aloud and leaps when you touch it.",
+      "cover": "art/cover.jpg",
+      "spine": "#c8202e",
+      "pages": 10,
+      "status": "ready",
+      "pins": [
+        {
+          "id": "swordfish",
+          "name": "Swordfish pin"
+        },
+        {
+          "id": "merlion",
+          "name": "Merlion pin"
+        },
+        {
+          "id": "otter",
+          "name": "Otter pin"
+        },
+        {
+          "id": "banana",
+          "name": "Banana pin"
+        },
+        {
+          "id": "hornbill",
+          "name": "Hornbill pin"
+        }
+      ],
+      "quizCount": 5,
+      "titles": {
+        "fr": "Nadim et les espadons",
+        "es": "Nadim y los peces espada",
+        "ja": "ナディムと メカジキ",
+        "zh": "纳丁和剑鱼"
+      },
+      "blurbs": {
+        "fr": "Des centaines d'espadons bondissent sur la plage et tous les grands plans échouent, jusqu'à ce qu'un petit garçon ait une idée toute douce : une légende qui se lit à voix haute et bondit quand on la touche.",
+        "es": "Cientos de peces espada saltan a la playa y todos los grandes planes fallan, hasta que un niño pequeño tiene una idea suave: una leyenda que se lee en voz alta y salta cuando la tocas.",
+        "ja": "なんびゃくもの かじきが はまに とびこみ、おおきな さくせんは ぜんぶ しっぱい。ちいさな おとこのこの やさしい おもいつきが ひらめくまで。よんでくれて、さわると はねる でんせつ。",
+        "zh": "几百条剑鱼跳上海滩，所有大计划都失败了，直到一个小男孩想出一个温柔的主意：一个会朗读、一碰就跳起来的传说。"
+      },
+      "art": {
+        "fr": {
+          "logo": "art/logo.fr.png",
+          "cover": "art/cover.fr.jpg"
+        },
+        "es": {
+          "logo": "art/logo.es.png",
+          "cover": "art/cover.es.jpg"
+        },
+        "ja": {
+          "logo": "art/logo.ja.png",
+          "cover": "art/cover.ja.jpg"
+        },
+        "zh": {
+          "logo": "art/logo.zh.png",
+          "cover": "art/cover.zh.jpg"
+        }
+      },
+      "access": "pro"
+    },
+    {
+      "id": "kaguya-moon-bamboo",
+      "title": "Kaguya and the Moon Bamboo",
+      "subtitle": "A tale from Japan, with words to keep",
+      "blurb": "An old bamboo cutter finds a tiny girl in a glowing stalk, and she belongs to the moon. Learn Japanese words as the story goes.",
+      "cover": "art/cover.jpg",
+      "spine": "#2f3f6b",
+      "pages": 10,
+      "status": "ready",
+      "language": "Japanese",
+      "pins": [
+        {
+          "id": "bamboo",
+          "name": "Bamboo pin"
+        },
+        {
+          "id": "moon",
+          "name": "Moon pin"
+        },
+        {
+          "id": "sakura",
+          "name": "Sakura pin"
+        },
+        {
+          "id": "fuji",
+          "name": "Mount Fuji pin"
+        },
+        {
+          "id": "fan",
+          "name": "Fan pin"
+        }
+      ],
+      "quizCount": 5,
+      "titles": {
+        "fr": "Kaguya et le bambou de la lune",
+        "es": "Kaguya y el bambú de la luna",
+        "ja": "かぐやひめと つきの たけ",
+        "zh": "辉夜姬和月亮竹"
+      },
+      "blurbs": {
+        "fr": "Un vieux coupeur de bambou trouve une toute petite fille dans une tige lumineuse, et elle appartient à la lune. Apprends des mots japonais au fil de l'histoire.",
+        "es": "Un viejo cortador de bambú encuentra a una niña diminuta en un tallo brillante, y ella pertenece a la luna. Aprende palabras en japonés mientras avanza el cuento.",
+        "ja": "たけとりの おじいさんが、ひかる たけの なかに ちいさな おんなのこを みつけます。そのこは、おつきさまの こでした。おはなしと いっしょに にほんごの ことばを おぼえよう。",
+        "zh": "一位砍竹子的老爷爷在发光的竹子里发现了一个小小的女孩，而她属于月亮。跟着故事学日语词语。"
+      },
+      "art": {
+        "fr": {
+          "logo": "art/logo.fr.png",
+          "cover": "art/cover.fr.jpg"
+        },
+        "es": {
+          "logo": "art/logo.es.png",
+          "cover": "art/cover.es.jpg"
+        },
+        "ja": {
+          "logo": "art/logo.ja.png",
+          "cover": "art/cover.ja.jpg"
+        },
+        "zh": {
+          "logo": "art/logo.zh.png",
+          "cover": "art/cover.zh.jpg"
+        }
+      },
+      "access": "pro"
+    },
+    {
+      "id": "colette-paris-postcard",
+      "title": "Colette and the Paris Postcard",
+      "subtitle": "A day in Paris, with words to keep",
+      "blurb": "A postcard from Grandma sends Colette across Paris collecting French words like souvenirs, from the bakery to the sparkling tower.",
+      "cover": "art/cover.jpg",
+      "spine": "#b8322f",
+      "pages": 10,
+      "status": "ready",
+      "language": "French",
+      "pins": [
+        {
+          "id": "eiffel",
+          "name": "Eiffel Tower pin"
+        },
+        {
+          "id": "croissant",
+          "name": "Croissant pin"
+        },
+        {
+          "id": "beret",
+          "name": "Beret pin"
+        },
+        {
+          "id": "pigeon",
+          "name": "Pigeon pin"
+        },
+        {
+          "id": "macaron",
+          "name": "Macaron pin"
+        }
+      ],
+      "quizCount": 5,
+      "titles": {
+        "fr": "Colette et la carte postale de Paris",
+        "es": "Colette y la postal de París",
+        "ja": "コレットと パリの はがき",
+        "zh": "科莱特和巴黎明信片"
+      },
+      "blurbs": {
+        "fr": "Une carte postale de Mamie envoie Colette à travers Paris ramasser des mots français comme des souvenirs, de la boulangerie à la tour qui scintille.",
+        "es": "Una postal de la abuela manda a Colette por todo París a recoger palabras francesas como recuerdos, de la panadería a la torre que brilla.",
+        "ja": "おばあちゃんからの えはがきで、コレットは パリを めぐり、パンやさんから きらめく とうまで、フランスごの ことばを おみやげみたいに あつめます。",
+        "zh": "奶奶寄来的一张明信片，让科莱特走遍巴黎，从面包店到闪闪发光的铁塔，把法语词语像纪念品一样收集起来。"
+      },
+      "art": {
+        "fr": {
+          "logo": "art/logo.fr.png",
+          "cover": "art/cover.fr.jpg"
+        },
+        "es": {
+          "logo": "art/logo.es.png",
+          "cover": "art/cover.es.jpg"
+        },
+        "ja": {
+          "logo": "art/logo.ja.png",
+          "cover": "art/cover.ja.jpg"
+        },
+        "zh": {
+          "logo": "art/logo.zh.png",
+          "cover": "art/cover.zh.jpg"
+        }
+      },
+      "access": "pro"
+    },
+    {
+      "id": "mei-year-beast",
+      "title": "Mei and the Year Beast",
+      "subtitle": "A New Year legend from China, with words to keep",
+      "blurb": "A beast called Nian comes down the mountain every New Year's Eve, until a brave girl learns the three things it fears. Learn Chinese words as the story goes.",
+      "cover": "art/cover.jpg",
+      "spine": "#a4231f",
+      "pages": 10,
+      "status": "ready",
+      "language": "Chinese",
+      "pins": [
+        {
+          "id": "lantern",
+          "name": "Lantern pin"
+        },
+        {
+          "id": "dragon",
+          "name": "Dragon pin"
+        },
+        {
+          "id": "firecracker",
+          "name": "Firecracker pin"
+        },
+        {
+          "id": "plum",
+          "name": "Plum blossom pin"
+        },
+        {
+          "id": "envelope",
+          "name": "Red envelope pin"
+        }
+      ],
+      "quizCount": 5,
+      "titles": {
+        "fr": "Mei et le monstre de l'année",
+        "es": "Mei y la bestia del año",
+        "ja": "メイと としの かいぶつ",
+        "zh": "小梅和年兽"
+      },
+      "blurbs": {
+        "fr": "Une bête nommée Nian descend de la montagne chaque veille du Nouvel An, jusqu'à ce qu'une fillette courageuse découvre les trois choses qu'elle craint. Apprends des mots chinois au fil de l'histoire.",
+        "es": "Una bestia llamada Nian baja de la montaña cada Nochevieja, hasta que una niña valiente descubre las tres cosas que teme. Aprende palabras en chino mientras avanza el cuento.",
+        "ja": "ニエンという けものが、としの おわりの よるに やまから おりてきます。ゆうかんな おんなのこが、けものの こわがる みっつの ものを しるまで。おはなしと いっしょに ちゅうごくごの ことばを おぼえよう。",
+        "zh": "每到除夕夜，一只叫年的怪兽就会下山，直到一个勇敢的小女孩学会它害怕的三样东西。跟着故事学中文词语。"
+      },
+      "art": {
+        "fr": {
+          "logo": "art/logo.fr.png",
+          "cover": "art/cover.fr.jpg"
+        },
+        "es": {
+          "logo": "art/logo.es.png",
+          "cover": "art/cover.es.jpg"
+        },
+        "ja": {
+          "logo": "art/logo.ja.png",
+          "cover": "art/cover.ja.jpg"
+        },
+        "zh": {
+          "logo": "art/logo.zh.png",
+          "cover": "art/cover.zh.jpg"
+        }
+      },
+      "access": "pro"
+    },
+    {
+      "id": "ruby-golden-gate",
+      "title": "Ruby and the Golden Gate",
+      "subtitle": "A foggy day in San Francisco, with words to keep",
+      "blurb": "One morning the fog swallows the Golden Gate Bridge, and Ruby and her dog Biscuit ride a cable car, a ferry and a kite-filled park to find it, keeping English words along the way.",
+      "cover": "art/cover.jpg",
+      "spine": "#d9532b",
+      "pages": 10,
+      "status": "ready",
+      "language": "English",
+      "pins": [
+        {
+          "id": "cablecar",
+          "name": "Cable car pin"
+        },
+        {
+          "id": "bread",
+          "name": "Sourdough crab pin"
+        },
+        {
+          "id": "sealion",
+          "name": "Sea lion pin"
+        },
+        {
+          "id": "kite",
+          "name": "Kite pin"
+        },
+        {
+          "id": "bridge",
+          "name": "Golden Gate pin"
+        }
+      ],
+      "quizCount": 5,
+      "titles": {
+        "fr": "Ruby et le Golden Gate",
+        "es": "Ruby y el Golden Gate",
+        "ja": "Ruby と ゴールデン ゲート",
+        "zh": "Ruby 和 金门大桥"
+      },
+      "blurbs": {
+        "fr": "Un matin, le brouillard avale le pont du Golden Gate, et Ruby et son chien Biscuit prennent un cable car, un ferry et traversent un parc plein de cerfs-volants pour le retrouver, en gardant des mots d’anglais tout au long du chemin : un livre-souvenir qui t’apprend l’anglais au fil de l’histoire.",
+        "es": "Una mañana, la niebla se traga el puente Golden Gate, y Ruby y su perro Biscuit viajan en tranvía, ferry y por un parque lleno de cometas para encontrarlo, guardando palabras en inglés por el camino: un libro recuerdo que te enseña inglés mientras avanzas.",
+        "ja": "ある あさ、 きり が ゴールデン ゲート ブリッジ を ぱくり。 Ruby と いぬ の Biscuit は、 ケーブルカー と フェリー と たこ が いっぱい の こうえん を めぐって、 その ばしょ を さがします。 おはなし を たのしみながら、 えいご の ことば も おぼえられる おみやげ えほん です。",
+        "zh": "一个 早晨 ， 浓雾 吞没 了 金门大桥 ， Ruby 和 她 的 小狗 Biscuit 坐 上 缆车 、 渡船 ， 又 去 了 放 满 风筝 的 公园 找 它 。 一路上 ， 他们 把 英语 单词 轻轻 收进 口袋里 ： 这 是 一本 一边 讲 故事 、 一边 教 你 英语 的 纪念 书 。"
+      },
+      "art": {
+        "fr": {
+          "logo": "art/logo.fr.png",
+          "cover": "art/cover.fr.jpg"
+        },
+        "es": {
+          "logo": "art/logo.es.png",
+          "cover": "art/cover.es.jpg"
+        },
+        "ja": {
+          "logo": "art/logo.ja.png",
+          "cover": "art/cover.ja.jpg"
+        },
+        "zh": {
+          "logo": "art/logo.zh.png",
+          "cover": "art/cover.zh.jpg"
+        }
+      },
+      "access": "pro"
+    },
+    {
+      "id": "whit-london-bells",
+      "title": "Whit and the London Bells",
+      "subtitle": "A tale of London town, with words to keep",
+      "blurb": "Whit walks to London with his cat Tabby to find streets paved with gold, and finds a red bus, a queen with a mouse problem and bells that tell him to turn again, keeping English words along the way.",
+      "cover": "art/cover.jpg",
+      "spine": "#2b3f7a",
+      "pages": 10,
+      "status": "ready",
+      "language": "English",
+      "pins": [
+        {
+          "id": "bus",
+          "name": "Red bus pin"
+        },
+        {
+          "id": "umbrella",
+          "name": "Umbrella pin"
+        },
+        {
+          "id": "raven",
+          "name": "Raven pin"
+        },
+        {
+          "id": "cat",
+          "name": "Tabby pin"
+        },
+        {
+          "id": "crown",
+          "name": "Crown pin"
+        }
+      ],
+      "quizCount": 5,
+      "titles": {
+        "fr": "Whit et les cloches de Londres",
+        "es": "Whit y las campanas de Londres",
+        "ja": "Whit と ロンドン の ベル",
+        "zh": "Whit 和 伦敦 的 钟声"
+      },
+      "blurbs": {
+        "fr": "Whit marche jusqu’à Londres avec son chat Tabby pour trouver des rues pavées d’or. Il y découvre un bus rouge, une reine avec un souci de souris et des cloches qui lui disent de tourner encore, en gardant des mots d’anglais tout au long de l’histoire : un livre-souvenir qui t’apprend l’anglais en chemin.",
+        "es": "Whit camina hasta Londres con su gato Tabby para encontrar calles empedradas de oro, y descubre un autobús rojo, una reina con un problema de ratones y unas campanas que le dicen que se dé la vuelta otra vez, guardando palabras en inglés por el camino: un libro recuerdo que te enseña inglés mientras avanza.",
+        "ja": "Whit は ねこ の Tabby と いっしょに、 きん で しきつめられた みち を さがして ロンドン へ あるきます。 そこで あかい バス、 ねずみ に こまった じょおう、 そして もう いちど まがりなさい と つげる ベル に であいます。 おはなし を たのしみながら、 えいご の ことば も おぼえられる きねん の えほん です。",
+        "zh": "Whit 带着 他 的 猫 Tabby 走 到 伦敦 ， 去 找 铺着 金子 的 街道 。 他 看见 了 红色 的 公交车 、 有 老鼠 烦恼 的 女王 ， 还有 叫 他 再 转 回去 的 钟声 。 一路上 ， 他 也 学 会 了 英语 单词 ： 这 是 一本 一边 讲 故事 、 一边 教 英语 的 纪念 书 。"
+      },
+      "art": {
+        "fr": {
+          "logo": "art/logo.fr.png",
+          "cover": "art/cover.fr.jpg"
+        },
+        "es": {
+          "logo": "art/logo.es.png",
+          "cover": "art/cover.es.jpg"
+        },
+        "ja": {
+          "logo": "art/logo.ja.png",
+          "cover": "art/cover.ja.jpg"
+        },
+        "zh": {
+          "logo": "art/logo.zh.png",
+          "cover": "art/cover.zh.jpg"
+        }
+      },
+      "access": "pro"
+    },
+    {
+      "id": "lucia-tooth-mouse",
+      "title": "Lucía and the Tooth Mouse",
+      "subtitle": "A night in Madrid, with words to keep",
+      "blurb": "Lucía loses her first tooth in the Plaza Mayor, and that night Ratoncito Pérez sneaks out of his biscuit tin and across Madrid to fetch it, collecting Spanish words like souvenirs.",
+      "cover": "art/cover.jpg",
+      "spine": "#c9902a",
+      "pages": 10,
+      "status": "ready",
+      "language": "Spanish",
+      "pins": [
+        {
+          "id": "churro",
+          "name": "Churro pin"
+        },
+        {
+          "id": "tooth",
+          "name": "Tooth pin"
+        },
+        {
+          "id": "mouse",
+          "name": "Ratoncito Pérez pin"
+        },
+        {
+          "id": "bear",
+          "name": "Bear and tree pin"
+        },
+        {
+          "id": "coin",
+          "name": "Moneda pin"
+        }
+      ],
+      "quizCount": 5,
+      "titles": {
+        "fr": "Lucía et la petite souris des dents",
+        "es": "Lucía y el Ratón de los Dientes",
+        "ja": "ルシア と はの ねずみ",
+        "zh": "Lucía 和 牙齿 小 老鼠"
+      },
+      "blurbs": {
+        "fr": "Lucía perd sa première dent sur la Plaza Mayor, et cette nuit-là Ratoncito Pérez se faufile hors de sa boîte à biscuits pour traverser Madrid et venir la chercher, en ramassant des mots espagnols comme des souvenirs : un livre-souvenir qui t’apprend l’espagnol au fil de l’histoire.",
+        "es": "Lucía pierde su primer diente en la Plaza Mayor, y esa noche Ratoncito Pérez sale a escondidas de su lata de galletas y cruza Madrid para recogerlo, juntando palabras en español como si fueran recuerdos: un libro-recuerdo que te enseña español mientras avanza.",
+        "ja": "ルシア は マドリード の プラサ・マヨール で はじめて の は を なくします。 その よる、 ラトンシート・ペレス は ビスケットかん から こっそり ぬけだして、 は を とりに でかけます。 おみやげ みたいに スペインご を あつめながら すすめる、 やさしい ことばの えほん です。",
+        "zh": "Lucía 在 马约尔 广场 掉了 她 的 第一 颗 牙。 那天 夜里， Ratoncito Pérez 悄悄 地 从 饼干 盒 里 溜 出来， 穿过 马德里 去 把 它 取走， 一路 收集 西班牙语 单词， 像 收集 小 纪念品 一样： 这 是 一本 一边 讲 故事、 一边 教 你 西班牙语 的 纪念 书。"
+      },
+      "art": {
+        "fr": {
+          "logo": "art/logo.fr.png",
+          "cover": "art/cover.fr.jpg"
+        },
+        "es": {
+          "logo": "art/logo.es.png",
+          "cover": "art/cover.es.jpg"
+        },
+        "ja": {
+          "logo": "art/logo.ja.png",
+          "cover": "art/cover.ja.jpg"
+        },
+        "zh": {
+          "logo": "art/logo.zh.png",
+          "cover": "art/cover.zh.jpg"
+        }
+      },
+      "access": "pro"
+    }
+  ]
+}
