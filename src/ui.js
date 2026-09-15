@@ -93,6 +93,7 @@ export class UI {
       sound: $("btn-sound"),
       look: $("btn-look"),
       settings: $("btn-settings"),
+      tribute: $("btn-tribute"),
       language: $("btn-language"),
       languageMenu: $("language-menu"),
       hint: $("hint"),
@@ -135,6 +136,7 @@ export class UI {
     press(e.sound, "sound");
     press(e.look, "look");
     press(e.settings, "settings");
+    if (e.tribute) press(e.tribute, "tribute");
     if (e.account) press(e.account, "account");
     if (e.language) {
       press(e.language, "language-menu");

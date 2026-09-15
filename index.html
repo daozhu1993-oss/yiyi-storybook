@@ -150,6 +150,44 @@
       </div>
       <p class="status-line">For parents and grown-ups · Secure checkout with Stripe · Prices in USD, plus applicable tax · <a href="/pricing">All the details</a></p>
     </dialog>
+    <dialog id="tribute-dialog" class="panel-shell folio-dialog tribute-dialog" aria-labelledby="tribute-dialog-title">
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <button id="tribute-close" class="folio-close" onclick="this.closest('dialog').close()" aria-label="关闭手记">×</button>
+      <header class="folio-head">
+        <div class="portrait medallion" aria-hidden="true" style="font-size: 38px; display: grid; place-items: center; background: rgba(212,185,130,0.18); border-radius: 50%;">🪶</div>
+        <div>
+          <span class="eyebrow" style="letter-spacing: 0.12em; color: #8c6a3c; font-weight: 700;">DAOZHU STORYBOOK · 创作手记与致谢</span>
+          <h2 id="tribute-dialog-title" style="margin: 2px 0 4px; font-size: 26px; color: #3d2a17;">献给女儿一一的童年礼物</h2>
+          <p class="panel-description">用爱记录成长瞬间，用技术雕琢童话梦境，诚挚致敬卓越的 WebGL 艺术工程。</p>
+        </div>
+      </header>
+      <div class="folio-rule"><i class="icon icon-star"></i></div>
+      
+      <div class="tribute-body">
+        <article class="tribute-section">
+          <h3><span>🌱</span> 绘本馆的初心与故事</h3>
+          <p>这里是由<b>岛主（一一爸爸）</b>为女儿打造的专属童年记忆展馆。从一一出生那一刻起，爸爸便用日常画笔、温暖故事与陪伴，记录下一一感知世界、学会说话、初次奔跑与探索自然的每一个难忘时刻，并创造了守护童年的温暖形象<b>「芽芽兽」</b>。</p>
+          <p>本馆收录的 <b>36 本一一成长绘本</b>严格按照女儿出生成长月龄编年排布（从第 1 部《春天里最重要的事》到第 36 部），与 <b>10 本芽芽兽奇幻冒险绘本</b>共同组成了一座可以亲手触碰的 3D 立体童话森林。</p>
+        </article>
+
+        <article class="tribute-section">
+          <h3><span>✨</span> 技术源泉与诚挚致敬</h3>
+          <p>本馆的核心 3D 纸张翻页物理引擎、曲面网格模拟与材质光影渲染，深度学习并致敬了由 <b>Meng To / DesignCode</b> 团队创作的杰出 WebGL 立体书工程 <b><a href="https://storycomet.app/" target="_blank" rel="noopener">StoryComet</a></b>。</p>
+          <p>StoryComet 将现代 Web 交互与绘本艺术融合到了不可思议的高度，让每一个翻页动作都流淌着真实纸张的温度。原作者团队对前沿交互美学与技术的极致打磨深深触动并启发了我们，特在此向 Meng To 及其团队致以最由衷的感谢与敬意！</p>
+        </article>
+
+        <div class="tribute-card-disclaimer">
+          <h4><span>🕊️</span> 非商业性与公益声明</h4>
+          <p>本项目为完全<b>非商业性质（100% Non-Commercial）</b>的个人纪念与技术学习实践作品，仅供记录女儿成长点滴、亲子家庭阅读及 WebGL 技术交流，不包含任何商业付费、广告或盈利模式。绘本故事、绘画及角色版权归属于岛主与一一，底层翻页引擎原型版权归原作者团队所有。</p>
+        </div>
+      </div>
+
+      <div class="panel-actions" style="margin-top: 18px;">
+        <button class="account-primary pill-button small" onclick="this.closest('dialog').close()" style="cursor: pointer;">
+          <i class="icon icon-star"></i><span>翻开书页 · 漫步童年</span>
+        </button>
+      </div>
+    </dialog>
     <div id="app">
       <canvas id="gl" aria-label="Otto and the Shy Moon, a pop-up book" tabindex="0"></canvas>
       <div id="focus-veil" hidden></div>
@@ -179,6 +217,9 @@
           </button>
           <button class="round-button hud" style="--i: 6" id="btn-settings" aria-label="Settings" data-i18n-aria="tipSettings" data-tip="Settings" data-i18n-tip="tipSettings">
             <i class="icon icon-settings"></i>
+          </button>
+          <button class="round-button hud tribute-button" style="--i: 7" id="btn-tribute" aria-label="创作手记与致谢" data-i18n-aria="tipTribute" data-tip="创作手记与致谢" data-i18n-tip="tipTribute">
+            <span class="quill-icon" aria-hidden="true">🪶</span>
           </button>
         </div>
         <div class="language-menu" id="language-menu" hidden role="menu" aria-label="Read in" data-i18n-aria="ariaReadIn">

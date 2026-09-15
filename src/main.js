@@ -1475,6 +1475,14 @@ function openAccount(editing = null) {
   ui.openAccount({ profiles: profiles.list, activeId: profiles.active.id, avatars: avatarList(), summaries: Object.fromEntries(profiles.list.map((p) => [p.id, summarize(p.id)])), max: MAX_PROFILES, editing });
 }
 
+function openTribute() {
+  const dlg = document.getElementById("tribute-dialog");
+  if (!dlg) return;
+  for (const open of document.querySelectorAll("dialog[open]")) if (open !== dlg) open.close();
+  if (ui?.settingsOpen) ui.closeSettings();
+  dlg.showModal();
+}
+
 /** Another child takes the shelf: their progress, stars, pins and points come in; the
     bookmarks, the shelf cards, the counter and the star row follow. An open book stays open. */
 function switchProfile(id, { announce = true } = {}) {
@@ -1972,6 +1980,11 @@ async function onAction(name, payload) {
       ui.openSettings({ openai: narrator.server.openai, browserVoices: ("speechSynthesis" in window ? speechSynthesis.getVoices() : []).filter((v) => v.lang && v.lang.startsWith("en")), openaiVoices: narrator.server.voices });
       break;
     case "settings-closed": break;
+    case "tribute":
+      sound.click();
+      if (state.reading === "playing") { narrator.pause(); setReadingState("paused"); }
+      openTribute();
+      break;
     case "account":
       sound.click();
       if (state.reading === "playing") { narrator.pause(); setReadingState("paused"); }
@@ -2241,6 +2254,17 @@ async function boot() {
   for (const type of ["pointermove", "pointerdown", "pointerup", "touchstart", "touchmove", "wheel", "keydown"]) window.addEventListener(type, noteActivity, { passive: true, capture: true });
   window.addEventListener("pointerup", onPointerUp);
   window.addEventListener("keydown", onKey);
+  const tributeDlg = document.getElementById("tribute-dialog");
+  if (tributeDlg) {
+    tributeDlg.addEventListener("click", (e) => {
+      if (e.target === tributeDlg) {
+        const rect = tributeDlg.getBoundingClientRect();
+        if (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) {
+          tributeDlg.close();
+        }
+      }
+    });
+  }
   if ("speechSynthesis" in window) speechSynthesis.getVoices();
   await waitForReadingProgress();
   profiles = new Profiles();
