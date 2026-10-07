@@ -163,6 +163,33 @@ img { display: block; }
 }
 .brand img { width: 100%; height: auto; }
 .brand:hover { opacity: 1; transform: scale(1.04) rotate(-1deg); }
+#interface.view-book .brand { display: none !important; }
+
+.book-back-button {
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  z-index: 22;
+  display: none !important;
+}
+#interface.view-book .book-back-button {
+  display: flex !important;
+}
+#interface.view-shelf .book-back-button {
+  display: none !important;
+}
+@media (max-width: 900px) {
+  .book-back-button {
+    top: 10px;
+    left: 12px;
+    width: 38px;
+    height: 38px;
+  }
+  .book-back-button .icon {
+    width: 18px;
+    height: 18px;
+  }
+}
 
 .top-actions {
   position: absolute;
@@ -1304,7 +1331,6 @@ dialog.pricing-dialog.panel-shell { width: min(900px, 96vw); overflow: auto; pad
   .reader-bar { left: 50%; bottom: 16px; gap: 12px; }
   .round-button.big { width: 58px; height: 58px; }
   .round-button.big .icon { width: 28px; height: 28px; }
-  .pill-button.primary { min-width: 170px; font-size: 18px; min-height: 54px; padding: 8px 22px; }
   .mode-toggle { display: none; }
   .word-zoom { font-size: 56px; padding: 16px 34px; }
   .word-zoom img { width: clamp(150px, 42vw, 230px); }
@@ -1420,17 +1446,36 @@ dialog.pricing-dialog.panel-shell { width: min(900px, 96vw); overflow: auto; pad
 .shelf-book.soon { opacity: 0.8; }
 .shelf-book.soon small { color: #a08a5a; }
 @media (max-width: 720px) {
-  /* the cards stack under the title (nothing clips their shadows); the round arrows keep their shape beside them */
-  .shelf-strip { bottom: 12px; gap: 6px; }
-  .shelf-row { width: 100%; box-sizing: border-box; padding: 0 14px; gap: 8px; justify-content: space-between; }   /* the arrows a thumb's margin in from the edges */
-  .shelf-books { flex-direction: column; gap: 8px; }   /* stacked outright (wrapping would size the row for three cards abreast and push the arrows to the edges) */
-  .shelf-nav { width: 44px; height: 44px; font-size: 28px; }
-  .shelf-book { width: 160px; padding: 8px 10px 7px; gap: 5px; }
-  .shelf-logo { height: 44px; }
-  .shelf-logo b { font-size: 14px; }
-  .shelf-meta small { font-size: 11px; }
-  .shelf-pins img { width: 16px; height: 16px; }
-  .shelf-title { font-size: 18px; }
+  .shelf-strip { bottom: max(12px, env(safe-area-inset-bottom)); gap: 6px; }
+  .shelf-row { width: 100%; box-sizing: border-box; padding: 0 8px; gap: 6px; justify-content: center; align-items: center; }
+  .shelf-books {
+    display: flex;
+    flex-wrap: nowrap !important;
+    flex-direction: row;
+    gap: 8px;
+    max-width: calc(100vw - 80px);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding: 6px 4px;
+    justify-content: flex-start;
+  }
+  .shelf-books::-webkit-scrollbar { display: none; }
+  .shelf-nav { width: 40px; height: 40px; font-size: 24px; flex-shrink: 0; }
+  .shelf-book {
+    flex: 0 0 130px;
+    width: 130px;
+    scroll-snap-align: center;
+    padding: 8px 8px 6px;
+    gap: 4px;
+  }
+  .shelf-logo { height: 38px; }
+  .shelf-logo b { font-size: 13px; line-height: 1.25; }
+  .shelf-meta small { font-size: 10px; }
+  .shelf-pins img, .shelf-pins .shelf-pin-glyph { width: 16px; height: 16px; font-size: 11px; }
+  .shelf-title { font-size: 16px; }
 }
 #interface.book-closed .reader-bar, #interface.book-closed .progress-dots, #interface.book-closed #btn-look, #interface.book-closed .hint-card { display: none !important; }
 
@@ -1545,15 +1590,30 @@ dialog.pricing-dialog.panel-shell { width: min(900px, 96vw); overflow: auto; pad
 .check-flight { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; font-size: 26px; color: #fff; background: linear-gradient(135deg, #9be29a, #3fa860); box-shadow: inset 0 0 0 3px #dbf5d6, 0 0 18px #9be29a99; }
 /* the counter stays in view over the quiz, so a right answer's check has somewhere to land */
 body.quiz-open .souvenir-chip { z-index: 31; }
+#interface.view-book .souvenir-chip,
+.view-book .souvenir-chip {
+  display: none !important;
+}
 @media (max-width: 900px) { .souvenir-chip { left: 146px; top: 21px; padding: 5px 12px 5px 9px; font-size: 15px; } }   /* a tablet: beside the logo on the header row, like the desktop */
 /* a phone: the header row is the symbol and the round buttons; the counter takes its own centred row
    under them, and the page stars a row under that */
 @media (max-width: 640px) {
-  .brand { width: 62px; left: 12px; }   /* the symbol is 256x200: 62 wide makes it 48 tall, the buttons' height */
-  .brand.storycomet-logo > .logo-symbol { width: 100%; }
-  .brand.storycomet-logo > .logo-wordmark { display: none; }
-  .souvenir-chip { left: 0; right: 0; width: fit-content; margin: 0 auto; top: 68px; }
-  .progress-dots { top: 112px; }
+  .brand { left: 12px; }
+  .top-actions { top: 10px; right: 10px; gap: 6px; }
+  .round-button { width: 38px; height: 38px; }
+  .round-button .icon { width: 18px; height: 18px; }
+  .round-button.account-button { display: none !important; }
+
+  /* In reading mode on mobile, keep screen clean and peaceful */
+  #interface.view-book .round-button.tribute-button,
+  #interface.view-book #btn-settings,
+  #interface.view-book .round-button.lang-button {
+    display: none !important;
+  }
+
+  .souvenir-chip { left: 0; right: 0; width: fit-content; margin: 0 auto; top: 58px; padding: 4px 10px; font-size: 13px; }
+  .progress-dots { top: 16px; gap: 5px; padding: 6px 12px; max-width: 80vw; }
+  .progress-dots i { width: 9px; height: 9px; }
 }
 
 /* ---------- the souvenir board ---------- */

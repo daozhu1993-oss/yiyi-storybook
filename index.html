@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#141a33" />
     
     <title>一一与芽芽兽 · 3D立体绘本馆 | Daozhu Storybook</title>
-    <link rel="icon" href="https://api.storycomet.app/storage/v1/object/public/story-assets/public/favicon.0e772dcee2865bcf.svg" type="image/svg+xml" />
+    <link rel="icon" href="public/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="public/fonts/fonts.css" />
     <link rel="stylesheet" href="src/style.css" />
     <link rel="stylesheet" href="src/account.css" />
@@ -25,27 +25,18 @@
         }
       }
     </script>
-  <meta name="description" content="Explore interactive picture books with read-aloud narration, word highlighting and playful 3D scenes in five languages. Read the first three stories free." />
-<link rel="canonical" href="https://storycomet.app/" />
+  <meta name="description" content="献给女儿一一的3D立体绘本馆。由爸爸亲手创作的36本成长绘本与芽芽兽童话森林，指尖触碰真实立体纸张与童话光影。" />
+<link rel="canonical" href="https://storybook.daozhuai.cn/" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
-<meta property="og:site_name" content="StoryComet" />
+<meta property="og:site_name" content="一一与芽芽兽 · 3D立体绘本馆" />
 <meta property="og:type" content="website" />
-<meta property="og:locale" content="en_US" />
-<meta property="og:title" content="Interactive Picture Books &amp; Read-Aloud Stories | StoryComet" />
-<meta property="og:description" content="Explore interactive picture books with read-aloud narration, word highlighting and playful 3D scenes in five languages. Read the first three stories free." />
-<meta property="og:url" content="https://storycomet.app/" />
-<meta property="og:image" content="https://api.storycomet.app/storage/v1/object/public/story-assets/public/social/storycomet-shelf.c31b9bb7eaf30768.jpg" />
-<meta property="og:image:secure_url" content="https://api.storycomet.app/storage/v1/object/public/story-assets/public/social/storycomet-shelf.c31b9bb7eaf30768.jpg" />
-<meta property="og:image:type" content="image/jpeg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="The StoryComet bookshelf with illustrated picture books and playful pop-up characters" />
+<meta property="og:locale" content="zh_CN" />
+<meta property="og:title" content="一一与芽芽兽 · 3D立体绘本馆 | Daozhu Storybook" />
+<meta property="og:description" content="献给女儿一一的3D立体绘本馆。由爸爸亲手创作的36本成长绘本与芽芽兽童话森林，指尖触碰真实立体纸张与童话光影。" />
+<meta property="og:url" content="https://storybook.daozhuai.cn/" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Interactive Picture Books &amp; Read-Aloud Stories | StoryComet" />
-<meta name="twitter:description" content="Explore interactive picture books with read-aloud narration, word highlighting and playful 3D scenes in five languages. Read the first three stories free." />
-<meta name="twitter:image" content="https://api.storycomet.app/storage/v1/object/public/story-assets/public/social/storycomet-shelf.c31b9bb7eaf30768.jpg" />
-<meta name="twitter:image:alt" content="The StoryComet bookshelf with illustrated picture books and playful pop-up characters" />
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://storycomet.app/#organization","name":"StoryComet","legalName":"DESIGNCODE IO PTE. LTD.","url":"https://storycomet.app/","logo":"https://api.storycomet.app/storage/v1/object/public/story-assets/public/brand/storycomet-symbol.546985a7de0c49d1.png","email":"hello@storycomet.app"},{"@type":"WebSite","@id":"https://storycomet.app/#website","name":"StoryComet","url":"https://storycomet.app/","description":"Explore interactive picture books with read-aloud narration, word highlighting and playful 3D scenes in five languages. Read the first three stories free.","inLanguage":"en","publisher":{"@id":"https://storycomet.app/#organization"}},{"@type":"WebPage","@id":"https://storycomet.app/#webpage","url":"https://storycomet.app/","name":"Interactive Picture Books & Read-Aloud Stories | StoryComet","description":"Explore interactive picture books with read-aloud narration, word highlighting and playful 3D scenes in five languages. Read the first three stories free.","inLanguage":"en","isPartOf":{"@id":"https://storycomet.app/#website"}}]}</script>
+<meta name="twitter:title" content="一一与芽芽兽 · 3D立体绘本馆 | Daozhu Storybook" />
+<meta name="twitter:description" content="献给女儿一一的3D立体绘本馆。由爸爸亲手创作的36本成长绘本与芽芽兽童话森林，指尖触碰真实立体纸张与童话光影。" />
 </head>
   <body>
     <button id="account-open" class="account-open" aria-haspopup="dialog">Parent account</button>
@@ -193,9 +184,15 @@
       <div id="focus-veil" hidden></div>
 
       <div id="interface" hidden>
-        <a class="brand storycomet-logo hud" style="--i: 0" href="#" aria-label="Story Comet home">
-          <img class="logo-symbol" src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/brand/storycomet-symbol.546985a7de0c49d1.png" alt="" width="256" height="200" />
-          <img class="logo-wordmark" src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/brand/storycomet-wordmark.199bba4889a58a32.png" alt="" width="800" height="120" />
+        <button class="round-button hud book-back-button" id="btn-back-shelf" aria-label="返回书架" title="返回书架" data-tip="返回书架">
+          <i class="icon icon-back"></i>
+        </button>
+        <a class="brand daozhu-brand hud" style="--i: 0" href="#" aria-label="一一与芽芽兽 · 3D立体绘本馆">
+          <span class="brand-badge" aria-hidden="true">🌱</span>
+          <div class="brand-text">
+            <span class="brand-title">一一与芽芽兽</span>
+            <span class="brand-sub">3D立体绘本馆 · DAOZHU</span>
+          </div>
         </a>
 
         <div class="progress-dots hud" style="--i: 1" id="dots" role="group" aria-label="Reading progress"></div>
@@ -320,29 +317,32 @@
           <i class="corner tr" aria-hidden="true"></i>
           <i class="corner bl" aria-hidden="true"></i>
           <i class="corner br" aria-hidden="true"></i>
-          <span class="eyebrow" data-i18n="eyebrow">A STORYCOMET POP-UP BOOK</span>
+          <span class="eyebrow" data-i18n="eyebrow">DAOZHU STORYBOOK · 3D立体绘本馆</span>
           <h1>
-            <span class="storycomet-logo loading-brand" role="img" aria-label="Story Comet">
-              <img class="logo-symbol" src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/brand/storycomet-symbol.546985a7de0c49d1.png" alt="" width="256" height="200" />
-              <img class="logo-wordmark" src="https://api.storycomet.app/storage/v1/object/public/story-assets/public/brand/storycomet-wordmark.199bba4889a58a32.png" alt="" width="800" height="120" />
+            <span class="daozhu-loading-brand" role="img" aria-label="一一与芽芽兽 3D立体绘本馆">
+              <span class="loading-emblem" aria-hidden="true">🌱</span>
+              <div class="loading-title-box">
+                <span class="loading-museum-name">一一与芽芽兽</span>
+                <span class="loading-museum-tag">3D立体绘本馆 · DAOZHU MUSEUM</span>
+              </div>
             </span>
             <img class="loading-logo" id="loading-logo" alt="" hidden width="1400" height="942" />
             <i class="quill" aria-hidden="true">🪶</i>
           </h1>
           <p class="loading-blurb" id="loading-blurb">
-            Pop-up stories that read themselves aloud, light up every word, and jump out of the page when you touch them.
+            献给女儿一一的童年礼物。翻开真实立体纸张，走进36段伴她成长的温暖时光与童话梦境。
             <i class="quill" aria-hidden="true">🪶</i>
           </p>
           <div class="loading-progress" role="progressbar" aria-label="Loading the book"><i></i></div>
-          <p id="loading-copy" role="status" aria-live="polite">Fluffing the clouds…</p>
+          <p id="loading-copy" role="status" aria-live="polite">打理纸张肌理…</p>
           <p id="loading-bytes" class="loading-bytes" aria-hidden="true"></p>
           <button class="pill-button primary" id="btn-open" hidden>
-            <i class="icon icon-book"></i><span data-i18n="openBook">Open the book</span>
+            <i class="icon icon-book"></i><span data-i18n="openBook">打开书</span>
           </button>
           <button class="pill-button small" id="btn-back" hidden>
-            <i class="icon icon-book"></i><span data-i18n="backToShelf">Back to the shelf</span>
+            <i class="icon icon-book"></i><span data-i18n="backToShelf">回到书架</span>
           </button>
-          <div class="loading-footnote" data-i18n="footnote">Best with sound on · Touch everything</div>
+          <div class="loading-footnote" data-i18n="footnote">轻触翻阅 · 打开声音感受更佳 · 任何玩具都可以摸一摸</div>
         </section>
       </div>
 

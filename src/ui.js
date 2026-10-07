@@ -88,6 +88,7 @@ export class UI {
       prev: $("btn-prev"),
       next: $("btn-next"),
       closeBook: $("btn-close-book"),
+      backShelf: $("btn-back-shelf"),
       modeListen: $("mode-listen"),
       modeSelf: $("mode-self"),
       sound: $("btn-sound"),
@@ -131,6 +132,7 @@ export class UI {
     press(e.prev, "prev");
     press(e.next, "next");
     if (e.closeBook) press(e.closeBook, "back");
+    if (e.backShelf) press(e.backShelf, "back");
     press(e.modeListen, "mode", "listen");
     press(e.modeSelf, "mode", "self");
     press(e.sound, "sound");
@@ -235,8 +237,14 @@ export class UI {
       // reading bar, and its five pins, found ones in colour and the rest as shadows
       const percent = meta.status !== "ready" ? 0 : readPercent(p, meta.pages);
       const found = pinsOf ? pinsOf(meta.id) : [];
-      // the pins at strip size (a few KB each); the full pin stands in if a small one is missing
-      const pins = (meta.pins || []).map((pin) => { const got = found.includes(pin.id); return `<img class="${got ? "found" : "missing"}" src="${assetUrl(`books/${meta.id}/pins/${pin.id}-strip.webp`)}" data-full="${assetUrl(`books/${meta.id}/pins/${pin.id}.png`)}" onerror="if(this.dataset.full){this.src=this.dataset.full;delete this.dataset.full;}" alt="${got ? pin.name : ""}" title="${got ? pin.name : t("stillHiding")}" />`; }).join("");
+      // the pins: badge icons for yiyi/yaya books, image strips for original books
+      const pins = (meta.pins || []).map((pin) => {
+        const got = found.includes(pin.id);
+        if (meta.id.startsWith("yiyi-") || meta.id.startsWith("yaya-") || pin.icon) {
+          return `<span class="shelf-pin-glyph ${got ? "found" : "missing"}" title="${got ? pin.name : t("stillHiding")}">${pin.icon || "🌟"}</span>`;
+        }
+        return `<img class="${got ? "found" : "missing"}" src="${assetUrl(`books/${meta.id}/pins/${pin.id}-strip.webp`)}" data-full="${assetUrl(`books/${meta.id}/pins/${pin.id}.png`)}" onerror="if(this.dataset.full){this.src=this.dataset.full;delete this.dataset.full;}" alt="${got ? pin.name : ""}" title="${got ? pin.name : t("stillHiding")}" />`;
+      }).join("");
       const code = currentLanguage();
       const title = (meta.titles && meta.titles[code]) || meta.title;
       const localLogo = code !== "en" && meta.art && meta.art[code] && meta.art[code].logo;
@@ -246,13 +254,17 @@ export class UI {
       const quizStars = quiz.total ? `<span class="shelf-quiz" role="img" aria-label="${t("quizScore", { best: quiz.best, total: quiz.total })}" title="${t("quizScore", { best: quiz.best, total: quiz.total })}">${Array.from({ length: quiz.total }, (_, i) => `<i class="${i < quiz.best ? "on" : ""}"></i>`).join("")}</span>` : "";
       b.innerHTML = `<span class="shelf-logo"><img alt="" /><b>${title}</b></span><span class="shelf-bar-row"><span class="shelf-progress" role="progressbar" aria-valuenow="${percent}" aria-valuemin="0" aria-valuemax="100"><i style="width: ${percent}%"></i></span>${quizStars}</span><span class="shelf-meta"><small>${meta.access==='pro'?'Pro · ':''}${status}</small><span class="shelf-pins">${pins}</span></span>`;
       const logo = b.querySelector(".shelf-logo img");
-      // the logo at strip size (art/logo-strip.webp, the language's when the book has one), then the
-      // full logo, then the English one, then the title when nothing loads
-      const stripOf = (file) => file.replace(/logo(\.[a-z]{2})?\.png$/, "logo-strip$1.webp");
-      const chain = [stripOf(localLogo || "art/logo.png"), localLogo || "art/logo.png", localLogo ? "art/logo-strip.webp" : null, localLogo ? "art/logo.png" : null].filter(Boolean);
-      logo.addEventListener("error", () => { const next = chain[++chain.at]; if (next) logo.src = assetUrl(`books/${meta.id}/${next}`); else logo.parentNode.classList.add("missing"); });
-      chain.at = 0;
-      logo.src = assetUrl(`books/${meta.id}/${chain[0]}`);
+      // the logo at strip size: only original stories have custom image logos
+      const isOriginal = !meta.id.startsWith("yiyi-") && !meta.id.startsWith("yaya-");
+      if (isOriginal && (localLogo || meta.logo !== false)) {
+        const stripOf = (file) => file.replace(/logo(\.[a-z]{2})?\.png$/, "logo-strip$1.webp");
+        const chain = [stripOf(localLogo || "art/logo.png"), localLogo || "art/logo.png", localLogo ? "art/logo-strip.webp" : null, localLogo ? "art/logo.png" : null].filter(Boolean);
+        logo.addEventListener("error", () => { const next = chain[++chain.at]; if (next) logo.src = assetUrl(`books/${meta.id}/${next}`); else logo.parentNode.classList.add("missing"); });
+        chain.at = 0;
+        logo.src = assetUrl(`books/${meta.id}/${chain[0]}`);
+      } else {
+        logo.parentNode.classList.add("missing");
+      }
       b.addEventListener("click", event => { if(event.target.closest(".shelf-bar-row,.shelf-pins")){this.onAction("souvenirs");return;}this.onAction("select", meta.id); });
       b.addEventListener("pointerenter", () => this.onAction("shelf-hover", meta.id));
       b.addEventListener("pointerleave", () => this.onAction("shelf-hover", null));

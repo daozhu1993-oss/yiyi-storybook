@@ -282,6 +282,9 @@ export class Souvenirs {
           <div class="pin-slots">
             ${pins.map((pin) => {
               const got = found.includes(pin.id);
+              if (b.id.startsWith("yiyi-") || b.id.startsWith("yaya-") || pin.icon) {
+                return `<span class="pin-slot ${got ? "found" : "missing"}" title="${got ? pin.name : t("stillHiding")}"><span class="pin-glyph" style="font-size:22px;">${pin.icon || "🌟"}</span>${got ? "" : "<i>?</i>"}</span>`;
+              }
               return `<span class="pin-slot ${got ? "found" : "missing"}" title="${got ? pin.name : t("stillHiding")}"><img src="${assetUrl(`books/${b.id}/pins/${pin.id}-strip.webp`)}" data-full="${assetUrl(`books/${b.id}/pins/${pin.id}.png`)}" onerror="if(this.dataset.full){this.src=this.dataset.full;delete this.dataset.full;}" alt="${got ? pin.name : ""}" />${got ? "" : "<i>?</i>"}</span>`;
             }).join("")}
             ${complete ? `<span class="board-rosette" title="${t("everyPinFound")}">★</span>` : ""}

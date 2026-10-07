@@ -1,1 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1d2649"/><path d="M40 10a18 18 0 1 0 12 31 14 14 0 1 1-12-31z" fill="#ffe08a"/><circle cx="22" cy="44" r="7" fill="#e0352b"/><path d="M22 51v6" stroke="#f8efd8" stroke-width="1.5"/><circle cx="14" cy="16" r="2" fill="#ffd166"/><circle cx="50" cy="52" r="1.5" fill="#ffd166"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8e7"/>
+      <stop offset="100%" stop-color="#f5e1b5"/>
+    </linearGradient>
+    <linearGradient id="sprout" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#73c058"/>
+      <stop offset="100%" stop-color="#428a2a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe885"/>
+      <stop offset="100%" stop-color="#d49e35"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#a67c1e" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#bg)" stroke="#d4b982" stroke-width="2.5" filter="url(#glow)"/>
+  <circle cx="32" cy="32" r="26.5" fill="none" stroke="#e8cfa0" stroke-width="1" stroke-dasharray="3,2"/>
+  
+  <!-- Sprout Stem -->
+  <path d="M 32 46 C 32 38, 30 30, 27 24" fill="none" stroke="url(#sprout)" stroke-width="3.5" stroke-linecap="round"/>
+  
+  <!-- Left Leaf -->
+  <path d="M 28 26 C 21 24, 18 16, 23 15 C 28 14, 30 20, 28 26 Z" fill="url(#sprout)" filter="url(#glow)"/>
+  
+  <!-- Right Leaf -->
+  <path d="M 30 32 C 37 30, 42 22, 38 18 C 34 14, 30 24, 30 32 Z" fill="#5cb343"/>
+  
+  <!-- Twinkling Gold Star -->
+  <path d="M 43 14 L 44.5 18 L 48.5 19.5 L 44.5 21 L 43 25 L 41.5 21 L 37.5 19.5 L 41.5 18 Z" fill="url(#gold)"/>
+  <circle cx="43" cy="19.5" r="1.5" fill="#ffffff"/>
+</svg>

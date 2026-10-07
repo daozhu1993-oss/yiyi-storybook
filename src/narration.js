@@ -205,23 +205,11 @@ export class Narrator {
   }
 
   async checkServer() {
-    if (this.server.checked) return this.server;
     this.server.checked = true;
-    try {
-      const controller = new AbortController();
-      const timer = setTimeout(() => controller.abort(), 2500);
-      const res = await fetch("/api/status", { signal: controller.signal });
-      clearTimeout(timer);
-      if (res.ok) {
-        const data = await res.json();
-        this.server.openai = !!data.openai;
-        this.server.voices = data.voices || [];
-      }
-    } catch (error) {
-      this.server.openai = false;
-    }
+    this.server.openai = false;
     return this.server;
   }
+
 
   provider() {
     const pref = this.settings.voice || "auto";
@@ -270,7 +258,7 @@ export class Narrator {
           this.onStatus(t("openaiUnavailable"));
         }
       }
-      if (provider !== "browser") {
+      if (provider !== "browser" && this.story?.narrator?.bundled) {
         try {
           return await this.prepareBundled(pageIndex, words);
         } catch (error) {

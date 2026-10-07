@@ -1,33 +1,212 @@
-/* Keep the header's original position and responsive box in style.css. */
-.storycomet-logo {
+/* ==========================================================================
+   Daozhu 3D Storybook Museum - Brand & Visual Identity
+   Awwwards / Webby / FWA Award-Grade Design Standards
+   ========================================================================== */
+
+/* Top HUD Brand Mark */
+.brand.daozhu-brand {
+  position: absolute;
+  top: 18px;
+  left: 22px;
   display: inline-flex;
   align-items: center;
-  gap: 4%;
+  gap: 12px;
   text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  padding: 5px 14px 5px 6px;
+  border-radius: 999px;
+  background: rgba(255, 248, 230, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 185, 130, 0.55);
+  box-shadow: 
+    0 4px 16px rgba(45, 25, 10, 0.09),
+    0 1px 2px rgba(45, 25, 10, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  transition: all 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 20;
 }
 
-.storycomet-logo > img {
-  display: block;
-  flex: none;
-  height: auto;
+.brand.daozhu-brand:hover {
+  transform: translateY(-2px) scale(1.025);
+  background: rgba(255, 250, 242, 0.92);
+  border-color: rgba(212, 185, 130, 0.85);
+  box-shadow: 
+    0 8px 26px rgba(184, 134, 11, 0.22),
+    0 2px 4px rgba(45, 25, 10, 0.08),
+    inset 0 1px 0 #ffffff;
 }
 
-.storycomet-logo > .logo-symbol { width: 20%; }
-.storycomet-logo > .logo-wordmark { width: 76%; }
-
-.loading-brand {
-  width: min(360px, 64vw);
-  margin: 10px 0 24px;
+.brand.daozhu-brand .brand-badge {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff5d6 0%, #edd197 50%, #cca35c 100%);
+  border: 1px solid #d4b982;
+  box-shadow: 
+    0 3px 8px rgba(60, 40, 20, 0.18),
+    inset 0 1px 2px #ffffff;
+  font-size: 20px;
+  flex-shrink: 0;
+  animation: sprout-breath 4s ease-in-out infinite alternate;
 }
 
-#loading.book .loading-brand { display: none; }
-
-.pricing-brand.storycomet-logo {
-  width: 190px;
-  height: 44px;
-  flex: none;
+@keyframes sprout-breath {
+  0% { transform: scale(1) rotate(-3deg); }
+  100% { transform: scale(1.1) rotate(4deg); }
 }
 
-@media (max-width: 600px) {
-  .pricing-brand.storycomet-logo { width: 150px; }
+.brand.daozhu-brand .brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.brand.daozhu-brand .brand-title {
+  font-family: -apple-system, "PingFang SC", "Noto Serif SC", "Songti SC", "Source Han Serif SC", "Georgia", serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  background: linear-gradient(135deg, #382410 0%, #7d5225 60%, #432b13 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+.brand.daozhu-brand .brand-sub {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9c7540;
+  white-space: nowrap;
+}
+
+/* Loading Card Museum Identity */
+.daozhu-loading-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0 20px;
+}
+
+.loading-emblem {
+  position: relative;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff6dc 0%, #eed299 50%, #cca35c 100%);
+  display: grid;
+  place-items: center;
+  font-size: 40px;
+  border: 2px solid #dfc691;
+  box-shadow: 
+    0 12px 32px rgba(175, 126, 41, 0.32),
+    inset 0 2px 4px #ffffff;
+  animation: emblem-float 4.5s ease-in-out infinite;
+}
+
+@keyframes emblem-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-6px) scale(1.03); }
+}
+
+.loading-emblem::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px dashed rgba(212, 185, 130, 0.55);
+  animation: ring-spin 24s linear infinite;
+}
+
+@keyframes ring-spin {
+  100% { transform: rotate(360deg); }
+}
+
+.loading-title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.loading-museum-name {
+  font-family: -apple-system, "PingFang SC", "Noto Serif SC", "Songti SC", "Source Han Serif SC", "Georgia", serif;
+  font-size: clamp(28px, 5.5vw, 38px);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #3d2a17 0%, #875a28 60%, #4a2f11 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 3px rgba(255, 255, 255, 0.7));
+}
+
+.loading-museum-tag {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #9d7747;
+}
+
+#loading.book .daozhu-loading-brand { display: none; }
+
+/* Shelf pin glyph badges */
+.shelf-pin-glyph {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  font-size: 14px;
+  border-radius: 50%;
+  background: rgba(255, 245, 220, 0.6);
+  border: 1px solid rgba(212, 185, 130, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.shelf-pin-glyph.found {
+  filter: drop-shadow(0 0 4px #ffd700);
+  background: rgba(255, 235, 160, 0.9);
+}
+
+.shelf-pin-glyph.missing {
+  opacity: 0.45;
+  filter: grayscale(0.8);
+}
+
+/* Mobile responsive refinements */
+@media (max-width: 768px) {
+  .brand.daozhu-brand {
+    top: 12px;
+    left: 12px;
+    padding: 3px 10px 3px 4px;
+    gap: 7px;
+    max-width: 140px;
+    height: 38px;
+    box-sizing: border-box;
+  }
+  .brand.daozhu-brand .brand-badge {
+    width: 28px;
+    height: 28px;
+    font-size: 15px;
+  }
+  .brand.daozhu-brand .brand-title {
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .brand.daozhu-brand .brand-sub {
+    display: none;
+  }
 }

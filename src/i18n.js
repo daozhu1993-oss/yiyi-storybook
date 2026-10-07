@@ -6,10 +6,10 @@
    data-i18n-aria (aria-label) or data-i18n-title (title). */
 
 const en = {
-  brand: "StoryComet",
-  eyebrow: "A STORYCOMET POP-UP BOOK",
-  defaultBlurb: "Pop-up stories that read themselves aloud, light up every word, and jump out of the page when you touch them.",
-  footnote: "Best with sound on · Touch everything",
+  brand: "一一与芽芽兽 · 3D立体绘本馆",
+  eyebrow: "DAOZHU STORYBOOK · 3D POP-UP MUSEUM",
+  defaultBlurb: "Dedicated to our daughter Yiyi. Turn real textured pages and explore 36 heartwarming stories and magical pop-up scenes.",
+  footnote: "Best with sound on · Touch and interact with everything",
   pickBook: "Pick a book",
   readToMe: "Read to me", pause: "Pause", keepReading: "Keep reading", readAgain: "Read again", illRead: "I'll read",
   openBook: "Open the book", backToShelf: "Back to the shelf", closeBook: "Close book", quizTime: "Quiz time!",
@@ -275,9 +275,10 @@ const ja = {
 };
 
 const zh = {
-  eyebrow: "STORYCOMET 立体绘本",
-  defaultBlurb: "会自己朗读的立体故事书，每个字都会发光，一碰就从书页里跳出来。",
-  footnote: "打开声音更好玩 · 什么都可以摸一摸",
+  brand: "一一与芽芽兽 · 3D立体绘本馆",
+  eyebrow: "DAOZHU STORYBOOK · 3D立体绘本馆",
+  defaultBlurb: "献给女儿一一的童年礼物。翻开真实立体纸张，走进36段伴她成长的温暖时光与童话梦境。",
+  footnote: "轻触翻阅 · 打开声音感受更佳 · 任何玩具都可以摸一摸",
   pickBook: "选一本书",
   readToMe: "读给我听", pause: "暂停", keepReading: "继续读", readAgain: "再读一遍", illRead: "我自己读",
   openBook: "打开书", backToShelf: "回到书架", closeBook: "合上书", quizTime: "答题时间！",

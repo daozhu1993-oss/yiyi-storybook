@@ -130,7 +130,7 @@ async function loadShared(progress = (p, copy) => ui.setLoading(p, copy)) {
   // no toy model is fetched before the shelf shows: the lamp, the train, the magnifier and the
   // crayons are procedural for a moment and swap for their models once the shelf is up
   textures.toyModelFor = loadToyModel;
-  try { textures.lockModel = (await new GLTFLoader().loadAsync("public/models/lock.glb")).scene; } catch (error) { textures.lockModel = null; }
+  textures.lockModel = null;
   tick(t("loadTidy"));
   // covers: the first row's before the shelf shows, the other rows in the background (the shelf
   // wears a printed placeholder until each arrives and swaps it in)
@@ -139,7 +139,11 @@ async function loadShared(progress = (p, copy) => ui.setLoading(p, copy)) {
   // the full cover comes with the book when it is opened
   const shelfCover = (file) => file.replace(/cover(\.[a-z]{2})?\.jpg$/, "cover-shelf$1.webp");
   const coverOf = async (meta) => {
-    const t = meta.cover ? (await optional(`books/${meta.id}/${shelfCover(meta.cover)}`) || await optional(`books/${meta.id}/${meta.cover}`)) : null;
+    if (!meta.cover) return null;
+    const isOriginal = !meta.id.startsWith("yiyi-") && !meta.id.startsWith("yaya-");
+    const t = isOriginal
+      ? ((await optional(`books/${meta.id}/${shelfCover(meta.cover)}`)) || (await optional(`books/${meta.id}/${meta.cover}`)))
+      : (await optional(`books/${meta.id}/${meta.cover}`));
     if (t) { t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; textures.covers[meta.id] = t; (textures.coversBase = textures.coversBase || {})[meta.id] = t; }
     return t;
   };
@@ -177,9 +181,9 @@ async function loadBook(id, progress = (p, copy) => ui.setLoading(p, copy)) {
   showBookToys(id);
   story = await (await fetch(assetUrl(`${BOOK_BASE}/story.json`))).json();
   story.id = story.id || id;
-  story.base = { title: story.title, blurb: story.blurb, subtitle: story.subtitle, logo: story.logo, cover: story.cover, pages: story.pages, end: story.end, magic: story.magic, quiz: story.quiz, vocab: story.vocab, folder: (story.narrator && story.narrator.bundled && story.narrator.bundled.folder) || "voice" };
+  story.base = { title: story.title, blurb: story.blurb, subtitle: story.subtitle, logo: story.logo, cover: story.cover, pages: story.pages, end: story.end, magic: story.magic, quiz: story.quiz, vocab: story.vocab, folder: (story.narrator && story.narrator.bundled && story.narrator.bundled.folder) || null };
   await applyLanguage(settings.language || "en", { announce: false });
-  document.title = `${story.title} · StoryComet`;
+  document.title = `${story.title} · 一一与芽芽兽绘本馆 | Daozhu Storybook`;
   let artList = [];
   try {
     const manifest = await (await fetch(assetUrl(`${BOOK_BASE}/art/manifest.json`))).json();
@@ -198,17 +202,20 @@ async function loadBook(id, progress = (p, copy) => ui.setLoading(p, copy)) {
     if (t) { t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; textures.art[card.id] = { texture: t, ...card }; }
     tick(card.copy || "Painting the pictures…");
   }
+  const isOriginalBook = !id.startsWith("yiyi-") && !id.startsWith("yaya-");
   try {
-    const words = await (await fetch(assetUrl(`${BOOK_BASE}/words/manifest.json`))).json();
-    textures.wordCards = new Set(words.cards || []);
-    textures.wordCardFolder = `${BOOK_BASE}/${words.folder || "words/cards"}`;
-    textures.wordCardFormat = words.format || "jpg";
+    const words = isOriginalBook ? await (await fetch(assetUrl(`${BOOK_BASE}/words/manifest.json`))).json() : null;
+    textures.wordCards = new Set((words && words.cards) || []);
+    textures.wordCardFolder = `${BOOK_BASE}/${(words && words.folder) || "words/cards"}`;
+    textures.wordCardFormat = (words && words.format) || "jpg";
   } catch (error) { textures.wordCards = new Set(); }
   // the souvenir pins hidden in this book's scenes
   textures.pins = {};
-  for (const pin of story.pins || []) {
-    const t = await optional(`${BOOK_BASE}/pins/${pin.id}.png`);
-    if (t) { t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; textures.pins[pin.id] = t; }
+  if (isOriginalBook) {
+    for (const pin of story.pins || []) {
+      const t = await optional(`${BOOK_BASE}/pins/${pin.id}.png`);
+      if (t) { t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4; textures.pins[pin.id] = t; }
+    }
   }
   // the hero: a rigged model plus animation clips that come as tiny proxy rigs and are retargeted onto it
   textures.heroGltf = null;
@@ -629,7 +636,12 @@ function prepWall(t) {
 /** The wallpaper for a book (public/textures/walls/<id>.jpg, with a normal map beside it), cached. */
 async function wallTexture(id) {
   if (textures.walls && textures.walls[id] !== undefined) return textures.walls[id];
-  const t = await optional(`public/textures/walls/${id}.jpg`);
+  const isOriginal = id === "default" || (!id.startsWith("yiyi-") && !id.startsWith("yaya-"));
+  const wallId = isOriginal ? id : "default";
+  if (wallId !== id && textures.walls && textures.walls["default"]) {
+    return (textures.walls[id] = textures.walls["default"]);
+  }
+  const t = await optional(`public/textures/walls/${wallId}.jpg`);
   if (t) {
     prepWall(t);
     const n = await optional(`public/textures/walls/${id}-normal.jpg`);
@@ -1543,9 +1555,10 @@ async function applyLanguage(code, { announce = true } = {}) {
   if(!isFreeBook(story.id))await readingSession.authorizeBook(story.id);
   else await loadPublicAssets({scope:'book',book:story.id,language:code||'en'});
   if(story!==currentStory||request!==languageApplyRequest)return false;
-  const base = story.base;
-  const t = code && code !== "en" ? await optionalJson(`${BOOK_BASE}/lang/${code}.json`) : null;
+  const isOriginal = !story.id.startsWith("yiyi-") && !story.id.startsWith("yaya-");
+  const t = isOriginal && code && code !== "en" ? await optionalJson(`${BOOK_BASE}/lang/${code}.json`) : null;
   if(story!==currentStory||request!==languageApplyRequest)return false;
+  const base = story.base;
   const have = !!(t && t.pages && t.pages.length === base.pages.length);
   story.lang = have ? code : "en";
   story.title = have && t.title ? t.title : base.title;
@@ -1575,8 +1588,12 @@ async function applyLanguage(code, { announce = true } = {}) {
       }),
     };
   }
-  story.narrator = story.narrator || {};
-  story.narrator.bundled = { ...(story.narrator.bundled || {}), folder: have ? `lang/${code}/voice` : base.folder, timings: true };
+  if (base.folder) {
+    story.narrator = story.narrator || {};
+    story.narrator.bundled = { ...(story.narrator.bundled || {}), folder: have ? `lang/${code}/voice` : base.folder, timings: true };
+  } else if (story.narrator) {
+    delete story.narrator.bundled;
+  }
   ui.setStory(story, BOOK_BASE);
   narrator.setStory(story, BOOK_BASE);
   if (quiz) quiz.setStory(story, BOOK_BASE, story.lang);
@@ -1640,18 +1657,7 @@ function greetToy(toy, tapped) {
     others keep their English cover. */
 async function refreshCovers() {
   if (!shelf || !library) return;
-  const code = settings.language || "en";
-  for (const meta of library.books) {
-    const file = code !== "en" && meta.art && meta.art[code] && meta.art[code].cover;
-    let tex = textures.coversBase && textures.coversBase[meta.id];
-    if (file) {
-      textures.coversLang = textures.coversLang || {};
-      const key = `${meta.id}:${code}`;
-      if (!textures.coversLang[key]) { const loaded = (await optional(`books/${meta.id}/${file.replace(/cover(\.[a-z]{2})?\.jpg$/, "cover-shelf$1.webp")}`)) || (await optional(`books/${meta.id}/${file}`)); if (loaded) { loaded.colorSpace = THREE.SRGBColorSpace; loaded.anisotropy = 8; textures.coversLang[key] = loaded; } }
-      tex = textures.coversLang[key] || tex;
-    }
-    if (tex && textures.covers[meta.id] !== tex) { textures.covers[meta.id] = tex; if (shelf.setCover) shelf.setCover(meta.id, tex); }
-  }
+  // All books use their primary high-resolution cover
 }
 
 /** The loading screen's shader sky, and the painted moon when public/ui/moon.webp exists. It
@@ -1855,7 +1861,8 @@ async function selectBook(id) {
   ui.hideShelf();
   ui.setView("book");
   ui.showBookCard(meta);
-  narrator.say(bookTitle(meta), { clip: `public/audio/titles/${settings.language || "en"}/${meta.id}.mp3` });
+  const hasClip = (settings.language === "en" || !settings.language) && !meta.id.startsWith("yiyi-") && !meta.id.startsWith("yaya-");
+  narrator.say(bookTitle(meta), hasClip ? { clip: `public/audio/titles/en/${meta.id}.mp3` } : {});
   sound.whoosh(true);
   applyCameraPreset(false);
   const pick = ++state.pick;
