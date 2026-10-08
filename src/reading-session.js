@@ -1,11 +1,8 @@
 import {isFreeBook} from './book-access.js';
 
-export const readingSession = {user:null, membership:null, ready:false, progress:{}, loading:Promise.resolve()};
-let resolveReady;
-export const accountReady = new Promise(resolve => {resolveReady=resolve;});
-// the shelf must never wait forever for the account script (a blocked script, an offline CDN):
-// after a few seconds the reader continues as a guest, and a later sign-in still updates the state
-setTimeout(() => {if (!readingSession.ready) {readingSession.ready = true; resolveReady();}}, 4000);
+export const readingSession = {user:null, membership:null, ready:true, progress:{}, loading:Promise.resolve()};
+let resolveReady = () => {};
+export const accountReady = Promise.resolve();
 const finishedReminders = new Set();
 export const readingEvents = new EventTarget();
 const emit = (name, detail) => readingEvents.dispatchEvent(new CustomEvent(name,{detail}));

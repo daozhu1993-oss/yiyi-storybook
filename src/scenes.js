@@ -241,8 +241,8 @@ export function moonCard(d, { width, x, y, z, delay = 0.2, glow = 0.3, name = "m
 
 /** Build one spread from a book's registry of scene builders (`books/<id>/scenes.js`). */
 export function buildScene(builders, name, ctx) {
-  const builder = builders[name] || builders.end;
-  return builder(ctx);
+  const builder = (builders && (builders[name] || builders.end)) || ((c) => new Diorama(c));
+  return typeof builder === "function" ? builder(ctx) : new Diorama(ctx);
 }
 
 /* ---------- shared helpers for the newer books ---------- */

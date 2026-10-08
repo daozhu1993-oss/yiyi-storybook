@@ -70,6 +70,7 @@ export class UI {
       loading: $("loading"),
       loadingCard: $("loading-card"),
       loadingLogo: $("loading-logo"),
+      bookCardTitle: $("book-card-title"),
       loadingBlurb: $("loading-blurb"),
       loadingCopy: $("loading-copy"),
       progress: document.querySelector(".loading-progress i"),
@@ -301,6 +302,10 @@ export class UI {
     const pickedTitle = (meta.titles && meta.titles[currentLanguage()]) || meta.title;
     if (this.el.loadingCard) this.el.loadingCard.setAttribute("aria-label", t("opening", { title: pickedTitle }));
     if (this.el.loadingLogo) { this.el.loadingLogo.hidden = true; }
+    if (this.el.bookCardTitle) {
+      this.el.bookCardTitle.textContent = pickedTitle;
+      this.el.bookCardTitle.hidden = false;
+    }
     // the blurb waits, unseen, until the logo has been drawn in; then the quill draws it too
     if (this.el.loadingCard) { this.el.loadingCard.classList.remove("draw"); this.el.loadingCard.classList.add("predraw"); }
     if (this.el.loadingBlurb) this.el.loadingBlurb.textContent = (meta.blurbs && meta.blurbs[currentLanguage()]) || meta.blurb || meta.subtitle || "";
@@ -315,6 +320,7 @@ export class UI {
   hideBookCard() {
     const L = this.el.loading;
     L.classList.add("fade");
+    if (this.el.bookCardTitle) this.el.bookCardTitle.hidden = true;
     setTimeout(() => { if (L.classList.contains("fade")) L.hidden = true; }, 700);
   }
 

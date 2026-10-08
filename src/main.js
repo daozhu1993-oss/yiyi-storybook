@@ -1283,6 +1283,15 @@ function onPointerMove(event) {
     return;
   }
   if (event.target === canvas || event.target === document.body) {
+    if (state.view === "book" && !state.opened && book) {
+      raycaster.setFromCamera(pointer.ndc, camera);
+      const hitBook = raycaster.intersectObject(book.group, true).length > 0;
+      if (hitBook) {
+        canvas.style.cursor = "pointer";
+        setHover(null);
+        return;
+      }
+    }
     const hit = pick();
     setHover(hit ? hit.entry : null);
   }
@@ -1317,7 +1326,7 @@ function onPointerUp(event) {
   if (state.shelfDrag && shelf) {
     const d = state.shelfDrag;
     state.shelfDrag = null;
-    if (pointer.moved > 8) {
+    if (pointer.moved > 14) {
       const before = shelf.page;
       const page = shelf.settle(d.velocity);
       if (page !== before) { sound.whoosh(page > before); ui.setShelfPage(page, shelf.pages); }
@@ -1329,10 +1338,10 @@ function onPointerUp(event) {
     state.drag = null;
     if (wasDrag.entry.onDragEnd) wasDrag.entry.onDragEnd();
     canvas.style.cursor = "grab";
-    if (pointer.moved > 6) return;
+    if (pointer.moved > 14) return;
   }
   if (event.target !== canvas) return;
-  if (pointer.moved > 8) return;
+  if (pointer.moved > 24) return;
   ui.closeLanguageMenu();
   if (state.view === "shelf") {
     raycaster.setFromCamera(pointer.ndc, camera);
@@ -1341,10 +1350,38 @@ function onPointerUp(event) {
     if (id) selectBook(id); else if (toy) greetToy(toy, true); else tapDecor();
     return;
   }
-  if (state.view !== "book") return;
-  const hit = pick();
-  if (hit) handleTap(hit);
-  else if (!tapDecor()) clearFocus();
+  if (state.view === "book") {
+    if (!state.opened) {
+      raycaster.setFromCamera(pointer.ndc, camera);
+      const hitBook = book && (raycaster.intersectObject(book.group, true).length > 0);
+      if (hitBook) {
+        openBook();
+        return;
+      }
+      if (!tapDecor()) clearFocus();
+      return;
+    }
+    const hit = pick();
+    if (hit) {
+      handleTap(hit);
+      return;
+    }
+    // Clicking on open book pages to turn forward/backward
+    raycaster.setFromCamera(pointer.ndc, camera);
+    const bookHits = book ? raycaster.intersectObject(book.group, true) : [];
+    if (bookHits.length > 0) {
+      const p = bookHits[0].point;
+      if (p.x > 0.05 && state.page < story.pages.length) {
+        goTo(state.page + 1);
+        return;
+      } else if (p.x < -0.05 && state.page > 0) {
+        goTo(state.page - 1);
+        return;
+      }
+    }
+    if (!tapDecor()) clearFocus();
+    return;
+  }
 }
 
 /** A tap on something in the scene: souvenir pins are collected, everything else reacts. */
