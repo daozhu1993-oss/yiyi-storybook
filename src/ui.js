@@ -77,6 +77,7 @@ export class UI {
       open: $("btn-open"),
       back: $("btn-back"),
       shelfStrip: $("shelf-strip"),
+      shelfSeriesTabs: $("shelf-series-tabs"),
       quiz: $("btn-quiz"),
       phrasebook: $("btn-phrasebook"),
       vocabCard: $("vocab-card"),
@@ -129,6 +130,14 @@ export class UI {
     if (e.vocabCard) e.vocabCard.addEventListener("click", () => { if (this.vocabKey) this.onAction("vocab-play", this.vocabKey); });
     if (e.shelfPrev) e.shelfPrev.addEventListener("click", () => this.onAction("shelf-page", -1));
     if (e.shelfNext) e.shelfNext.addEventListener("click", () => this.onAction("shelf-page", 1));
+    if (e.shelfSeriesTabs) {
+      e.shelfSeriesTabs.addEventListener("click", (event) => {
+        const tab = event.target.closest(".series-tab");
+        if (!tab) return;
+        const targetPage = parseInt(tab.dataset.startPage || "0", 10);
+        this.onAction("shelf-goto-page", targetPage);
+      });
+    }
     press(e.read, "read");
     press(e.prev, "prev");
     press(e.next, "next");
@@ -275,6 +284,16 @@ export class UI {
     if (this.el.shelfNext) this.el.shelfNext.disabled = page >= pages - 1;
     if (this.el.shelfDots) this.el.shelfDots.innerHTML = Array.from({ length: pages }, (_, i) => `<i class="${i === page ? "on" : ""}"></i>`).join("");
     if (this.el.shelfRow) { this.el.shelfRow.classList.toggle("single", pages <= 1); }
+    if (this.el.shelfSeriesTabs) {
+      const tabs = this.el.shelfSeriesTabs.querySelectorAll(".series-tab");
+      tabs.forEach(tab => {
+        const start = parseInt(tab.dataset.startPage || "0", 10);
+        const end = parseInt(tab.dataset.endPage || "99", 10);
+        const isActive = page >= start && page <= end;
+        tab.classList.toggle("active", isActive);
+        tab.setAttribute("aria-selected", isActive ? "true" : "false");
+      });
+    }
   }
 
   hideShelf() { if (this.el.shelfStrip) this.el.shelfStrip.hidden = true; }

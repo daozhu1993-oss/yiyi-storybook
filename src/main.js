@@ -1481,7 +1481,11 @@ function migrateProgress() {
 
 /** The heroes a child can pick as an avatar: every ready book's portrait. */
 function avatarList() {
-  return library.books.filter((b) => b.status === "ready").map((meta) => ({ id: meta.id, name: meta.title.split(" ")[0], url: `books/${meta.id}/${meta.portrait || `art/${meta.id.split("-")[0]}-reference.jpg`}` }));
+  return library.books.filter((b) => b.status === "ready").map((meta) => {
+    const isSpecial = meta.id.startsWith("yiyi-") || meta.id.startsWith("yaya-");
+    const fallback = isSpecial ? (meta.cover || "art/cover.jpg") : `art/${meta.id.split("-")[0]}-reference.jpg`;
+    return { id: meta.id, name: meta.title.split(" ")[0], url: `books/${meta.id}/${meta.portrait || fallback}` };
+  });
 }
 
 function avatarUrlFor(profile) {
@@ -2070,6 +2074,7 @@ async function onAction(name, payload) {
     case "select": selectBook(payload); break;
     case "shelf-hover": if (state.view === "shelf" && shelf) { shelf.setHover(payload); ui.setShelfHover(payload); setWall(payload || state.wallBook); } break;
     case "shelf-page": if (state.view === "shelf" && shelf) { const before = shelf.page; const page = shelf.scrollBy(payload); if (page !== before) { sound.whoosh(payload > 0); ui.setShelfPage(page, shelf.pages); } else sound.pop(0.7); } break;
+    case "shelf-goto-page": if (state.view === "shelf" && shelf) { const target = Math.max(0, Math.min(shelf.pages - 1, payload)); if (target !== shelf.page) { shelf.scrollTo(target, true); sound.whoosh(target > shelf.page); ui.setShelfPage(target, shelf.pages); } } break;
     default: break;
   }
 }

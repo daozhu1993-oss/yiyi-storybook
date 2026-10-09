@@ -228,7 +228,21 @@
         </div>
 
         <div class="shelf-strip" id="shelf-strip" hidden>
-          <div class="shelf-heading"><span class="shelf-title" data-i18n="pickBook">Pick a book</span><a class="sr-only" href="/stories/">All stories</a></div>
+          <div class="shelf-heading">
+            <div class="shelf-series-tabs" id="shelf-series-tabs" role="tablist" aria-label="绘本分类">
+              <button class="series-tab active" data-start-page="0" data-end-page="11" id="tab-series-yiyi" role="tab" aria-selected="true" type="button">
+                <span class="tab-icon">🌱</span>
+                <span class="tab-title">一一成长绘本</span>
+                <span class="tab-count">36本</span>
+              </button>
+              <button class="series-tab" data-start-page="12" data-end-page="15" id="tab-series-yaya" role="tab" aria-selected="false" type="button">
+                <span class="tab-icon">🦖</span>
+                <span class="tab-title">芽芽兽故事集</span>
+                <span class="tab-count">10本</span>
+              </button>
+            </div>
+            <a class="sr-only" href="/stories/">All stories</a>
+          </div>
           <div class="shelf-row">
             <button class="shelf-nav" id="shelf-prev" aria-label="Previous books" data-i18n-aria="ariaPrevBooks" title="Previous books" data-i18n-title="ariaPrevBooks">&#8249;</button>
             <div class="shelf-books"></div>

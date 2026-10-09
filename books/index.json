@@ -765,7 +765,7 @@
       "author": "芽芽兽故事集",
       "cover": "art/cover.jpg",
       "spine": "#2f5b49",
-      "pages": 11,
+      "pages": 10,
       "status": "ready",
       "pins": [
         {
@@ -786,7 +786,7 @@
       "author": "芽芽兽故事集",
       "cover": "art/cover.jpg",
       "spine": "#3b725c",
-      "pages": 11,
+      "pages": 10,
       "status": "ready",
       "pins": [
         {
@@ -807,7 +807,7 @@
       "author": "芽芽兽故事集",
       "cover": "art/cover.jpg",
       "spine": "#264f3e",
-      "pages": 11,
+      "pages": 10,
       "status": "ready",
       "pins": [
         {
@@ -828,7 +828,7 @@
       "author": "芽芽兽故事集",
       "cover": "art/cover.jpg",
       "spine": "#32624d",
-      "pages": 11,
+      "pages": 10,
       "status": "ready",
       "pins": [
         {
@@ -849,7 +849,7 @@
       "author": "芽芽兽故事集",
       "cover": "art/cover.jpg",
       "spine": "#3b725c",
-      "pages": 11,
+      "pages": 10,
       "status": "ready",
       "pins": [
         {
@@ -870,7 +870,7 @@
       "author": "芽芽兽故事集",
       "cover": "art/cover.jpg",
       "spine": "#2f5b49",
-      "pages": 11,
+      "pages": 10,
       "status": "ready",
       "pins": [
         {
@@ -891,7 +891,7 @@
       "author": "芽芽兽故事集",
       "cover": "art/cover.jpg",
       "spine": "#264f3e",
-      "pages": 11,
+      "pages": 10,
       "status": "ready",
       "pins": [
         {
@@ -912,7 +912,7 @@
       "author": "芽芽兽故事集",
       "cover": "art/cover.jpg",
       "spine": "#447e67",
-      "pages": 11,
+      "pages": 10,
       "status": "ready",
       "pins": [
         {
@@ -933,7 +933,7 @@
       "author": "芽芽兽故事集",
       "cover": "art/cover.jpg",
       "spine": "#264f3e",
-      "pages": 11,
+      "pages": 10,
       "status": "ready",
       "pins": [
         {
@@ -954,7 +954,7 @@
       "author": "芽芽兽故事集",
       "cover": "art/cover.jpg",
       "spine": "#32624d",
-      "pages": 11,
+      "pages": 10,
       "status": "ready",
       "pins": [
         {
@@ -964,198 +964,6 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
-    },
-    {
-      "id": "otto-shy-moon",
-      "title": "Otto and the Shy Moon",
-      "subtitle": "A bedtime story",
-      "blurb": "Otto floats up on his red balloon to find the moon and bring her back.",
-      "cover": "art/cover.jpg",
-      "spine": "#1b2450",
-      "pages": 10,
-      "status": "ready",
-      "pins": [
-        {
-          "id": "moon",
-          "name": "Moon pin"
-        },
-        {
-          "id": "balloon",
-          "name": "Balloon pin"
-        },
-        {
-          "id": "owl",
-          "name": "Owl pin"
-        },
-        {
-          "id": "bear",
-          "name": "Otto pin"
-        },
-        {
-          "id": "star",
-          "name": "Star pin"
-        }
-      ],
-      "quizCount": 5,
-      "titles": {
-        "fr": "Otto et la Lune timide",
-        "es": "Otto y la Luna tímida",
-        "ja": "オットーと はずかしがりやの おつきさま",
-        "zh": "奥托和害羞的月亮"
-      },
-      "blurbs": {
-        "fr": "Otto s'envole sur son ballon rouge pour retrouver la lune et la ramener.",
-        "es": "Otto sube en su globo rojo para encontrar a la luna y traerla de vuelta.",
-        "ja": "オットーは あかい ふうせんで そらへ。おつきさまを さがして、つれてかえります。",
-        "zh": "奥托乘着红气球飞上天，去找月亮并把她带回来。"
-      },
-      "art": {
-        "fr": {
-          "logo": "art/logo.fr.png",
-          "cover": "art/cover.fr.jpg"
-        },
-        "es": {
-          "logo": "art/logo.es.png",
-          "cover": "art/cover.es.jpg"
-        },
-        "ja": {
-          "logo": "art/logo.ja.png",
-          "cover": "art/cover.ja.jpg"
-        },
-        "zh": {
-          "logo": "art/logo.zh.png",
-          "cover": "art/cover.zh.jpg"
-        }
-      },
-      "access": "free"
-    },
-    {
-      "id": "nia-runaway-kite",
-      "title": "Nia and the Runaway Kite",
-      "subtitle": "A windy day story",
-      "blurb": "Nia chases her kite over the river, up the hill and into the clouds.",
-      "cover": "art/cover.jpg",
-      "spine": "#3d86c9",
-      "pages": 10,
-      "status": "ready",
-      "pins": [
-        {
-          "id": "kite",
-          "name": "Kite pin"
-        },
-        {
-          "id": "rabbit",
-          "name": "Nia pin"
-        },
-        {
-          "id": "sheep",
-          "name": "Sheep pin"
-        },
-        {
-          "id": "cloud",
-          "name": "Cloud pin"
-        },
-        {
-          "id": "tree",
-          "name": "Tree pin"
-        }
-      ],
-      "quizCount": 5,
-      "titles": {
-        "fr": "Nia et le cerf-volant fugueur",
-        "es": "Nia y la cometa fugitiva",
-        "ja": "ニアと にげた たこ",
-        "zh": "妮娅和飞走的风筝"
-      },
-      "blurbs": {
-        "fr": "Nia poursuit son cerf-volant au-dessus de la rivière, sur la colline et jusque dans les nuages.",
-        "es": "Nia persigue su cometa sobre el río, colina arriba y hasta las nubes.",
-        "ja": "ニアは たこを おいかけて、かわを こえ、おかを のぼり、くもの なかへ。",
-        "zh": "妮娅追着风筝越过小河，爬上山坡，钻进云里。"
-      },
-      "art": {
-        "fr": {
-          "logo": "art/logo.fr.png",
-          "cover": "art/cover.fr.jpg"
-        },
-        "es": {
-          "logo": "art/logo.es.png",
-          "cover": "art/cover.es.jpg"
-        },
-        "ja": {
-          "logo": "art/logo.ja.png",
-          "cover": "art/cover.ja.jpg"
-        },
-        "zh": {
-          "logo": "art/logo.zh.png",
-          "cover": "art/cover.zh.jpg"
-        }
-      },
-      "access": "free"
-    },
-    {
-      "id": "fin-glowing-sea",
-      "title": "Fin and the Glowing Sea",
-      "subtitle": "An underwater story",
-      "blurb": "Fin dives deeper than ever to bring back the lantern fish's lost light.",
-      "cover": "art/cover.jpg",
-      "spine": "#1c6d78",
-      "pages": 10,
-      "status": "ready",
-      "pins": [
-        {
-          "id": "fish",
-          "name": "Fin pin"
-        },
-        {
-          "id": "jar",
-          "name": "Jar pin"
-        },
-        {
-          "id": "turtle",
-          "name": "Turtle pin"
-        },
-        {
-          "id": "crab",
-          "name": "Crab pin"
-        },
-        {
-          "id": "lanternfish",
-          "name": "Lantern fish pin"
-        }
-      ],
-      "quizCount": 5,
-      "titles": {
-        "fr": "Fin et la mer qui brille",
-        "es": "Fin y el mar que brilla",
-        "ja": "フィンと ひかる うみ",
-        "zh": "小芬和发光的大海"
-      },
-      "blurbs": {
-        "fr": "Fin plonge plus profond que jamais pour rapporter la lumière perdue du poisson-lanterne.",
-        "es": "Fin se sumerge más hondo que nunca para devolverle al pez linterna su luz perdida.",
-        "ja": "フィンは いままでで いちばん ふかく もぐって、ちょうちんあんこうの なくした ひかりを とりもどします。",
-        "zh": "小芬潜到从未到过的深处，去找回灯笼鱼丢失的光。"
-      },
-      "art": {
-        "fr": {
-          "logo": "art/logo.fr.png",
-          "cover": "art/cover.fr.jpg"
-        },
-        "es": {
-          "logo": "art/logo.es.png",
-          "cover": "art/cover.es.jpg"
-        },
-        "ja": {
-          "logo": "art/logo.ja.png",
-          "cover": "art/cover.ja.jpg"
-        },
-        "zh": {
-          "logo": "art/logo.zh.png",
-          "cover": "art/cover.zh.jpg"
-        }
-      },
       "access": "free"
     }
   ]

@@ -8,6 +8,9 @@ const cache = new Map();
 const images = new Map();
 
 function loadImage(id) {
+  if (typeof id === "string" && (id.startsWith("yiyi-") || id.startsWith("yaya-"))) {
+    return Promise.resolve(null);
+  }
   if (!images.has(id)) {
     images.set(id, new Promise((resolve) => {
       const img = new Image();

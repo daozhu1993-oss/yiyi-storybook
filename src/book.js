@@ -348,7 +348,8 @@ export function renderSpreadCanvasTexture({ story, artTextures, paperImage, page
 
     // Find image element
     let img = null;
-    const candidates = [page.id, `page-${pageIndex + 1}`, page.scene, "cover"];
+    const imageKey = page.image ? page.image.split("/").pop().replace(/\.[^.]+$/, "") : null;
+    const candidates = [imageKey, page.id, `page-${pageIndex + 1}`, page.scene, "cover"].filter(Boolean);
     for (const key of candidates) {
       if (artTextures && artTextures[key] && artTextures[key].texture && artTextures[key].texture.image) {
         img = artTextures[key].texture.image;
