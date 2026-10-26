@@ -244,7 +244,7 @@ export function renderSpreadCanvasTexture({ story, artTextures, paperImage, page
   const ctx = canvas.getContext("2d");
 
   // 1. Warm archival paper base (natural Japanese art parchment)
-  ctx.fillStyle = "#faf5ea";
+  ctx.fillStyle = "#f5efe2";
   ctx.fillRect(0, 0, W, H);
 
   // 2. Blend subtle scanned paper grain if available
@@ -429,13 +429,13 @@ export function renderSpreadCanvasTexture({ story, artTextures, paperImage, page
 
       if (hasTextInArt) {
         // High-DPI Gallery Spread for "图文融合版V1"
-        // The typography is already integrated into the illustration at vector quality!
-        const marginSide = 96;
-        const availW = W - marginSide * 2; // 1856px
-        const maxImgH = 1500;
+        // Page-filling art presentation with contrast preservation
+        const marginSide = 56;
+        const availW = W - marginSide * 2; // 1936px
+        const maxImgH = 1750;
 
         let imgW = availW;
-        let imgH = 1270; // default 1100:752 = 1.4628 -> 1856 / 1.4628 = 1268px
+        let imgH = 1324; // default 1100:752
 
         if (img && (img.naturalWidth || img.width)) {
           const nw = img.naturalWidth || img.width;
@@ -449,31 +449,30 @@ export function renderSpreadCanvasTexture({ story, artTextures, paperImage, page
           }
         }
         const imgX = (W - imgW) / 2;
-        const imgY = (H - imgH) / 2 - 40; // centered with generous vertical breathing room
+        const imgY = (H - imgH) / 2 - 40;
 
-        // Soft museum drop shadow behind artwork
+        // Subtle warm art paper backing plate to give white artwork clear separation against the page
         ctx.save();
-        ctx.shadowColor = "rgba(45, 30, 10, 0.16)";
-        ctx.shadowBlur = 32;
-        ctx.shadowOffsetY = 12;
-        ctx.fillStyle = "#f5efe4";
+        ctx.fillStyle = "#ede3d0";
         ctx.beginPath();
-        if (ctx.roundRect) ctx.roundRect(imgX, imgY, imgW, imgH, 20);
-        else ctx.rect(imgX, imgY, imgW, imgH);
+        if (ctx.roundRect) ctx.roundRect(imgX - 4, imgY - 4, imgW + 8, imgH + 8, 12);
+        else ctx.rect(imgX - 4, imgY - 4, imgW + 8, imgH + 8);
         ctx.fill();
         ctx.restore();
 
-        // Clip with subtle rounded corners and draw high-res painting
+        // Draw painting with contrast and color vibrance boost so 3D lighting does not wash out pastels
         if (img) {
           ctx.save();
+          ctx.filter = "contrast(1.08) saturate(1.10)";
           ctx.beginPath();
-          if (ctx.roundRect) ctx.roundRect(imgX, imgY, imgW, imgH, 20);
+          if (ctx.roundRect) ctx.roundRect(imgX, imgY, imgW, imgH, 10);
           else ctx.rect(imgX, imgY, imgW, imgH);
           ctx.clip();
           ctx.drawImage(img, imgX, imgY, imgW, imgH);
-          // Delicate 2px picture frame
-          ctx.strokeStyle = "rgba(0, 0, 0, 0.08)";
-          ctx.lineWidth = 2;
+          ctx.filter = "none";
+          // Crisp border rule defining artwork edge
+          ctx.strokeStyle = "rgba(90, 68, 42, 0.24)";
+          ctx.lineWidth = 2.5;
           ctx.stroke();
           ctx.restore();
         }
@@ -481,7 +480,18 @@ export function renderSpreadCanvasTexture({ story, artTextures, paperImage, page
         // Delicate outer paper framing rule
         ctx.strokeStyle = "rgba(180, 140, 80, 0.22)";
         ctx.lineWidth = 2;
-        ctx.strokeRect(52, 52, W - 104, H - 104);
+        ctx.strokeRect(40, 40, W - 80, H - 80);
+
+        // High-contrast legible text caption below illustration
+        if (page.text) {
+          ctx.save();
+          ctx.textAlign = "center";
+          ctx.fillStyle = "#382618";
+          ctx.font = "600 48px 'Noto Serif SC', 'Songti SC', 'STSong', serif";
+          const textY = Math.min(H - 120, imgY + imgH + 88);
+          ctx.fillText(page.text, W / 2, textY);
+          ctx.restore();
+        }
 
         // Page Number
         ctx.font = "600 34px 'Fredoka', 'Noto Serif SC', sans-serif";
@@ -489,10 +499,10 @@ export function renderSpreadCanvasTexture({ story, artTextures, paperImage, page
         const pageNumStr = `· 第 ${pageIndex + 1} 页 ·`;
         if (side === "right") {
           ctx.textAlign = "right";
-          ctx.fillText(pageNumStr, W - 90, H - 80);
+          ctx.fillText(pageNumStr, W - 72, H - 65);
         } else {
           ctx.textAlign = "left";
-          ctx.fillText(pageNumStr, 90, H - 80);
+          ctx.fillText(pageNumStr, 72, H - 65);
         }
       } else {
         // Standard split layout for books without embedded typography
@@ -773,9 +783,19 @@ export class Book {
   }
 
   paperMaterial(map, side = THREE.FrontSide) {
-    const matColor = this.isSpreadMode ? 0xfbf7ed : 0xe6d8bd;
-    const m = new THREE.MeshStandardMaterial({ map, color: matColor, roughness: 0.96, metalness: 0, side, envMapIntensity: 0.35 });
-    if (this.paperNormal) { m.normalMap = prepRepeat(this.paperNormal, 1.6, 2.1); m.normalScale.set(1.1, 1.1); }
+    const matColor = this.isSpreadMode ? 0xffffff : 0xe6d8bd;
+    const m = new THREE.MeshStandardMaterial({
+      map,
+      color: matColor,
+      roughness: 0.90,
+      metalness: 0,
+      side,
+      envMapIntensity: 0.05
+    });
+    if (this.paperNormal) {
+      m.normalMap = prepRepeat(this.paperNormal, 1.6, 2.1);
+      m.normalScale.set(0.35, 0.35);
+    }
     return m;
   }
 

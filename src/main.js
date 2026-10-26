@@ -313,7 +313,7 @@ function setupRenderer() {
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.shadowMap.autoUpdate = false;   // the loop decides when the shadow map is redrawn
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 0.84;
+  renderer.toneMappingExposure = 0.90;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
 
   scene = new THREE.Scene();
@@ -321,7 +321,7 @@ function setupRenderer() {
   scene.fog = new THREE.Fog(0x10142b, 5, 11);
   const pmrem = new THREE.PMREMGenerator(renderer);
   scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
-  scene.environmentIntensity = 0.38;
+  scene.environmentIntensity = 0.15;
   pmrem.dispose();
 
   camera = new THREE.PerspectiveCamera(33, w / h, 0.1, 30);
@@ -354,26 +354,23 @@ function setupRenderer() {
   composer.addPass(bloom);
   composer.addPass(new OutputPass());
 
-  // Lighting: a large soft key from the upper left (calibrated warm fine-art lighting), cool sky fill,
-  // a warm bounce from the room, cool moonlight from behind, and the practical lamp on the table.
-  scene.add(new THREE.HemisphereLight(0x8ea2e0, 0x5a3c22, 0.35));
-  const key = new THREE.DirectionalLight(0xffebd2, 1.6);
+  // Lighting: calibrated warm fine-art lighting with gentle key and soft fill
+  scene.add(new THREE.HemisphereLight(0x8ea2e0, 0x5a3c22, 0.28));
+  const key = new THREE.DirectionalLight(0xffebd2, 1.15);
   key.position.set(-2.6, 3.6, 2.2);
   key.target.position.set(0.2, 0, -0.2);
   key.castShadow = true;
   key.shadow.mapSize.set(power.touch ? 2048 : 4096, power.touch ? 2048 : 4096);
   const sc = key.shadow.camera;
-  // wide enough to take in the whole wall behind the shelf: a tighter box ends in a hard slanted
-  // edge across the wallpaper where the plank's shadow simply stops (the box's side, not a shadow)
   sc.left = -4.4; sc.right = 4.4; sc.top = 3.6; sc.bottom = -3.4; sc.near = 1; sc.far = 14;
   key.shadow.bias = -0.0003;
   key.shadow.normalBias = 0.015;
   scene.add(key, key.target);
   state.keyLight = key;
-  const moonlight = new THREE.DirectionalLight(0x8fb0ff, 0.55);
+  const moonlight = new THREE.DirectionalLight(0x8fb0ff, 0.35);
   moonlight.position.set(2.6, 2.6, -2.4);
   scene.add(moonlight);
-  const bounce = new THREE.PointLight(0xffd6ae, 0.95, 5, 2);
+  const bounce = new THREE.PointLight(0xffd6ae, 0.45, 5, 2);
   bounce.position.set(1.6, 0.9, 1.7);
   scene.add(bounce);
   // the souvenir pins' light: one for the whole scene, parked at zero until a badge picks it up
@@ -729,11 +726,11 @@ function updateFraming() {
   const vfov = THREE.MathUtils.degToRad(camera.fov);
   const hfov = 2 * Math.atan(Math.tan(vfov / 2) * camera.aspect);
   const isSpread = !!(book && book.isSpreadMode);
-  const sceneW = isSpread ? (panelVisible ? 2.5 : 2.3) : 1.4;
-  const sceneH = isSpread ? (panelVisible ? 1.5 : 1.35) : 1.2;
+  const sceneW = isSpread ? (panelVisible ? 2.4 : 2.1) : 1.4;
+  const sceneH = isSpread ? (panelVisible ? 1.45 : 1.3) : 1.2;
   const dw = sceneW / (framing.fw * 2 * Math.tan(hfov / 2));
   const dh = sceneH / (framing.fh * 2 * Math.tan(vfov / 2));
-  framing.distance = THREE.MathUtils.clamp(Math.max(dw, dh) * 1.04, 1.9, 5.5);
+  framing.distance = THREE.MathUtils.clamp(Math.max(dw, dh) * 1.02, 1.8, 5.5);
   applyCameraPreset(state.look);
 }
 

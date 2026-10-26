@@ -1211,16 +1211,16 @@ export function makeLamp(model = null) {
   bulbMesh.position.y = 0.27;
   bulbMesh.castShadow = false;
   group.add(bulbMesh);
-  const bulb = new THREE.PointLight(0xffc98a, 6, 9, 2);
+  const bulb = new THREE.PointLight(0xffdcb0, 1.2, 5, 2);
   bulb.position.y = 0.27;
   bulb.castShadow = false;
   group.add(bulb);
-  // a warm pool that reaches the book (aimed after placement with api.aim)
-  const pool = new THREE.SpotLight(0xffd39a, 16, 8, 0.62, 0.85, 1.4);
+  // a warm gentle pool that reaches the book
+  const pool = new THREE.SpotLight(0xffe2bc, 1.8, 6, 0.72, 0.85, 1.6);
   pool.position.y = 0.25;
   pool.target.position.set(0.6, 0, 0.5);
   group.add(pool, pool.target);
-  const halo = glowSprite(0xffd9a0, 0.36, 0.2);
+  const halo = glowSprite(0xffd9a0, 0.25, 0.15);
   halo.position.y = 0.27;
   group.add(halo);
   const state = { on: true, level: 1 };
@@ -1235,11 +1235,11 @@ export function makeLamp(model = null) {
       const s = state;
       s.level += ((s.on ? 1 : 0) - s.level) * Math.min(1, dt * 6);
       const flicker = 1 + Math.sin(t * 9) * 0.015;
-      shadeMat.emissiveIntensity = 0.04 + s.level * 0.55 * flicker;
-      bulbMesh.material.emissiveIntensity = 0.1 + s.level * 2.2;
-      bulb.intensity = s.level * 6 * flicker;
-      pool.intensity = s.level * 16 * flicker;
-      halo.material.opacity = s.level * 0.2;
+      shadeMat.emissiveIntensity = 0.04 + s.level * 0.35 * flicker;
+      bulbMesh.material.emissiveIntensity = 0.1 + s.level * 1.5;
+      bulb.intensity = s.level * 1.2 * flicker;
+      pool.intensity = s.level * 1.8 * flicker;
+      halo.material.opacity = s.level * 0.15;
     },
   };
   return api;
@@ -1253,14 +1253,14 @@ function makeModelLamp(group, model) {
   const mats = [];
   model.traverse((o) => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; if (o.material) { const m = o.material; m.emissiveMap = m.map || null; m.emissive = new THREE.Color(0xffd9a0); m.emissiveIntensity = 0; m.needsUpdate = true; mats.push(m); } } });
   const bulbY = H * 0.74;
-  const bulb = new THREE.PointLight(0xffc98a, 6, 9, 2);
+  const bulb = new THREE.PointLight(0xffdcb0, 1.2, 5, 2);
   bulb.position.y = bulbY;
   group.add(bulb);
-  const pool = new THREE.SpotLight(0xffd39a, 16, 8, 0.62, 0.85, 1.4);
+  const pool = new THREE.SpotLight(0xffe2bc, 1.8, 6, 0.72, 0.85, 1.6);
   pool.position.y = bulbY - 0.02;
   pool.target.position.set(0.6, 0, 0.5);
   group.add(pool, pool.target);
-  const halo = glowSprite(0xffd9a0, 0.4, 0.2);
+  const halo = glowSprite(0xffd9a0, 0.28, 0.15);
   halo.position.y = bulbY;
   group.add(halo);
   const state = { on: true, level: 1 };
@@ -1274,10 +1274,10 @@ function makeModelLamp(group, model) {
       const s = state;
       s.level += ((s.on ? 1 : 0) - s.level) * Math.min(1, dt * 6);
       const flicker = 1 + Math.sin(t * 9) * 0.015;
-      for (const m of mats) m.emissiveIntensity = s.level * 0.38 * flicker;
-      bulb.intensity = s.level * 6 * flicker;
-      pool.intensity = s.level * 16 * flicker;
-      halo.material.opacity = s.level * 0.2;
+      for (const m of mats) m.emissiveIntensity = s.level * 0.25 * flicker;
+      bulb.intensity = s.level * 1.2 * flicker;
+      pool.intensity = s.level * 1.8 * flicker;
+      halo.material.opacity = s.level * 0.15;
     },
   };
 }
