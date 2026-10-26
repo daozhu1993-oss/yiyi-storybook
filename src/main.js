@@ -140,10 +140,11 @@ async function loadShared(progress = (p, copy) => ui.setLoading(p, copy)) {
   const shelfCover = (file) => file.replace(/cover(\.[a-z]{2})?\.jpg$/, "cover-shelf$1.webp");
   const coverOf = async (meta) => {
     if (!meta.cover) return null;
+    const coverPath = meta.cover.startsWith("books/") ? meta.cover : `books/${meta.id}/${meta.cover}`;
     const isOriginal = !meta.id.startsWith("yiyi-") && !meta.id.startsWith("yaya-");
     const t = isOriginal
-      ? ((await optional(`books/${meta.id}/${shelfCover(meta.cover)}`)) || (await optional(`books/${meta.id}/${meta.cover}`)))
-      : (await optional(`books/${meta.id}/${meta.cover}`));
+      ? ((await optional(shelfCover(coverPath))) || (await optional(coverPath)))
+      : (await optional(coverPath));
     if (t) { t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; textures.covers[meta.id] = t; (textures.coversBase = textures.coversBase || {})[meta.id] = t; }
     return t;
   };
@@ -312,7 +313,7 @@ function setupRenderer() {
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.shadowMap.autoUpdate = false;   // the loop decides when the shadow map is redrawn
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 0.98;
+  renderer.toneMappingExposure = 0.84;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
 
   scene = new THREE.Scene();
@@ -353,10 +354,10 @@ function setupRenderer() {
   composer.addPass(bloom);
   composer.addPass(new OutputPass());
 
-  // Lighting: a large soft key from the upper left (blurred VSM shadows), cool sky fill,
+  // Lighting: a large soft key from the upper left (calibrated warm fine-art lighting), cool sky fill,
   // a warm bounce from the room, cool moonlight from behind, and the practical lamp on the table.
-  scene.add(new THREE.HemisphereLight(0x8ea2e0, 0x5a3c22, 0.5));
-  const key = new THREE.DirectionalLight(0xffe3bf, 2.4);
+  scene.add(new THREE.HemisphereLight(0x8ea2e0, 0x5a3c22, 0.35));
+  const key = new THREE.DirectionalLight(0xffebd2, 1.6);
   key.position.set(-2.6, 3.6, 2.2);
   key.target.position.set(0.2, 0, -0.2);
   key.castShadow = true;
@@ -369,10 +370,10 @@ function setupRenderer() {
   key.shadow.normalBias = 0.015;
   scene.add(key, key.target);
   state.keyLight = key;
-  const moonlight = new THREE.DirectionalLight(0x8fb0ff, 0.75);
+  const moonlight = new THREE.DirectionalLight(0x8fb0ff, 0.55);
   moonlight.position.set(2.6, 2.6, -2.4);
   scene.add(moonlight);
-  const bounce = new THREE.PointLight(0xffd6ae, 1.6, 5, 2);
+  const bounce = new THREE.PointLight(0xffd6ae, 0.95, 5, 2);
   bounce.position.set(1.6, 0.9, 1.7);
   scene.add(bounce);
   // the souvenir pins' light: one for the whole scene, parked at zero until a badge picks it up

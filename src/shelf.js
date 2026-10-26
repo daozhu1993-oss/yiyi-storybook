@@ -122,8 +122,8 @@ export function makeShelf({ books, textures }) {
       diag.rotation.x = -0.72;
     }
   }
-  // a soft warm fill so the covers read
-  const fill = new THREE.PointLight(0xffe6c4, 1.3, 3.8, 1.8);
+  // a soft warm fill so the covers read without milky glare
+  const fill = new THREE.PointLight(0xffe6c4, 0.75, 3.8, 1.8);
   fill.position.set(0, 1.0, 0.8);
   group.add(fill);
 
@@ -134,7 +134,7 @@ export function makeShelf({ books, textures }) {
     const spine = new THREE.Color(meta.spine || "#2a2f6e");
     const cover = textures.covers && textures.covers[meta.id] ? textures.covers[meta.id] : placeholderCover(meta.title, meta.spine, meta.status === "ready" ? "a storylight book" : "coming soon");
     const clothMat = new THREE.MeshStandardMaterial({ map: textures.cloth || null, color: spine, roughness: 0.7, metalness: 0 });
-    const coverMat = new THREE.MeshPhysicalMaterial({ map: cover, color: 0xffffff, roughness: 0.55, metalness: 0, clearcoat: 0.3, clearcoatRoughness: 0.5 });
+    const coverMat = new THREE.MeshPhysicalMaterial({ map: cover, color: 0xf6f1e8, roughness: 0.82, metalness: 0, clearcoat: 0.04, clearcoatRoughness: 0.85 });
     const mesh = new THREE.Mesh(new THREE.BoxGeometry(BOOK_W, BOOK_H, BOOK_D), [edgeMat, clothMat, edgeMat, edgeMat, coverMat, clothMat]);
     mesh.castShadow = casting; mesh.receiveShadow = true; mesh.userData.caster = true;
     mesh.userData.shelfBook = meta.id;

@@ -19,7 +19,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-02",
@@ -40,7 +42,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-03",
@@ -61,7 +65,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-04",
@@ -82,7 +88,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-05",
@@ -103,7 +111,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-06",
@@ -124,7 +134,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-07",
@@ -145,7 +157,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-08",
@@ -166,7 +180,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-09",
@@ -187,7 +203,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-10",
@@ -208,7 +226,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-11",
@@ -229,7 +249,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-12",
@@ -250,7 +272,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-13",
@@ -271,7 +295,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-14",
@@ -292,7 +318,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-15",
@@ -313,7 +341,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-16",
@@ -334,18 +364,20 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-17",
       "series": "yiyi",
-      "title": "17. 一一，听！—— 一一成长",
+      "title": "17. 一一，听！",
       "subtitle": "一一成长系列 · 第 17 本（1岁）",
       "blurb": "一一成长系列第 17 本（1岁）：《一一，听！—— 一一成长》—— 听觉启蒙·听世界的声音。",
       "author": "一一与爸爸妈妈",
       "cover": "art/cover.jpg",
       "spine": "#e58368",
-      "pages": 14,
+      "pages": 12,
       "status": "ready",
       "pins": [
         {
@@ -355,7 +387,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 12,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-18",
@@ -376,7 +410,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 12,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-19",
@@ -397,7 +433,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 12,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-20",
@@ -418,7 +456,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 12,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-21",
@@ -439,7 +479,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 12,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-22",
@@ -460,7 +502,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 12,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-23",
@@ -481,7 +525,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 12,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-24",
@@ -502,7 +548,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 12,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-25",
@@ -523,7 +571,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 12,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-26",
@@ -544,7 +594,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 12,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-27",
@@ -565,7 +617,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 12,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-28",
@@ -586,7 +640,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 12,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-29",
@@ -607,7 +663,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 12,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-30",
@@ -628,7 +686,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-31",
@@ -649,7 +709,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-32",
@@ -670,7 +732,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-33",
@@ -691,7 +755,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-34",
@@ -700,7 +766,7 @@
       "subtitle": "一一成长系列 · 第 34 本（1岁+）",
       "blurb": "一一成长系列第 34 本（1岁+）：《跑跑跑，一一追泡泡》—— 奔跑·夏日追逐泡泡。",
       "author": "一一与爸爸妈妈",
-      "cover": "art/cover.jpg",
+      "cover": "art/cover.png",
       "spine": "#c04e3e",
       "pages": 11,
       "status": "ready",
@@ -712,7 +778,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-35",
@@ -721,7 +789,7 @@
       "subtitle": "一一成长系列 · 第 35 本（1.5岁+）",
       "blurb": "一一成长系列第 35 本（1.5岁+）：《搭搭搭，一一堆积木》—— 建构·搭得高高倒得哈哈。",
       "author": "一一与爸爸妈妈",
-      "cover": "art/cover.jpg",
+      "cover": "art/cover.png",
       "spine": "#e58368",
       "pages": 11,
       "status": "ready",
@@ -733,7 +801,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yiyi-36",
@@ -742,7 +812,7 @@
       "subtitle": "一一成长系列 · 第 36 本（1.5岁+）",
       "blurb": "一一成长系列第 36 本（1.5岁+）：《冲冲冲，一一玩水啦》—— 探索·夏天玩水大冒险。",
       "author": "一一与爸爸妈妈",
-      "cover": "art/cover.jpg",
+      "cover": "art/cover.png",
       "spine": "#d96552",
       "pages": 11,
       "status": "ready",
@@ -754,7 +824,9 @@
         }
       ],
       "quizCount": 3,
-      "access": "free"
+      "access": "free",
+      "pagesCount": 11,
+      "readingLevel": "亲子伴读"
     },
     {
       "id": "yaya-01",

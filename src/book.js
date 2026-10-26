@@ -237,55 +237,55 @@ export function formatStoryLines(text) {
 /** Render a high-DPI full-page printed spread (illustration + typography + paper grain) */
 export function renderSpreadCanvasTexture({ story, artTextures, paperImage, pageIndex, side = "right" }) {
   const canvas = document.createElement("canvas");
-  const W = 1200;
-  const H = 1560; // 1200:1560 = 1.0:1.3 matching PAGE_W:PAGE_H
+  const W = 2048;
+  const H = 2662; // 2048:2662 ≈ 1.0:1.3 matching PAGE_W:PAGE_H
   canvas.width = W;
   canvas.height = H;
   const ctx = canvas.getContext("2d");
 
-  // 1. Warm parchment base paper
-  ctx.fillStyle = "#faf6ed";
+  // 1. Warm archival paper base (natural Japanese art parchment)
+  ctx.fillStyle = "#faf5ea";
   ctx.fillRect(0, 0, W, H);
 
   // 2. Blend subtle scanned paper grain if available
   if (paperImage) {
     ctx.save();
-    ctx.globalAlpha = 0.45;
+    ctx.globalAlpha = 0.38;
     ctx.drawImage(paperImage, 0, 0, W, H);
     ctx.restore();
   }
 
-  // 3. Realistic book spine gutter shadow & edge gradient
+  // 3. Realistic book spine gutter shadow & edge gradient (scaled to 2K)
   if (side === "right") {
     // Spine shadow on left edge
-    const gSpine = ctx.createLinearGradient(0, 0, 180, 0);
-    gSpine.addColorStop(0, "rgba(65, 45, 18, 0.36)");
-    gSpine.addColorStop(0.3, "rgba(65, 45, 18, 0.14)");
+    const gSpine = ctx.createLinearGradient(0, 0, 280, 0);
+    gSpine.addColorStop(0, "rgba(65, 45, 18, 0.28)");
+    gSpine.addColorStop(0.35, "rgba(65, 45, 18, 0.10)");
     gSpine.addColorStop(1, "rgba(65, 45, 18, 0)");
     ctx.fillStyle = gSpine;
-    ctx.fillRect(0, 0, 180, H);
+    ctx.fillRect(0, 0, 280, H);
 
     // Subtle edge shadow on right edge
-    const gEdge = ctx.createLinearGradient(W, 0, W - 50, 0);
-    gEdge.addColorStop(0, "rgba(100, 75, 35, 0.12)");
+    const gEdge = ctx.createLinearGradient(W, 0, W - 80, 0);
+    gEdge.addColorStop(0, "rgba(100, 75, 35, 0.09)");
     gEdge.addColorStop(1, "rgba(100, 75, 35, 0)");
     ctx.fillStyle = gEdge;
-    ctx.fillRect(W - 50, 0, 50, H);
+    ctx.fillRect(W - 80, 0, 80, H);
   } else {
     // Spine shadow on right edge
-    const gSpine = ctx.createLinearGradient(W, 0, W - 180, 0);
-    gSpine.addColorStop(0, "rgba(65, 45, 18, 0.36)");
-    gSpine.addColorStop(0.3, "rgba(65, 45, 18, 0.14)");
+    const gSpine = ctx.createLinearGradient(W, 0, W - 280, 0);
+    gSpine.addColorStop(0, "rgba(65, 45, 18, 0.28)");
+    gSpine.addColorStop(0.35, "rgba(65, 45, 18, 0.10)");
     gSpine.addColorStop(1, "rgba(65, 45, 18, 0)");
     ctx.fillStyle = gSpine;
-    ctx.fillRect(W - 180, 0, 180, H);
+    ctx.fillRect(W - 280, 0, 280, H);
 
     // Subtle edge shadow on left edge
-    const gEdge = ctx.createLinearGradient(0, 0, 50, 0);
-    gEdge.addColorStop(0, "rgba(100, 75, 35, 0.12)");
+    const gEdge = ctx.createLinearGradient(0, 0, 80, 0);
+    gEdge.addColorStop(0, "rgba(100, 75, 35, 0.09)");
     gEdge.addColorStop(1, "rgba(100, 75, 35, 0)");
     ctx.fillStyle = gEdge;
-    ctx.fillRect(0, 0, 50, H);
+    ctx.fillRect(0, 0, 80, H);
   }
 
   const pages = (story && story.pages) || [];
@@ -295,155 +295,293 @@ export function renderSpreadCanvasTexture({ story, artTextures, paperImage, page
   if (isDedication) {
     // Inside cover / Dedication & Title Spread
     ctx.strokeStyle = "rgba(180, 140, 80, 0.35)";
-    ctx.lineWidth = 2;
-    ctx.strokeRect(60, 60, W - 120, H - 120);
-    ctx.strokeRect(68, 68, W - 136, H - 136);
+    ctx.lineWidth = 3;
+    ctx.strokeRect(90, 90, W - 180, H - 180);
+    ctx.lineWidth = 1.5;
+    ctx.strokeRect(104, 104, W - 208, H - 208);
 
-    ctx.fillStyle = "#3d2f22";
+    ctx.fillStyle = "#322316";
     ctx.textAlign = "center";
-    ctx.font = "bold 52px 'Noto Serif SC', 'Songti SC', 'STSong', serif";
-    ctx.fillText(story ? story.title : "一一与芽芽兽绘本", W / 2, 480);
+    ctx.font = "bold 80px 'Noto Serif SC', 'Songti SC', 'STSong', serif";
+    ctx.fillText(story ? story.title : "一一与芽芽兽绘本", W / 2, 700);
 
-    ctx.font = "500 32px 'Noto Serif SC', 'Songti SC', serif";
-    ctx.fillStyle = "#8a755d";
-    ctx.fillText(story ? (story.subtitle || "成长伴读绘本") : "成长伴读绘本", W / 2, 560);
+    ctx.font = "500 46px 'Noto Serif SC', 'Songti SC', serif";
+    ctx.fillStyle = "#7c6245";
+    ctx.fillText(story ? (story.subtitle || "一一成长系列 · 图文融合版") : "一一成长系列 · 图文融合版", W / 2, 820);
 
-    ctx.font = "36px serif";
-    ctx.fillStyle = "#c5a880";
-    ctx.fillText("✦ · ✧ · ✦", W / 2, 650);
+    ctx.font = "52px serif";
+    ctx.fillStyle = "#bfa075";
+    ctx.fillText("✦ · ✧ · ✦", W / 2, 960);
 
-    ctx.font = "italic 32px 'Noto Serif SC', 'Songti SC', serif";
-    ctx.fillStyle = "#6a5744";
-    ctx.fillText("献给最珍贵的一一与芽芽兽", W / 2, 770);
-    ctx.fillText("愿每一个成长的瞬间，都被温暖珍藏。", W / 2, 830);
+    ctx.font = "italic 44px 'Noto Serif SC', 'Songti SC', serif";
+    ctx.fillStyle = "#5d4734";
+    ctx.fillText("献给最珍贵的一一与爸爸妈妈", W / 2, 1140);
+    ctx.fillText("愿每一个成长的瞬间，都被温暖珍藏。", W / 2, 1230);
 
-    ctx.font = "24px 'Fredoka', 'Noto Serif SC', sans-serif";
-    ctx.fillStyle = "#a89070";
-    ctx.fillText("· 扉页 ·", W / 2, H - 70);
+    ctx.font = "34px 'Fredoka', 'Noto Serif SC', sans-serif";
+    ctx.fillStyle = "#9f8363";
+    ctx.fillText("· 扉页 ·", W / 2, H - 110);
   } else if (isEnd) {
     // End of book congratulations spread
     ctx.strokeStyle = "rgba(180, 140, 80, 0.35)";
-    ctx.lineWidth = 2;
-    ctx.strokeRect(60, 60, W - 120, H - 120);
+    ctx.lineWidth = 3;
+    ctx.strokeRect(90, 90, W - 180, H - 180);
+    ctx.lineWidth = 1.5;
+    ctx.strokeRect(104, 104, W - 208, H - 208);
 
-    ctx.fillStyle = "#3d2f22";
+    ctx.fillStyle = "#322316";
     ctx.textAlign = "center";
-    ctx.font = "bold 58px 'Noto Serif SC', 'Songti SC', 'STSong', serif";
-    ctx.fillText("全 书 完", W / 2, 490);
+    ctx.font = "bold 88px 'Noto Serif SC', 'Songti SC', 'STSong', serif";
+    ctx.fillText("全 书 完", W / 2, 720);
 
-    ctx.font = "42px 'Fredoka', sans-serif";
+    ctx.font = "60px 'Fredoka', sans-serif";
     ctx.fillStyle = "#d49a38";
-    ctx.fillText("★ ★ ★ ★ ★", W / 2, 580);
+    ctx.fillText("★ ★ ★ ★ ★", W / 2, 850);
 
-    ctx.font = "500 34px 'Noto Serif SC', 'Songti SC', serif";
-    ctx.fillStyle = "#6a5744";
-    ctx.fillText("恭喜读完全部绘本故事！", W / 2, 680);
-    ctx.fillText("宝宝又收获了新的一天成长 ✨", W / 2, 750);
+    ctx.font = "500 50px 'Noto Serif SC', 'Songti SC', serif";
+    ctx.fillStyle = "#5d4734";
+    ctx.fillText("恭喜读完全部绘本故事！", W / 2, 1000);
+    ctx.fillText("宝宝又收获了新的一天成长 ✨", W / 2, 1100);
 
-    ctx.font = "24px 'Fredoka', 'Noto Serif SC', sans-serif";
-    ctx.fillStyle = "#a89070";
-    ctx.fillText("· 完 ·", W / 2, H - 70);
+    ctx.font = "34px 'Fredoka', 'Noto Serif SC', sans-serif";
+    ctx.fillStyle = "#9f8363";
+    ctx.fillText("· 完 ·", W / 2, H - 110);
   } else if (pages[pageIndex]) {
     const page = pages[pageIndex];
 
-    // Find image element
-    let img = null;
-    const imageKey = page.image ? page.image.split("/").pop().replace(/\.[^.]+$/, "") : null;
-    const candidates = [imageKey, page.id, `page-${pageIndex + 1}`, page.scene, "cover"].filter(Boolean);
-    for (const key of candidates) {
-      if (artTextures && artTextures[key] && artTextures[key].texture && artTextures[key].texture.image) {
-        img = artTextures[key].texture.image;
-        break;
-      }
-    }
-
-    const marginSide = 64;
-    const marginTop = 64;
-    const availW = W - marginSide * 2;
-    const maxImgH = 740;
-
-    let imgX = marginSide;
-    let imgY = marginTop;
-    let imgW = availW;
-    let imgH = maxImgH;
-
-    if (img && (img.naturalWidth || img.width)) {
-      const nw = img.naturalWidth || img.width;
-      const nh = img.naturalHeight || img.height;
-      const aspect = nw / nh;
-      imgW = availW;
-      imgH = imgW / aspect;
-      if (imgH > maxImgH) {
-        imgH = maxImgH;
-        imgW = imgH * aspect;
-      }
-      imgX = (W - imgW) / 2;
-
-      // Soft drop shadow behind painting
-      ctx.save();
-      ctx.shadowColor = "rgba(60, 40, 15, 0.16)";
-      ctx.shadowBlur = 20;
-      ctx.shadowOffsetY = 8;
-      ctx.fillStyle = "#f5efe6";
-      ctx.beginPath();
-      if (ctx.roundRect) ctx.roundRect(imgX, imgY, imgW, imgH, 16);
-      else ctx.rect(imgX, imgY, imgW, imgH);
-      ctx.fill();
-      ctx.restore();
-
-      // Clip with rounded corners and draw the painting
-      ctx.save();
-      ctx.beginPath();
-      if (ctx.roundRect) ctx.roundRect(imgX, imgY, imgW, imgH, 16);
-      else ctx.rect(imgX, imgY, imgW, imgH);
-      ctx.clip();
-      ctx.drawImage(img, imgX, imgY, imgW, imgH);
-      // Delicate 1px frame
-      ctx.strokeStyle = "rgba(0, 0, 0, 0.07)";
+    // Check if this is the parents' letter (Section N: 给爸爸妈妈的话)
+    if (page.parentNote || page.type === "prose") {
+      ctx.strokeStyle = "rgba(180, 140, 80, 0.35)";
+      ctx.lineWidth = 3;
+      ctx.strokeRect(90, 90, W - 180, H - 180);
       ctx.lineWidth = 1.5;
+      ctx.strokeRect(104, 104, W - 208, H - 208);
+
+      const title = page.heading || (story && story.parentNote && story.parentNote.title) || "给爸爸妈妈的话";
+      ctx.fillStyle = "#8c6a42";
+      ctx.textAlign = "center";
+      ctx.font = "bold 70px 'Noto Serif SC', 'Songti SC', 'STSong', serif";
+      ctx.fillText(title, W / 2, 420);
+
+      // Gold ornamental rule under header
+      ctx.strokeStyle = "rgba(180, 140, 80, 0.45)";
+      ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      ctx.moveTo(W / 2 - 160, 480);
+      ctx.lineTo(W / 2 + 160, 480);
       ctx.stroke();
-      ctx.restore();
-    }
 
-    // Delicate paper framing rule
-    ctx.strokeStyle = "rgba(180, 140, 80, 0.18)";
-    ctx.lineWidth = 1.5;
-    ctx.strokeRect(32, 32, W - 64, H - 64);
-
-    // Story Chinese Text Section below painting
-    const textStartY = imgY + imgH + 48;
-    const lines = formatStoryLines(page.text);
-
-    ctx.fillStyle = "#18120c"; // deep warm ink
-    ctx.textAlign = "center";
-    ctx.font = "bold 44px 'Noto Serif SC', 'Songti SC', 'STSong', 'KaiTi', 'Source Han Serif CN', serif";
-
-    const lineHeight = 76;
-    const totalTextH = lines.length * lineHeight;
-    const remainAreaTop = textStartY;
-    const remainAreaBottom = H - 90;
-    const centerTextY = remainAreaTop + Math.max(0, (remainAreaBottom - remainAreaTop - totalTextH) / 2);
-
-    lines.forEach((line, idx) => {
-      ctx.fillText(line, W / 2, centerTextY + idx * lineHeight + 44);
-    });
-
-    // Page Number
-    ctx.font = "600 26px 'Fredoka', 'Noto Serif SC', sans-serif";
-    ctx.fillStyle = "#a89070";
-    const pageNumStr = `· 第 ${pageIndex + 1} 页 ·`;
-    if (side === "right") {
-      ctx.textAlign = "right";
-      ctx.fillText(pageNumStr, W - 64, H - 54);
-    } else {
+      // Prose paragraphs
+      const paragraphs = page.paragraphs || (page.text ? page.text.split("\n") : []);
+      ctx.fillStyle = "#362618";
       ctx.textAlign = "left";
-      ctx.fillText(pageNumStr, 64, H - 54);
+      ctx.font = "40px 'Noto Serif SC', 'Songti SC', serif";
+
+      const lineH = 72;
+      const marginX = 220;
+      const maxTextW = W - marginX * 2;
+      let curY = 600;
+
+      for (const p of paragraphs) {
+        if (!p.trim()) continue;
+        const text = "    " + p.trim(); // Chinese 2-char indent
+        let line = "";
+        for (const char of text) {
+          const test = line + char;
+          if (ctx.measureText(test).width > maxTextW) {
+            ctx.fillText(line, marginX, curY);
+            curY += lineH;
+            line = char;
+          } else {
+            line = test;
+          }
+        }
+        if (line) {
+          ctx.fillText(line, marginX, curY);
+          curY += lineH;
+        }
+        curY += 36; // Paragraph gap
+      }
+
+      // Closing sign
+      ctx.textAlign = "right";
+      ctx.fillStyle = "#7c6245";
+      ctx.font = "italic 36px 'Noto Serif SC', 'Songti SC', serif";
+      ctx.fillText("—— 一一成长故事馆", W - marginX, curY + 40);
+
+      ctx.textAlign = "center";
+      ctx.font = "34px 'Fredoka', 'Noto Serif SC', sans-serif";
+      ctx.fillStyle = "#9f8363";
+      ctx.fillText("· 寄语 ·", W / 2, H - 110);
+    } else {
+      // Find image element
+      let img = null;
+      const imageKey = page.image ? page.image.split("/").pop().replace(/\.[^.]+$/, "") : null;
+      const candidates = [imageKey, page.id, `page-${pageIndex + 1}`, page.scene, "cover"].filter(Boolean);
+      for (const key of candidates) {
+        if (artTextures && artTextures[key] && artTextures[key].texture && artTextures[key].texture.image) {
+          img = artTextures[key].texture.image;
+          break;
+        }
+      }
+
+      const hasTextInArt = !!(story && (story.hasTextInArt || story.series === "yiyi" || page.hasTextInArt));
+
+      if (hasTextInArt) {
+        // High-DPI Gallery Spread for "图文融合版V1"
+        // The typography is already integrated into the illustration at vector quality!
+        const marginSide = 96;
+        const availW = W - marginSide * 2; // 1856px
+        const maxImgH = 1500;
+
+        let imgW = availW;
+        let imgH = 1270; // default 1100:752 = 1.4628 -> 1856 / 1.4628 = 1268px
+
+        if (img && (img.naturalWidth || img.width)) {
+          const nw = img.naturalWidth || img.width;
+          const nh = img.naturalHeight || img.height;
+          const aspect = nw / nh;
+          imgW = availW;
+          imgH = imgW / aspect;
+          if (imgH > maxImgH) {
+            imgH = maxImgH;
+            imgW = imgH * aspect;
+          }
+        }
+        const imgX = (W - imgW) / 2;
+        const imgY = (H - imgH) / 2 - 40; // centered with generous vertical breathing room
+
+        // Soft museum drop shadow behind artwork
+        ctx.save();
+        ctx.shadowColor = "rgba(45, 30, 10, 0.16)";
+        ctx.shadowBlur = 32;
+        ctx.shadowOffsetY = 12;
+        ctx.fillStyle = "#f5efe4";
+        ctx.beginPath();
+        if (ctx.roundRect) ctx.roundRect(imgX, imgY, imgW, imgH, 20);
+        else ctx.rect(imgX, imgY, imgW, imgH);
+        ctx.fill();
+        ctx.restore();
+
+        // Clip with subtle rounded corners and draw high-res painting
+        if (img) {
+          ctx.save();
+          ctx.beginPath();
+          if (ctx.roundRect) ctx.roundRect(imgX, imgY, imgW, imgH, 20);
+          else ctx.rect(imgX, imgY, imgW, imgH);
+          ctx.clip();
+          ctx.drawImage(img, imgX, imgY, imgW, imgH);
+          // Delicate 2px picture frame
+          ctx.strokeStyle = "rgba(0, 0, 0, 0.08)";
+          ctx.lineWidth = 2;
+          ctx.stroke();
+          ctx.restore();
+        }
+
+        // Delicate outer paper framing rule
+        ctx.strokeStyle = "rgba(180, 140, 80, 0.22)";
+        ctx.lineWidth = 2;
+        ctx.strokeRect(52, 52, W - 104, H - 104);
+
+        // Page Number
+        ctx.font = "600 34px 'Fredoka', 'Noto Serif SC', sans-serif";
+        ctx.fillStyle = "#9f8363";
+        const pageNumStr = `· 第 ${pageIndex + 1} 页 ·`;
+        if (side === "right") {
+          ctx.textAlign = "right";
+          ctx.fillText(pageNumStr, W - 90, H - 80);
+        } else {
+          ctx.textAlign = "left";
+          ctx.fillText(pageNumStr, 90, H - 80);
+        }
+      } else {
+        // Standard split layout for books without embedded typography
+        const marginSide = 110;
+        const marginTop = 110;
+        const availW = W - marginSide * 2;
+        const maxImgH = 1260;
+
+        let imgX = marginSide;
+        let imgY = marginTop;
+        let imgW = availW;
+        let imgH = maxImgH;
+
+        if (img && (img.naturalWidth || img.width)) {
+          const nw = img.naturalWidth || img.width;
+          const nh = img.naturalHeight || img.height;
+          const aspect = nw / nh;
+          imgW = availW;
+          imgH = imgW / aspect;
+          if (imgH > maxImgH) {
+            imgH = maxImgH;
+            imgW = imgH * aspect;
+          }
+          imgX = (W - imgW) / 2;
+
+          ctx.save();
+          ctx.shadowColor = "rgba(60, 40, 15, 0.16)";
+          ctx.shadowBlur = 28;
+          ctx.shadowOffsetY = 10;
+          ctx.fillStyle = "#f5efe6";
+          ctx.beginPath();
+          if (ctx.roundRect) ctx.roundRect(imgX, imgY, imgW, imgH, 20);
+          else ctx.rect(imgX, imgY, imgW, imgH);
+          ctx.fill();
+          ctx.restore();
+
+          ctx.save();
+          ctx.beginPath();
+          if (ctx.roundRect) ctx.roundRect(imgX, imgY, imgW, imgH, 20);
+          else ctx.rect(imgX, imgY, imgW, imgH);
+          ctx.clip();
+          ctx.drawImage(img, imgX, imgY, imgW, imgH);
+          ctx.strokeStyle = "rgba(0, 0, 0, 0.07)";
+          ctx.lineWidth = 2;
+          ctx.stroke();
+          ctx.restore();
+        }
+
+        ctx.strokeStyle = "rgba(180, 140, 80, 0.22)";
+        ctx.lineWidth = 2;
+        ctx.strokeRect(52, 52, W - 104, H - 104);
+
+        const textStartY = imgY + imgH + 80;
+        const lines = formatStoryLines(page.text);
+
+        ctx.fillStyle = "#18120c";
+        ctx.textAlign = "center";
+        ctx.font = "bold 58px 'Noto Serif SC', 'Songti SC', 'STSong', serif";
+
+        const lineHeight = 100;
+        const totalTextH = lines.length * lineHeight;
+        const remainAreaTop = textStartY;
+        const remainAreaBottom = H - 130;
+        const centerTextY = remainAreaTop + Math.max(0, (remainAreaBottom - remainAreaTop - totalTextH) / 2);
+
+        lines.forEach((line, idx) => {
+          ctx.fillText(line, W / 2, centerTextY + idx * lineHeight + 56);
+        });
+
+        ctx.font = "600 34px 'Fredoka', 'Noto Serif SC', sans-serif";
+        ctx.fillStyle = "#9f8363";
+        const pageNumStr = `· 第 ${pageIndex + 1} 页 ·`;
+        if (side === "right") {
+          ctx.textAlign = "right";
+          ctx.fillText(pageNumStr, W - 90, H - 80);
+        } else {
+          ctx.textAlign = "left";
+          ctx.fillText(pageNumStr, 90, H - 80);
+        }
+      }
     }
   }
 
   const tex = new THREE.CanvasTexture(canvas);
   tex.colorSpace = THREE.SRGBColorSpace;
-  tex.anisotropy = 8;
+  tex.anisotropy = 16;
+  tex.generateMipmaps = true;
+  tex.minFilter = THREE.LinearMipmapLinearFilter;
+  tex.magFilter = THREE.LinearFilter;
   return tex;
 }
 
@@ -635,8 +773,8 @@ export class Book {
   }
 
   paperMaterial(map, side = THREE.FrontSide) {
-    const matColor = this.isSpreadMode ? 0xffffff : 0xe6d8bd;
-    const m = new THREE.MeshStandardMaterial({ map, color: matColor, roughness: 0.94, metalness: 0, side, envMapIntensity: 0.35 });
+    const matColor = this.isSpreadMode ? 0xfbf7ed : 0xe6d8bd;
+    const m = new THREE.MeshStandardMaterial({ map, color: matColor, roughness: 0.96, metalness: 0, side, envMapIntensity: 0.35 });
     if (this.paperNormal) { m.normalMap = prepRepeat(this.paperNormal, 1.6, 2.1); m.normalScale.set(1.1, 1.1); }
     return m;
   }

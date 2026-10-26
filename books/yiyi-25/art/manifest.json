@@ -2,87 +2,80 @@
   "cards": [
     {
       "id": "page-1",
-      "file": "page-1.jpg",
+      "file": "page-1.svg",
       "copy": "翻开第 1 页…",
-      "width": 1200,
-      "height": 900
+      "width": 1100,
+      "height": 752
     },
     {
       "id": "page-2",
-      "file": "page-2.jpg",
+      "file": "page-2.svg",
       "copy": "翻开第 2 页…",
-      "width": 1200,
-      "height": 900
+      "width": 1100,
+      "height": 752
     },
     {
       "id": "page-3",
-      "file": "page-3.jpg",
+      "file": "page-3.svg",
       "copy": "翻开第 3 页…",
-      "width": 1200,
-      "height": 900
+      "width": 1100,
+      "height": 752
     },
     {
       "id": "page-4",
-      "file": "page-4.jpg",
+      "file": "page-4.svg",
       "copy": "翻开第 4 页…",
-      "width": 1200,
-      "height": 900
+      "width": 1100,
+      "height": 752
     },
     {
       "id": "page-5",
-      "file": "page-5.jpg",
+      "file": "page-5.svg",
       "copy": "翻开第 5 页…",
-      "width": 1200,
-      "height": 900
+      "width": 1100,
+      "height": 752
     },
     {
       "id": "page-6",
-      "file": "page-6.jpg",
+      "file": "page-6.svg",
       "copy": "翻开第 6 页…",
-      "width": 1200,
-      "height": 900
+      "width": 1100,
+      "height": 752
     },
     {
       "id": "page-7",
-      "file": "page-7.jpg",
+      "file": "page-7.svg",
       "copy": "翻开第 7 页…",
-      "width": 1200,
-      "height": 900
+      "width": 1100,
+      "height": 752
     },
     {
       "id": "page-8",
-      "file": "page-8.jpg",
+      "file": "page-8.svg",
       "copy": "翻开第 8 页…",
-      "width": 1200,
-      "height": 900
+      "width": 1100,
+      "height": 752
     },
     {
       "id": "page-9",
-      "file": "page-9.jpg",
+      "file": "page-9.svg",
       "copy": "翻开第 9 页…",
-      "width": 1200,
-      "height": 900
+      "width": 1100,
+      "height": 752
     },
     {
       "id": "page-10",
-      "file": "page-10.jpg",
+      "file": "page-10.svg",
       "copy": "翻开第 10 页…",
-      "width": 1200,
-      "height": 900
+      "width": 1100,
+      "height": 752
     },
     {
       "id": "page-11",
-      "file": "page-11.jpg",
+      "file": "page-11.svg",
       "copy": "翻开第 11 页…",
-      "width": 1200,
-      "height": 900
-    },
-    {
-      "id": "page-12",
-      "file": "page-12.jpg",
-      "copy": "翻开第 12 页…",
-      "width": 1200,
-      "height": 900
+      "width": 1100,
+      "height": 752
     }
   ]
 }
