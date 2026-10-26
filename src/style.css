@@ -336,6 +336,51 @@ img { display: block; }
   opacity: 0.9;
   pointer-events: none;
 }
+.panel-toggle-btn {
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 54px;
+  border-radius: 0 10px 10px 0;
+  background: var(--paper, #fff9ec);
+  border: 1px solid #d4b982;
+  border-left: none;
+  box-shadow: 2px 4px 12px rgba(5, 8, 26, 0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #7c6245;
+  z-index: 10;
+  transition: all 0.25s ease;
+  padding: 0;
+}
+.panel-toggle-btn:hover {
+  background: #fbf2dc;
+  color: #3b2812;
+  width: 28px;
+  right: -28px;
+}
+.text-panel.collapsed {
+  transform: translateX(calc(-100% - 10px)) translateY(-50%) !important;
+  box-shadow: none !important;
+}
+.text-panel.collapsed .panel-toggle-btn {
+  right: -32px;
+  width: 32px;
+  box-shadow: 3px 4px 14px rgba(5, 8, 26, 0.22);
+}
+.toggle-text-pill {
+  transition: all 0.2s ease;
+}
+.toggle-text-pill.active {
+  background: #e8d7b8;
+  color: #3e2815;
+}
 .text-panel .corner.tl { left: 10px; top: 10px; }
 .text-panel .corner.br { right: 10px; bottom: 10px; transform: scale(-1); }
 .text-panel-inner { padding: 44px 46px 30px 50px; display: flex; flex-direction: column; gap: 10px; }
@@ -1309,6 +1354,23 @@ dialog.pricing-dialog.panel-shell { width: min(900px, 96vw); overflow: auto; pad
   .progress-dots { top: 25px; gap: 6px; padding: 6px 10px; }   /* centred on the header row, like the desktop */
   .progress-dots i { width: 11px; height: 11px; }
   .text-panel { left: 3vw; right: 3vw; width: auto; top: auto; bottom: 112px; transform: none; max-height: 44vh; }
+  .text-panel .panel-toggle-btn {
+    right: 20px;
+    top: -24px;
+    transform: none;
+    width: 54px;
+    height: 24px;
+    border-radius: 8px 8px 0 0;
+    border: 1px solid #d4b982;
+    border-bottom: none;
+  }
+  .text-panel.collapsed {
+    transform: translateY(calc(100% + 20px)) !important;
+  }
+  .text-panel.collapsed .panel-toggle-btn {
+    top: -28px;
+    right: 20px;
+  }
   .text-panel.hud { animation-name: panel-in-mobile; }
   @keyframes panel-in-mobile { from { opacity: 0; transform: translateY(40px) scale(0.94); } to { opacity: 1; transform: none; } }
   .text-panel.turning { animation-name: panel-turn-mobile; }

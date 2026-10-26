@@ -710,8 +710,9 @@ const framing = { cx: 0.5, cy: 0.5, distance: 3.2, fw: 1, fh: 1 };
 function updateFraming() {
   const { w, h } = viewport();
   const panel = document.getElementById("text-panel");
+  const panelVisible = state.opened && panel && !panel.hidden && !panel.classList.contains("collapsed");
   let free = { x: 0, y: 0, w, h };
-  if (state.opened && panel && !panel.hidden) {
+  if (panelVisible) {
     const r = panel.getBoundingClientRect();
     const portrait = w < h * 1.05;
     if (portrait) free = { x: 0, y: 0, w, h: Math.max(h * 0.4, r.top - 8) };
@@ -727,10 +728,12 @@ function updateFraming() {
   camera.setViewOffset(w, h, Math.round(w * (0.5 - cx)), Math.round(h * (0.5 - cy)), w, h);
   const vfov = THREE.MathUtils.degToRad(camera.fov);
   const hfov = 2 * Math.atan(Math.tan(vfov / 2) * camera.aspect);
-  const sceneW = 1.4, sceneH = 1.2;
+  const isSpread = !!(book && book.isSpreadMode);
+  const sceneW = isSpread ? (panelVisible ? 2.5 : 2.3) : 1.4;
+  const sceneH = isSpread ? (panelVisible ? 1.5 : 1.35) : 1.2;
   const dw = sceneW / (framing.fw * 2 * Math.tan(hfov / 2));
   const dh = sceneH / (framing.fh * 2 * Math.tan(vfov / 2));
-  framing.distance = THREE.MathUtils.clamp(Math.max(dw, dh) * 1.04, 1.9, 5);
+  framing.distance = THREE.MathUtils.clamp(Math.max(dw, dh) * 1.04, 1.9, 5.5);
   applyCameraPreset(state.look);
 }
 
@@ -749,9 +752,15 @@ function applyCameraPreset(look, immediate = false) {
     cameraRig.pos.set(0.12, 2.15, 2.95);
     cameraRig.target.set(0.05, 0.1, -0.18);
   } else {
-    // aim at the middle of the pop-up on the right page, from about 32 degrees above the front
-    const target = new THREE.Vector3(book ? book.pageCenterX : 0.5, 0.42, -0.1);
-    const dir = new THREE.Vector3(0.06, 0.63, 1).normalize();
+    const isSpread = !!(book && book.isSpreadMode);
+    const panel = document.getElementById("text-panel");
+    const panelVisible = state.opened && panel && !panel.hidden && !panel.classList.contains("collapsed");
+    // for 2-page spread mode, aim at the middle spine of the open book spread (shift slightly right when card is open)
+    const targetX = isSpread ? (panelVisible ? 0.10 : 0.02) : (book ? book.pageCenterX : 0.5);
+    const targetY = isSpread ? 0.38 : 0.42;
+    const targetZ = isSpread ? -0.06 : -0.1;
+    const target = new THREE.Vector3(targetX, targetY, targetZ);
+    const dir = new THREE.Vector3(0.04, 0.63, 0.98).normalize();
     const distance = framing.distance * (look ? 0.62 : 1);
     cameraRig.target.copy(target);
     cameraRig.pos.copy(target).add(dir.multiplyScalar(distance));
@@ -2290,6 +2299,7 @@ async function boot() {
         } else if (!on) ui.hideWordTip();
       },
       onPanelTap: (focused) => { sound.click(); if (focused) clearFocus(); },
+      onFramingChange: () => { sound.click(); updateFraming(); },
       onDone: async (page) => { if(!await requestReadingFeature("game-action"))return; sound.click(); if (page === state.page) earnStar(page); },
     },
   });

@@ -81,11 +81,47 @@ export class Reading {
     this.mode = "listen";
     this.focused = false;
     if (settings.textSize === "large") panel.classList.add("size-large");
+
+    const toggleBtn = panel.querySelector("#btn-panel-toggle");
+    if (toggleBtn) {
+      toggleBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        this.toggleCollapse();
+      });
+    }
+    const barToggleBtn = document.getElementById("btn-toggle-text");
+    if (barToggleBtn) {
+      barToggleBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        this.toggleCollapse();
+      });
+    }
+
     panel.addEventListener("click", (event) => {
-      if (event.target.closest(".word")) return;
+      if (event.target.closest(".word") || event.target.closest(".panel-toggle-btn")) return;
       this.toggleFocus();
       if (this.handlers.onPanelTap) this.handlers.onPanelTap(this.focused);
     });
+  }
+
+  toggleCollapse() {
+    this.panel.classList.toggle("collapsed");
+    const isCollapsed = this.panel.classList.contains("collapsed");
+    const toggleBtn = this.panel.querySelector("#btn-panel-toggle");
+    if (toggleBtn) {
+      toggleBtn.textContent = isCollapsed ? "›" : "‹";
+      toggleBtn.title = isCollapsed ? "展开朗读文字卡" : "收起文字卡";
+      toggleBtn.setAttribute("aria-label", isCollapsed ? "展开朗读文字卡" : "收起文字卡");
+    }
+    const barBtn = document.getElementById("btn-toggle-text");
+    const barLabel = document.getElementById("btn-toggle-text-label");
+    if (barBtn) barBtn.classList.toggle("active", isCollapsed);
+    if (barLabel) {
+      barLabel.textContent = isCollapsed ? "展开文字" : "纯享画卷";
+    }
+    if (this.handlers && this.handlers.onFramingChange) {
+      this.handlers.onFramingChange();
+    }
   }
 
   /** Swap to another book's text. */

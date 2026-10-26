@@ -252,6 +252,7 @@
         </div>
 
         <section class="text-panel hud" style="--i: 2" id="text-panel" aria-live="polite" hidden>
+          <button class="panel-toggle-btn" id="btn-panel-toggle" aria-label="收起文字卡" title="收起文字卡">‹</button>
           <i class="corner tl" aria-hidden="true"></i>
           <i class="corner br" aria-hidden="true"></i>
           <div class="text-panel-inner">
@@ -308,6 +309,9 @@
                 <i class="icon icon-abc"></i><span data-i18n="illRead">I'll read</span>
               </button>
             </div>
+            <button class="pill-button small toggle-text-pill" id="btn-toggle-text" aria-label="切换文字卡显示" title="切换文字卡显示">
+              <i class="icon icon-book"></i><span id="btn-toggle-text-label">纯享画卷</span>
+            </button>
           </div>
           <button class="round-button big" id="btn-next" aria-label="Next page" data-i18n-aria="ariaNext" data-tip="Next" data-i18n-tip="tipNext">
             <i class="icon icon-next"></i>
