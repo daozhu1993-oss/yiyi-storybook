@@ -495,7 +495,10 @@ export class UI {
   setOpened(opened) {
     this.el.interface.classList.toggle("book-closed", !opened);
     const modePill = document.getElementById("reading-mode-pill");
-    if (modePill) modePill.hidden = !opened;
+    if (modePill) {
+      modePill.hidden = !opened;
+      modePill.style.display = opened ? "flex" : "none";
+    }
   }
 
   /* ---------- page state ---------- */

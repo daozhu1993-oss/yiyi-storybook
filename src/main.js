@@ -1,7 +1,7 @@
-import {readingSession,readingEvents,canReadBook,requestReadingFeature,remindAfterFinish,waitForReadingProgress} from "./reading-session.js";
-import {readingStore} from "./reading-store.js";
-import {assetUrl, downloadProgress, loadPublicAssets } from "./assets.js";
-import {isFreeBook} from "./book-access.js";
+import {readingSession,readingEvents,canReadBook,requestReadingFeature,remindAfterFinish,waitForReadingProgress} from "./reading-session.js?v=20261030_v2";
+import {readingStore} from "./reading-store.js?v=20261030_v2";
+import {assetUrl, downloadProgress, loadPublicAssets } from "./assets.js?v=20261030_v2";
+import {isFreeBook} from "./book-access.js?v=20261030_v2";
 /* Storylight — Otto and the Shy Moon
    A 3D pop-up picture book: the book lies open on a bedside table, each spread pops a
    diorama up from the right page, the words sit on a big flat reading card, the narrator reads
@@ -13,26 +13,26 @@ import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js"
 import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
-import { Book } from "./book.js";
-import { buildScene } from "./scenes.js";
-import { Reading } from "./reading.js";
-import { Narrator, cleanWord } from "./narration.js";
-import { SoundKit } from "./audio.js";
-import { UI, loadSettings, saveSettings } from "./ui.js";
-import * as P from "./props.js";
-import { Sparkles } from "./sparkles.js";
-import { makePinBadge } from "./pin.js";
-import { t, setLanguage } from "./i18n.js";
-import { NightSky } from "./nightsky.js";
-import { Comets } from "./comets.js";
-import { makeShelf, BOOK_H, PER_PAGE } from "./shelf.js";
-import { Quiz } from "./quiz.js";
-import { Souvenirs, PIN_POINTS } from "./souvenirs.js";
-import { normalizeSouvenirs } from "./souvenir-state.js";
-import { Profiles, MAX_PROFILES } from "./profiles.js";
-import { makeBookmark, readPercent } from "./bookmark.js";
-import { vocabKey } from "./reading.js";
-import { CinemaMode } from "./cinema.js";
+import { Book } from "./book.js?v=20261030_v2";
+import { buildScene } from "./scenes.js?v=20261030_v2";
+import { Reading } from "./reading.js?v=20261030_v2";
+import { Narrator, cleanWord } from "./narration.js?v=20261030_v2";
+import { SoundKit } from "./audio.js?v=20261030_v2";
+import { UI, loadSettings, saveSettings } from "./ui.js?v=20261030_v2";
+import * as P from "./props.js?v=20261030_v2";
+import { Sparkles } from "./sparkles.js?v=20261030_v2";
+import { makePinBadge } from "./pin.js?v=20261030_v2";
+import { t, setLanguage } from "./i18n.js?v=20261030_v2";
+import { NightSky } from "./nightsky.js?v=20261030_v2";
+import { Comets } from "./comets.js?v=20261030_v2";
+import { makeShelf, BOOK_H, PER_PAGE } from "./shelf.js?v=20261030_v2";
+import { Quiz } from "./quiz.js?v=20261030_v2";
+import { Souvenirs, PIN_POINTS } from "./souvenirs.js?v=20261030_v2";
+import { normalizeSouvenirs } from "./souvenir-state.js?v=20261030_v2";
+import { Profiles, MAX_PROFILES } from "./profiles.js?v=20261030_v2";
+import { makeBookmark, readPercent } from "./bookmark.js?v=20261030_v2";
+import { vocabKey } from "./reading.js?v=20261030_v2";
+import { CinemaMode } from "./cinema.js?v=20261030_v2";
 import * as SkeletonUtils from "three/addons/utils/SkeletonUtils.js";
 
 const params = new URLSearchParams(location.search);
@@ -2384,20 +2384,20 @@ async function boot() {
   const btnToggleText = document.getElementById("btn-toggle-text");
 
   if (btnModeCinema) {
-    btnModeCinema.addEventListener("click", () => {
+    btnModeCinema.onclick = () => {
       openCinemaMode();
-    });
+    };
   }
   if (btnMode3D) {
-    btnMode3D.addEventListener("click", () => {
+    btnMode3D.onclick = () => {
       if (cinema && cinema.isOpen) cinema.close();
-    });
+    };
   }
   if (btnToggleText) {
-    btnToggleText.addEventListener("click", (e) => {
+    btnToggleText.onclick = (e) => {
       e.stopPropagation();
       toggleCinemaMode();
-    });
+    };
   }
 
   resize();
