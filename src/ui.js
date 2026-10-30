@@ -494,6 +494,8 @@ export class UI {
   /** Reader controls only make sense once the book is open. */
   setOpened(opened) {
     this.el.interface.classList.toggle("book-closed", !opened);
+    const modePill = document.getElementById("reading-mode-pill");
+    if (modePill) modePill.hidden = !opened;
   }
 
   /* ---------- page state ---------- */

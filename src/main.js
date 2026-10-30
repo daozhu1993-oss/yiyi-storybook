@@ -32,6 +32,7 @@ import { normalizeSouvenirs } from "./souvenir-state.js";
 import { Profiles, MAX_PROFILES } from "./profiles.js";
 import { makeBookmark, readPercent } from "./bookmark.js";
 import { vocabKey } from "./reading.js";
+import { CinemaMode } from "./cinema.js";
 import * as SkeletonUtils from "three/addons/utils/SkeletonUtils.js";
 
 const params = new URLSearchParams(location.search);
@@ -43,6 +44,7 @@ let sceneBuilders = null;
 let quiz = null;                 // the end-of-story picture quiz (src/quiz.js)
 let souvenirs = null;            // pins, points and the souvenir board (src/souvenirs.js)
 let profiles = null;             // who is reading: up to three children (src/profiles.js)
+let cinema = null;               // 方案 C: 剧场全屏高清纯享画卷 (src/cinema.js)
 
 const state = {
   page: -1,
@@ -969,6 +971,10 @@ async function goTo(index, { autoRead = true } = {}) {
   updateFraming();
   setTimeout(updateFraming, 800);
   if (!isEnd) ui.setReading("idle");
+  if (cinema && cinema.isOpen) {
+    const spreadIdx = Math.floor(index / 2) + 1;
+    if (cinema.currentSpread !== spreadIdx) cinema.renderSpread(spreadIdx);
+  }
   state.transitioning = false;
   mark("ui");
   if (marks) { const rows = marks.slice(1).map(([name, at], i) => `${name} ${(at - marks[i][1]).toFixed(1)}ms`); console.log(`[page ${index}] ${rows.join(" · ")} · total ${(marks[marks.length - 1][1] - marks[0][1]).toFixed(0)}ms`); window.__turnMarks = marks; }
@@ -980,6 +986,7 @@ async function goTo(index, { autoRead = true } = {}) {
 function setReadingState(s) {
   state.reading = s;
   if (state.page < story.pages.length) ui.setReading(s);
+  if (cinema && cinema.isOpen) cinema.setReadingState(s);
 }
 
 async function startReading() {
@@ -1021,6 +1028,26 @@ async function restart() {
   clearTimeout(state.autoTimer);
   narrator.stop();
   await goTo(0);
+}
+
+function openCinemaMode() {
+  if (!state.opened || !story || !cinema) return;
+  sound.click();
+  cinema.open({
+    story,
+    bookId: BOOK_ID,
+    pageIndex: state.page,
+    bookBase: BOOK_BASE,
+  });
+}
+
+function toggleCinemaMode(force) {
+  if (!cinema) return;
+  if (force === true || (!cinema.isOpen && force !== false)) {
+    openCinemaMode();
+  } else {
+    cinema.close();
+  }
 }
 
 /* ---------- stars: one per page read to the end ---------- */
@@ -1785,6 +1812,13 @@ function onKey(event) {
   if(document.querySelector("dialog[open]") || event.target.closest("input,textarea,select,button,a,[role=button]"))return;
   if (souvenirs && souvenirs.isOpen) { if (event.key === "Escape") souvenirs.close(); return; }
   if (ui.settingsOpen) { if (event.key === "Escape") ui.closeSettings(); return; }
+  if (cinema && cinema.isOpen) {
+    if (event.key === "Escape") { cinema.close(); return; }
+    if (event.key === "ArrowRight" || event.key === "PageDown") { cinema.nextSpread(); return; }
+    if (event.key === "ArrowLeft" || event.key === "PageUp") { cinema.prevSpread(); return; }
+    if (event.key === " " || event.key === "r" || event.key === "R") { event.preventDefault(); cinema.el.btnPlay.click(); return; }
+    return;
+  }
   if (state.view === "shelf") {
     if (event.key === "ArrowRight") onAction("shelf-page", 1);
     else if (event.key === "ArrowLeft") onAction("shelf-page", -1);
@@ -1948,6 +1982,7 @@ async function closeBook() {
   clearTimeout(state.hintTimer);
   narrator.stop();
   if (quiz) quiz.hide();
+  if (cinema && cinema.isOpen) cinema.close();
   if (book && book.bookmark) book.bookmark.setEnabled(false);
   clearBookToys();
   setReadingState("idle");
@@ -2301,6 +2336,70 @@ async function boot() {
     },
   });
   reading.setMode(state.mode);
+
+  cinema = new CinemaMode();
+  cinema.init(document.getElementById("cinema-stage"), {
+    onExit: (targetPage) => {
+      sound.click();
+      if (targetPage !== state.page) {
+        goTo(targetPage, { autoRead: false });
+      }
+    },
+    onSpreadChange: (activeIdx) => {
+      if (state.page !== activeIdx) {
+        state.page = activeIdx;
+        const p = state.progress[BOOK_ID] || {};
+        state.progress[BOOK_ID] = { ...p, page: activeIdx, max: Math.max(p.max ?? -1, activeIdx), updated: Date.now() };
+        saveProgress();
+        updateBookmarks();
+        ui.setPage(activeIdx, state.progress[BOOK_ID]);
+      }
+    },
+    onSpeakPage: (pageIndex, { onEnd }) => {
+      narrator.play(pageIndex, {
+        onWord: (i) => {},
+        onEnd: (complete = true) => {
+          if (onEnd) onEnd(complete);
+        }
+      });
+    },
+    onPause: () => {
+      narrator.pause();
+      setReadingState("paused");
+    },
+    onResume: () => {
+      narrator.resume();
+      setReadingState("playing");
+    },
+    onEarnStar: (pageIndex) => {
+      earnStar(pageIndex);
+    },
+    onBackToShelf: () => {
+      closeBook();
+    }
+  });
+
+  const btnMode3D = document.getElementById("btn-mode-3d");
+  const btnModeCinema = document.getElementById("btn-mode-cinema");
+  const btnToggleText = document.getElementById("btn-toggle-text");
+
+  if (btnModeCinema) {
+    btnModeCinema.addEventListener("click", () => {
+      openCinemaMode();
+    });
+  }
+  if (btnMode3D) {
+    btnMode3D.addEventListener("click", () => {
+      if (cinema && cinema.isOpen) cinema.close();
+    });
+  }
+  if (btnToggleText) {
+    btnToggleText.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleCinemaMode();
+    });
+  }
+
   resize();
   window.addEventListener("resize", resize);
   window.addEventListener("pointermove", onPointerMove);
@@ -2360,6 +2459,9 @@ async function boot() {
     pointerAt: (x, y) => { onPointerMove({ clientX: x, clientY: y, target: canvas, movementX: 0, movementY: 0 }); },
     tap: (x, y) => { onPointerMove({ clientX: x, clientY: y, target: canvas, movementX: 0, movementY: 0 }); const hit = pick(); if (hit) handleTap(hit); return hit ? hit.entry.name : null; },
     get souvenirs() { return souvenirs; },
+    get cinema() { return cinema; },
+    openCinemaMode,
+    toggleCinemaMode,
     collectPin: (id) => { const entry = state.diorama && state.diorama.objects[`pin:${id}`]; if (entry && entry.pin) collectPin(entry.pin, entry); return !!entry; },
     playVocab,
   };

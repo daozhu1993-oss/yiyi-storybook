@@ -89,13 +89,6 @@ export class Reading {
         this.toggleCollapse();
       });
     }
-    const barToggleBtn = document.getElementById("btn-toggle-text");
-    if (barToggleBtn) {
-      barToggleBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        this.toggleCollapse();
-      });
-    }
 
     panel.addEventListener("click", (event) => {
       if (event.target.closest(".word") || event.target.closest(".panel-toggle-btn")) return;
@@ -131,6 +124,15 @@ export class Reading {
     this.current = null;
     this.spans = null;
     this.panel.hidden = true;
+    const isSpread = !!(story && (story.series === 'yiyi' || story.series === 'yayashou' || story.spreadMode));
+    if (isSpread) {
+      this.panel.classList.add("collapsed");
+      const toggleBtn = this.panel.querySelector("#btn-panel-toggle");
+      if (toggleBtn) {
+        toggleBtn.textContent = "›";
+        toggleBtn.title = "展开朗读文字卡";
+      }
+    }
   }
 
   /** The vocabulary entry behind a token (language books only; only braced tokens count). */
